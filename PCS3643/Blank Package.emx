@@ -4528,7 +4528,7 @@
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_9-FqUs2QEeiUWsWhRzdcqA" name="ReceiveOperationEvent55" operation="_9-FqUM2QEeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_TO7xwM2REeiUWsWhRzdcqA" name="SendOperationEvent60" operation="_TO7KsM2REeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_TO7xwc2REeiUWsWhRzdcqA" name="ReceiveOperationEvent58" operation="_TO7KsM2REeiUWsWhRzdcqA"/>
-    <packagedElement xmi:type="uml:StateMachine" xmi:id="_LZNtENL_EeiOJesYmtaNMQ" name="StateMachine1">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_LZNtENL_EeiOJesYmtaNMQ" name="Nav_comprar_seguro">
       <eAnnotations xmi:id="_LajJ0NL_EeiOJesYmtaNMQ" source="uml2.diagrams">
         <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_LajJ0dL_EeiOJesYmtaNMQ" type="Statechart" element="_LZNtENL_EeiOJesYmtaNMQ" name="Nav_comprar_seguro" measurementUnit="Himetric">
           <children xmi:type="umlnotation:UMLFrame" xmi:id="_LajJ0tL_EeiOJesYmtaNMQ" type="Statemachine" element="_LZNtENL_EeiOJesYmtaNMQ" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label" alignment="Horizontal">
