@@ -4678,7 +4678,7 @@
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_qRp5gdMCEeiOJesYmtaNMQ" name="" operation="_TO7KsM2REeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_dkIBgdMDEeiOJesYmtaNMQ" name="" operation="_uOd9sMjYEeiAe8bNAfWZjQ"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_gAiZkdMDEeiOJesYmtaNMQ" name="" operation="__vcvsM2PEeiUWsWhRzdcqA"/>
-    <packagedElement xmi:type="uml:StateMachine" xmi:id="_tiHsENL_EeipUaHctl3P9A" name="StateMachine1">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_tiHsENL_EeipUaHctl3P9A" name="Nav_alterar_status">
       <eAnnotations xmi:id="_tilmINL_EeipUaHctl3P9A" source="uml2.diagrams">
         <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_tilmIdL_EeipUaHctl3P9A" type="Statechart" element="_tiHsENL_EeipUaHctl3P9A" name="nav_alterar_status" measurementUnit="Himetric">
           <children xmi:type="umlnotation:UMLFrame" xmi:id="_tilmItL_EeipUaHctl3P9A" type="Statemachine" element="_tiHsENL_EeipUaHctl3P9A" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label" alignment="Horizontal">
