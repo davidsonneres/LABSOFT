@@ -3,6 +3,7 @@ package model;
 import java.util.Date;
 
 public class Apolice {
+	private static int idCounter = 0;
 	private int id;
 	private Date dataInicio;
 	private Date dataFim;
@@ -11,7 +12,12 @@ public class Apolice {
 //	private Veiculo veiculo;
 //	private Compra compra;
 	
-	public Apolice(){}
+	public Apolice(Date dataInicio, Date dataFim, String status){
+		this.id = idCounter++;
+		this.dataInicio = dataInicio;
+		this.dataFim = dataFim;
+		this.status = status;
+	}
 	
 	public int getId(){
 		return id;
