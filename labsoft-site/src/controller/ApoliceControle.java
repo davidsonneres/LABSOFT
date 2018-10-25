@@ -40,12 +40,12 @@ public class ApoliceControle extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		if (request.getAttribute("id") == null) {
+		if (request.getParameter("id") == null) {
 			request.setAttribute("apoliceList", apoliceList);
 			RequestDispatcher requestDispacher = getServletContext().getRequestDispatcher("/apolices.jsp");
 			requestDispacher.forward(request, response);
 		} else {
-			request.setAttribute("apolice", apoliceList.get((int) request.getAttribute("id")));
+			request.setAttribute("apolice", apoliceList.get(Integer.valueOf(request.getParameter("id"))));
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/detalhe.jsp");
 			requestDispatcher.forward(request, response);
 		}
