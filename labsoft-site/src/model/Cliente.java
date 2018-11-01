@@ -8,6 +8,8 @@ public class Cliente {
 	private String email;
 	private int id;
 	
+	public Cliente() {}
+	
 	public Cliente(String cpf, String endereco, String telefone, String nome, String email, int id) {
 		this.id = id;
 		this.cpf = cpf;
@@ -48,6 +50,10 @@ public class Cliente {
 	}
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }
