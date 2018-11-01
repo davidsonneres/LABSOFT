@@ -20,7 +20,7 @@
 	<p>Telefone: <%= corretor.getTelefone() %></p>
 	<p>E mail:<%= corretor.getEmail() %></p>
 	
-	<a href="ApoliceControle">Voltar</a>
+	<a href="CorretorControle">Voltar</a>
 
 </body>
 </html>

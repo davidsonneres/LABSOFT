@@ -1,5 +1,7 @@
 package controller;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -18,7 +20,7 @@ import model.Corretor;
 public class CorretorControle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	ArrayList <Corretor> list = new ArrayList <>();
+	Map <Integer, Corretor> list = new HashMap<>();
 	
    
     /**
@@ -35,10 +37,10 @@ public class CorretorControle extends HttpServlet {
     public CorretorControle() {
         // TODO Auto-generated constructor stub
     	super();
-    	list.add(new Corretor(01,"Tomaz Ferreira","11912344321","tomaz.ferreira@hotmail.com"));
-    	list.add(new Corretor(02,"Bruno Lopez","11912355321","bruno.lopez@hotmail.com"));
-    	list.add(new Corretor(03,"Altenor Oliveira","11912564321","altnor.oliveira@hotmail.com"));
-    	list.add(new Corretor(04,"Alberto Ramos","11912904321","alberto.ramos@hotmail.com"));
+    	list.put(01, new Corretor(01,"Tomaz Ferreira","11912344321","tomaz.ferreira@hotmail.com"));
+    	list.put(02, new Corretor(02,"Bruno Lopez","11912355321","bruno.lopez@hotmail.com"));
+    	list.put(03, new Corretor(03,"Altenor Oliveira","11912564321","altnor.oliveira@hotmail.com"));
+    	list.put(04, new Corretor(04,"Alberto Ramos","11912904321","alberto.ramos@hotmail.com"));
     	
     }
 

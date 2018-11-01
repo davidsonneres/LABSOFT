@@ -21,7 +21,7 @@
 	<p>Telefone: <%= cliente.getTelefone() %></p>
 	<p>Endereço: <%= cliente.getEndereco() %></p>
 	
-	<a href="ApoliceControle">Voltar</a>
+	<a href="ClienteControle">Voltar</a>
 	
 </body>
 </html>
