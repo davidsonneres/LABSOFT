@@ -55,13 +55,13 @@ public class CorretorControle extends HttpServlet {
 			
 			request.setAttribute("list",list );
 			RequestDispatcher requestDispatcher =
-			getServletContext().getRequestDispatcher("/lista.jsp");
+			getServletContext().getRequestDispatcher("/listaCorretor.jsp");
 			requestDispatcher.forward(request, response);
 		}
 		else{	
 		request.setAttribute("corretor",list.get(Integer.valueOf(request.getParameter("id"))));
 		RequestDispatcher requestDispatcher =
-		getServletContext().getRequestDispatcher("/detalhe_corretor.jsp");
+		getServletContext().getRequestDispatcher("/detalhesCorretor.jsp");
 		requestDispatcher.forward(request, response);
 		}
 	}

@@ -1,4 +1,4 @@
-package model;
+package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Cliente;
+
 /**
  * Servlet implementation class ClienteControle
  */
@@ -17,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ClienteControle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private ArrayList<Cliente> listaCliente = new ArrayList();
+	private ArrayList<Cliente> listaCliente = new ArrayList<>();
 	
 	
        
@@ -39,7 +41,7 @@ public class ClienteControle extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if(request.getAttribute("id") == null){
+		if(request.getParameter("id") == null){
 			request.setAttribute("listaCliente", listaCliente);
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listaCliente.jsp");
 			requestDispatcher.forward(request, response);
