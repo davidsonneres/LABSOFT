@@ -16,7 +16,7 @@ public class ClientDAO {
 	public ClientDAO() {
 		try {
 			Class.forName("org.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pcs3643");
+			connection = DriverManager.getConnection("jdbc:mysql://143.107.102.7:3306/t1g8");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
