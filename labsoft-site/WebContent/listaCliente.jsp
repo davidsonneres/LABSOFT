@@ -41,6 +41,7 @@
 			</tr>
 		<% } %>
 	</table>
+	<a href="">Inicio</a>
 
 </body>
 </html>

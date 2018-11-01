@@ -24,7 +24,15 @@ public class ClientDAO {
 		}
 	}
 	
-	public boolean create(Cliente cliente){
+	public boolean create(Cliente cliente) throws SQLException{
+		Statement statement = connection.createStatement();
+		
+		statement.executeUpdate(
+				String.format("INSERT INTO cliente (IdCliente, Nome, Endereco, Telefone, Email) "
+						+ "VALUES (%d, %s, %s, %s, %s)", 
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getEndereco(), cliente.getEmail()));
+		
+		statement.close();
 		
 		return true;
 	}
@@ -32,6 +40,7 @@ public class ClientDAO {
 	public Cliente findByPrimaryKey(int id) throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM cliente WHERE id=%d", id));
+		statement.close();
 		return createClient(resultSet);
 	}
 	
@@ -50,11 +59,27 @@ public class ClientDAO {
 		return clientList;
 	}
 	
-	public boolean update(Cliente cliente) {
+	public boolean update(Cliente cliente) throws SQLException {
+		Statement statement = connection.createStatement();
+		
+		statement.executeUpdate(
+				String.format("UPDATE cliente (IdCliente, Nome, Endereco, Telefone, Email) "
+						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, Telefone = %s, Email = %s", 
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getEndereco(), cliente.getEmail()));
+		
+		statement.close();
+		
 		return true;
 	}
 	
-	public boolean remove(int id) {
+	public boolean remove(int id) throws SQLException {
+		Statement statement = connection.createStatement();
+		
+		statement.executeUpdate(
+				String.format("DELETE FROM cliente WHERE id=%d", id));
+		
+		statement.close();
+		
 		return true;
 	}
 	
