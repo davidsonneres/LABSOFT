@@ -46,7 +46,7 @@ public class ApoliceControle extends HttpServlet {
 			requestDispacher.forward(request, response);
 		} else {
 			request.setAttribute("apolice", apoliceList.get(Integer.valueOf(request.getParameter("id"))));
-			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/detalhe.jsp");
+			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/detalhe_apolice.jsp");
 			requestDispatcher.forward(request, response);
 		}
 	}

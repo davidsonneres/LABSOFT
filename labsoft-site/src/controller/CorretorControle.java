@@ -61,7 +61,7 @@ public class CorretorControle extends HttpServlet {
 		else{	
 		request.setAttribute("corretor",list.get(Integer.valueOf(request.getParameter("id"))));
 		RequestDispatcher requestDispatcher =
-		getServletContext().getRequestDispatcher("/detalhes.jsp");
+		getServletContext().getRequestDispatcher("/detalhe_corretor.jsp");
 		requestDispatcher.forward(request, response);
 		}
 	}
