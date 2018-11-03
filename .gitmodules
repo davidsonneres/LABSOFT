@@ -1,0 +1,3 @@
+[submodule "LABSOFT"]
+	path = LABSOFT
+	url = git@github.com:davidsonneres/LABSOFT.git
