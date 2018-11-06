@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Cliente;
+import dao.ClienteDAO;
 
 /**
  * Servlet implementation class ClienteControle
@@ -22,6 +24,7 @@ public class ClienteControle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private Map<Integer, Cliente> listaCliente = new HashMap<>();
+	private ClienteDAO clienteDAO = new ClienteDAO();
 	
 	
        
@@ -30,12 +33,17 @@ public class ClienteControle extends HttpServlet {
      */
     public ClienteControle() {
         super();
-        listaCliente.put(01, new Cliente("42345234", "Rua Dias Felizes", "(11)92831932", "Joao Silva", "joao.silva@email.com", 01));
-        listaCliente.put(02, new Cliente("42345235", "Rua Dias Áureos", "(11)92831932", "Joao Souza", "joao.souza@email.com", 02));
-        listaCliente.put(03, new Cliente("42345236", "Rua Dias Chuvosos", "(11)92831932", "Joao Silvestre", "joao.silvestre@email.com", 03));
-        listaCliente.put(04, new Cliente("42345237", "Rua Dias Ruins", "(11)92831932", "Joao Salvador", "joao.salvador@email.com", 04));
-        
-        // TODO Auto-generated constructor stub
+//        listaCliente.put(01, new Cliente("42345234", "Rua Dias Felizes", "(11)92831932", "Joao Silva", "joao.silva@email.com", 01));
+//        listaCliente.put(02, new Cliente("42345235", "Rua Dias Áureos", "(11)92831932", "Joao Souza", "joao.souza@email.com", 02));
+//        listaCliente.put(03, new Cliente("42345236", "Rua Dias Chuvosos", "(11)92831932", "Joao Silvestre", "joao.silvestre@email.com", 03));
+//        listaCliente.put(04, new Cliente("42345237", "Rua Dias Ruins", "(11)92831932", "Joao Salvador", "joao.salvador@email.com", 04));
+//        
+        try {
+			listaCliente = clienteDAO.getAll();
+	    } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
 	/**

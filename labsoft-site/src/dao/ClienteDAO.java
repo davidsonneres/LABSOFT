@@ -10,13 +10,13 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import model.Cliente;
 
-public class ClientDAO {
+public class ClienteDAO {
 	private Connection connection;
 	
-	public ClientDAO() {
+	public ClienteDAO() {
 		try {
-			Class.forName("org.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://143.107.102.7:3306/t1g8");
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://143.107.102.7:3306/t1g8?user=t1g8&password=%25jL*-nLp");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -28,9 +28,9 @@ public class ClientDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("INSERT INTO cliente (IdCliente, Nome, Endereco, Telefone, Email) "
+				String.format("INSERT INTO Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email) "
 						+ "VALUES (%d, %s, %s, %s, %s)", 
-						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getEndereco(), cliente.getEmail()));
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail()));
 		
 		statement.close();
 		
@@ -39,7 +39,7 @@ public class ClientDAO {
 	
 	public Cliente findByPrimaryKey(int id) throws SQLException {
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM cliente WHERE id=%d", id));
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Cliente WHERE IdCliente=%d", id));
 		statement.close();
 		return createClient(resultSet);
 	}
@@ -47,12 +47,12 @@ public class ClientDAO {
 	public Map<Integer, Cliente> getAll() throws SQLException {
 		Map<Integer, Cliente> clientList = new HashMap<>();
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM cliente");
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM Cliente");
 		
 		while(resultSet.next()) {
 			Cliente cliente = createClient(resultSet);
 
-			clientList.put(resultSet.getInt("id"), cliente);
+			clientList.put(resultSet.getInt("IdCliente"), cliente);
 		}
 		
 		statement.close();
@@ -63,9 +63,9 @@ public class ClientDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("UPDATE cliente (IdCliente, Nome, Endereco, Telefone, Email) "
-						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, Telefone = %s, Email = %s", 
-						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getEndereco(), cliente.getEmail()));
+				String.format("UPDATE Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email) "
+						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, CPF = %s, Telefone = %s, Email = %s", 
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail()));
 		
 		statement.close();
 		
@@ -76,7 +76,7 @@ public class ClientDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("DELETE FROM cliente WHERE id=%d", id));
+				String.format("DELETE FROM Cliente WHERE IdCliente=%d", id));
 		
 		statement.close();
 		
@@ -89,12 +89,12 @@ public class ClientDAO {
 	
 	private Cliente createClient(ResultSet resultSet) throws SQLException {
 		Cliente cliente = new Cliente();
-		cliente.setId(resultSet.getInt("id"));
-		cliente.setCPF(resultSet.getString("cpf"));
-		cliente.setEndereco(resultSet.getString("endereco"));
-		cliente.setTelefone(resultSet.getString("telefone"));
-		cliente.setNome(resultSet.getString("nome"));
-		cliente.setEmail(resultSet.getString("email"));
+		cliente.setId(resultSet.getInt("IdCliente"));
+		cliente.setCPF(resultSet.getString("CPF"));
+		cliente.setEndereco(resultSet.getString("Endereco"));
+		cliente.setTelefone(resultSet.getString("Telefone"));
+		cliente.setNome(resultSet.getString("Nome"));
+		cliente.setEmail(resultSet.getString("Email"));
 		
 		return cliente;
 	}
