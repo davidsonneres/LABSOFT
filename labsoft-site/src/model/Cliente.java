@@ -1,48 +1,59 @@
 package model;
 
 public class Cliente {
-	private String CPF;
-	private String Endereco;
-	private String Telefone;
-	private String Nome;
-	private String Email;
+	private String cpf;
+	private String endereco;
+	private String telefone;
+	private String nome;
+	private String email;
 	private int id;
 	
-	public Cliente(String string, String string2, String string3, String string4, String string5, int i) {
-		// TODO Auto-generated constructor stub
+	public Cliente() {}
+	
+	public Cliente(String cpf, String endereco, String telefone, String nome, String email, int id) {
+		this.id = id;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.nome = nome;
+		this.email = email;
 	}
 	public String getCPF() {
-		return CPF;
+		return this.cpf;
 	}
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCPF(String cpf) {
+		this.cpf = cpf;
 	}
 	public String getEndereco() {
-		return Endereco;
+		return endereco;
 	}
 	public void setEndereco(String endereco) {
-		Endereco = endereco;
+		this.endereco = endereco;
 	}
 	public String getTelefone() {
-		return Telefone;
+		return this.telefone;
 	}
 	public void setTelefone(String telefone) {
-		Telefone = telefone;
+		this.telefone = telefone;
 	}
 	public String getNome() {
-		return Nome;
+		return this.nome;
 	}
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 	public String getEmail() {
-		return Email;
+		return this.email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

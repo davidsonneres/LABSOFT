@@ -9,13 +9,15 @@
 <body>
 	<%@page import="java.util.ArrayList"%>
 	<%@page import="java.util.Date"%>
+	<%@page import="java.util.Set"%>
+	<%@page import="java.util.Map"%>
 	<%@page import="java.util.List"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Apolice" %>
 
 	<h1>Lista de Apólices</h1>
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>
-	<% List<Apolice> apoliceList = (ArrayList) request.getAttribute("apoliceList"); %>
+	<% Map<Integer, Apolice> apoliceList = (Map) request.getAttribute("apoliceList"); %>
 	<table>
 		<tr>
 			<th>Id</th>
@@ -23,15 +25,19 @@
 			<th>Data de fim</th>
 			<th>Status</th>
 		</tr>
-		<% for(int i = 0; i < apoliceList.size(); i++) {%>
-		<% Apolice apolice = apoliceList.get(i);%>
+		<% Set<Integer> keySet = apoliceList.keySet(); %>
+		<% for(Integer id : keySet){%>
+		<% Apolice apolice = apoliceList.get(id);%>
 			<tr>
-				<td><a href="ApoliceControle?id=<%= apolice.getId() %>"><%= apoliceList.get(i).getId() %></a></td>
+				<td><a href="ApoliceControle?id=<%= apolice.getId() %>"><%= apolice.getId() %></a></td>
 				<td><%= ft.format(apolice.getDataInicio()) %></td>
 				<td><%= ft.format(apolice.getDataFim()) %></td>
 				<td><%= apolice.getStatus() %></td>
 			</tr>
 		<% } %>
 	</table>
+	
+	<a href="">Inicial</a>
+	
 </body>
 </html>

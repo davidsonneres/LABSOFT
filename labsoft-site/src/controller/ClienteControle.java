@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,7 +21,7 @@ import model.Cliente;
 public class ClienteControle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private ArrayList<Cliente> listaCliente = new ArrayList<>();
+	private Map<Integer, Cliente> listaCliente = new HashMap<>();
 	
 	
        
@@ -28,10 +30,10 @@ public class ClienteControle extends HttpServlet {
      */
     public ClienteControle() {
         super();
-        listaCliente.add(new Cliente("42345234", "Rua Dias Felizes", "(11)92831932", "Joao Silva", "joao.silva@email.com", 01));
-        listaCliente.add(new Cliente("42345235", "Rua Dias Áureos", "(11)92831932", "Joao Souza", "joao.souza@email.com", 02));
-        listaCliente.add(new Cliente("42345236", "Rua Dias Chuvosos", "(11)92831932", "Joao Silvestre", "joao.silvestre@email.com", 03));
-        listaCliente.add(new Cliente("42345237", "Rua Dias Ruins", "(11)92831932", "Joao Salvador", "joao.salvador@email.com", 04));
+        listaCliente.put(01, new Cliente("42345234", "Rua Dias Felizes", "(11)92831932", "Joao Silva", "joao.silva@email.com", 01));
+        listaCliente.put(02, new Cliente("42345235", "Rua Dias Áureos", "(11)92831932", "Joao Souza", "joao.souza@email.com", 02));
+        listaCliente.put(03, new Cliente("42345236", "Rua Dias Chuvosos", "(11)92831932", "Joao Silvestre", "joao.silvestre@email.com", 03));
+        listaCliente.put(04, new Cliente("42345237", "Rua Dias Ruins", "(11)92831932", "Joao Salvador", "joao.salvador@email.com", 04));
         
         // TODO Auto-generated constructor stub
     }
@@ -46,7 +48,7 @@ public class ClienteControle extends HttpServlet {
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listaCliente.jsp");
 			requestDispatcher.forward(request, response);
 		} else {
-			request.setAttribute("Cliente", listaCliente.get((int)request.getAttribute("id")));
+			request.setAttribute("cliente", listaCliente.get(Integer.valueOf(request.getParameter("id"))));
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/detalhesCliente.jsp");
 			requestDispatcher.forward(request, response);
 		}
@@ -62,5 +64,4 @@ public class ClienteControle extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }

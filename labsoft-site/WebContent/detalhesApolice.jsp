@@ -9,6 +9,7 @@
 <body>
 	<%@page import="java.util.Date"%>
 	<%@page import="java.util.List"%>
+	<%@page import="java.util.Map"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Apolice" %>
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>

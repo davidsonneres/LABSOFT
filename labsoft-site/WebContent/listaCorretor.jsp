@@ -9,13 +9,15 @@
 <body>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Date"%>
+<%@page import="java.util.Set"%>
 <%@page import="java.util.List"%>
+<%@page import="java.util.Map"%>
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="model.Apolice" %>
 <%@ page import="model.Corretor" %>
 
 <h1>Lista de Corretores</h1>
-<% List<Corretor> list = (ArrayList) request.getAttribute("list"); %>
+<% Map<Integer, Corretor> list = (Map) request.getAttribute("list"); %>
 
 <table>
 		<tr>
@@ -24,16 +26,17 @@
 			<th>Telefone</th>
 			<th>E-mail</th>
 		</tr>
-		<% for(int i = 0; i < list.size(); i++) {%>
-		<% Corretor corretor = list.get(i);%>
+		<% Set<Integer> keySet = list.keySet(); %>
+		<% for(Integer id : keySet){%>
+		<% Corretor corretor= list.get(id);%>
 			<tr>    
-				<td><a href="CorretorControle?id=<%= corretor.getIdCorretor() %>"><%= list.get(i).getIdCorretor() %></a></td>
+				<td><a href="CorretorControle?id=<%= corretor.getIdCorretor() %>"><%= corretor.getIdCorretor() %></a></td>
 				<td><%= corretor.getNome() %></td>
 				<td><%= corretor.getTelefone() %></td>
 				<td><%= corretor.getEmail() %></td>
 			</tr>
 		<% } %>
 	</table>
-
+	<a href="">Inicio</a>
 </body>
 </html>

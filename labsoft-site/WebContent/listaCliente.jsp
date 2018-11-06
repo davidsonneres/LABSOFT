@@ -10,12 +10,15 @@
 	<%@page import="java.util.ArrayList"%>
 	<%@page import="java.util.Date"%>
 	<%@page import="java.util.List"%>
+	<%@page import="java.util.Set"%>
+	<%@page import="java.util.Map"%>
+		<%@page import="java.util.HashMap"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Cliente" %>
 
 	<h1>Lista de Clientes</h1>
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>
-	<% List<Cliente> clienteList = (ArrayList) request.getAttribute("listaCliente"); %>
+	<% Map<Integer, Cliente> clienteList = (Map) request.getAttribute("listaCliente"); %>
 	<table>
 		<tr>
 			<th>Id</th>
@@ -25,10 +28,11 @@
 			<th>Telefone</th>
 			<th>Endereço</th>
 		</tr>
-		<% for(int i = 0; i < clienteList.size(); i++) {%>
-		<% Cliente cliente = clienteList.get(i);%>
+		<% Set<Integer> keySet = clienteList.keySet(); %>
+		<% for(Integer id : keySet){%>
+		<% Cliente cliente = clienteList.get(id);%>
 			<tr>
-				<td><a href="ClienteControle?id=<%= cliente.getId() %>"><%= clienteList.get(i).getId() %></a></td>
+				<td><a href="ClienteControle?id=<%= cliente.getId() %>"><%= cliente.getId() %></a></td>
 				<td><%= cliente.getNome() %></td>
 				<td><%= cliente.getCPF() %></td>
 				<td><%= cliente.getEmail() %></td>
@@ -37,6 +41,7 @@
 			</tr>
 		<% } %>
 	</table>
+	<a href="">Inicio</a>
 
 </body>
 </html>
