@@ -20,7 +20,10 @@
 	<p>Email: <%= cliente.getEmail() %></p>
 	<p>Telefone: <%= cliente.getTelefone() %></p>
 	<p>Endereço: <%= cliente.getEndereco() %></p>
-	
+	<p>Sexo: <%= cliente.getSexo() %></p>
+	<p>Nacionalidade: <%= cliente.getNacionalidade() %></p>
+	<p>DataNascimento: <%= cliente.getDataNascimento() %></p>
+	<p>CNH: <%= cliente.getCNH() %></p>
 	<a href="ClienteControle">Voltar</a>
 	
 </body>
