@@ -104,6 +104,18 @@
             <children xsi:type="notation:Shape" xmi:id="_pgyOAN4KEeiA1o3OyXZfAA" type="Column" element="_pgpEEN4KEeiA1o3OyXZfAA" fontName="Segoe UI">
               <layoutConstraint xsi:type="notation:Bounds" xmi:id="_pgyOAd4KEeiA1o3OyXZfAA"/>
             </children>
+            <children xsi:type="notation:Shape" xmi:id="_NggfEON5Eeilwf4BfuAFbw" type="Column" element="_Nf6pMON5Eeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_NggfEeN5Eeilwf4BfuAFbw"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_OKX7cuN5Eeilwf4BfuAFbw" type="Column" element="_OKX7cON5Eeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_OKX7c-N5Eeilwf4BfuAFbw"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_eFwaEuN5Eeilwf4BfuAFbw" type="Column" element="_eFwaEON5Eeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_eFwaE-N5Eeilwf4BfuAFbw"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_fm5csuN5Eeilwf4BfuAFbw" type="Column" element="_fm5csON5Eeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_fm5cs-N5Eeilwf4BfuAFbw"/>
+            </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_l07nWt4KEeiA1o3OyXZfAA" sortingKeys="Natural:Ascending"/>
           </children>
           <children xmi:id="_l07nW94KEeiA1o3OyXZfAA" visible="false" type="Index.Compartment">
@@ -114,7 +126,7 @@
           </children>
           <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_l07nUt4KEeiA1o3OyXZfAA" sortingKeys="Natural:Ascending"/>
           <styles xsi:type="datanotation:TableStyle" xmi:id="_l07nVN4KEeiA1o3OyXZfAA" fontName="Segoe UI" lineWidth="1"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_l07nU94KEeiA1o3OyXZfAA" x="14446" y="8678"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_l07nU94KEeiA1o3OyXZfAA" x="15927" y="8281"/>
         </children>
         <children xmi:id="_zfGRQd4KEeiA1o3OyXZfAA" element="_zfGRQN4KEeiA1o3OyXZfAA">
           <children xsi:type="notation:Shape" xmi:id="_zfGRRd4KEeiA1o3OyXZfAA" type="TableName" fontName="Segoe UI">
@@ -504,7 +516,7 @@
             <layoutConstraint xsi:type="notation:Location" xmi:id="_KLxcPeHqEeizwZ_l9KHKyw" x="264" y="661"/>
           </children>
           <styles xsi:type="datanotation:DataLineStyle" xmi:id="_KLnrMeHqEeizwZ_l9KHKyw" fontName="Segoe UI" routing="Rectilinear" lineWidth="1"/>
-          <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_KLnrMuHqEeizwZ_l9KHKyw" points="[-1083, -238, 3999, 547]$[-5082, -238, 0, 547]"/>
+          <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_KLnrMuHqEeizwZ_l9KHKyw" points="[-1599, -449, 5480, 785]$[-5118, -449, 1961, 785]$[-5118, -1269, 1961, -35]$[-7102, -1269, -23, -35]"/>
           <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_KL6mIOHqEeizwZ_l9KHKyw" id="(1.0,0.8456114028507127)"/>
         </edges>
         <edges xmi:id="_PlQCUOHqEeizwZ_l9KHKyw" element="_PW9HoOHqEeizwZ_l9KHKyw" source="_em3zQd4MEeiA1o3OyXZfAA" target="_zfGRQd4KEeiA1o3OyXZfAA">
@@ -655,6 +667,18 @@
     </columns>
     <columns xmi:id="_pgpEEN4KEeiA1o3OyXZfAA" name="Email">
       <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_pgpEEd4KEeiA1o3OyXZfAA" name="CHAR" length="50"/>
+    </columns>
+    <columns xmi:id="_Nf6pMON5Eeilwf4BfuAFbw" name="Sexo">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Nf6pMeN5Eeilwf4BfuAFbw" name="CHAR" length="20"/>
+    </columns>
+    <columns xmi:id="_OKX7cON5Eeilwf4BfuAFbw" name="Nacionalidade">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_OKX7ceN5Eeilwf4BfuAFbw" name="CHAR" length="30"/>
+    </columns>
+    <columns xmi:id="_eFwaEON5Eeilwf4BfuAFbw" name="DataNascimento">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_fVducON5Eeilwf4BfuAFbw" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="_fm5csON5Eeilwf4BfuAFbw" name="CNH">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_fm5cseN5Eeilwf4BfuAFbw" name="CHAR" length="30"/>
     </columns>
     <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_xf-8YN4OEeiA1o3OyXZfAA" name="Cliente_PK" members="_8QwMwN4NEeiA1o3OyXZfAA" ForeignKey="_KGG5EOHqEeizwZ_l9KHKyw"/>
   </SQLTables:PersistentTable>
