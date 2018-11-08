@@ -1044,7 +1044,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_6MXP9sgQEeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_6MXP98gQEeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_6MX3AMgQEeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6MWo4cgQEeiGN6N5S8hV9Q" x="1584" y="3696"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6MWo4cgQEeiGN6N5S8hV9Q" x="396" y="396"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_AdblYMgREeiGN6N5S8hV9Q" element="_AdaXQMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_AdcMcMgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1057,7 +1057,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_AdcMdsgREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_AdcMd8gREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_AdcMeMgREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AdblYcgREeiGN6N5S8hV9Q" x="7608"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AdblYcgREeiGN6N5S8hV9Q" x="9240" y="-132"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_Docv4MgREeiGN6N5S8hV9Q" element="_DobhwMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_Docv4sgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1083,7 +1083,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_HI6l9sgREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_HI6l98gREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_HI6l-MgREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HI5-4cgREeiGN6N5S8hV9Q" x="5412" y="11088"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HI5-4cgREeiGN6N5S8hV9Q" x="4884" y="17688"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_NxA7UMgREeiGN6N5S8hV9Q" element="_NxAUQMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_NxBiYMgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1096,7 +1096,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_NxCJc8gREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_NxCJdMgREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_NxCJdcgREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NxA7UcgREeiGN6N5S8hV9Q" x="6657" y="14582"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NxA7UcgREeiGN6N5S8hV9Q" x="7524" y="20460"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_V4EiAMgREeiGN6N5S8hV9Q" element="_V4Cs0MgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_V4EiAsgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1109,7 +1109,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_V4FJE8gREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_V4FJFMgREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_V4FwIMgREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V4EiAcgREeiGN6N5S8hV9Q" x="3036" y="1584"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V4EiAcgREeiGN6N5S8hV9Q" x="4224" y="132"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_bMPxYMgREeiGN6N5S8hV9Q" element="_bMOjQMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_bMPxYsgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1122,7 +1122,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_bMQYccgREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_bMQYcsgREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_bMQYc8gREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bMPxYcgREeiGN6N5S8hV9Q" x="10461" y="14899"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bMPxYcgREeiGN6N5S8hV9Q" x="11484" y="16764"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_e1jaYMgREeiGN6N5S8hV9Q" element="_e1iMQMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_e1jaYsgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1132,14 +1132,14 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_e1kBccgREeiGN6N5S8hV9Q" type="Name"/>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_e1kBcsgREeiGN6N5S8hV9Q" type="Parent"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_e1kBc8gREeiGN6N5S8hV9Q" type="AttributeCompartment">
-              <layoutConstraint xmi:type="notation:Ratio" xmi:id="__YjToM2EEeiUWsWhRzdcqA" value="0.8400699912510936"/>
+              <layoutConstraint xmi:type="notation:Ratio" xmi:id="__YjToM2EEeiUWsWhRzdcqA" value="0.6477245364796532"/>
             </children>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_e1kBdMgREeiGN6N5S8hV9Q" type="OperationCompartment">
-              <layoutConstraint xmi:type="notation:Ratio" xmi:id="__YjToc2EEeiUWsWhRzdcqA" value="0.1599300087489064"/>
+              <layoutConstraint xmi:type="notation:Ratio" xmi:id="__YjToc2EEeiUWsWhRzdcqA" value="0.3522754635203467"/>
             </children>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_e1kBdcgREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_e1kBdsgREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1jaYcgREeiGN6N5S8hV9Q" x="660" y="9108" width="3674" height="6453"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1jaYcgREeiGN6N5S8hV9Q" x="792" y="13068" width="3647" height="4891"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_y6CcYMgREeiGN6N5S8hV9Q" element="_y6BOQMgREeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_y6CcYsgREeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1152,7 +1152,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_y6DDdcgREeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_y6DDdsgREeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_y6DDd8gREeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y6CcYcgREeiGN6N5S8hV9Q" x="16484" y="9510"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y6CcYcgREeiGN6N5S8hV9Q" x="17028" y="10428"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_H0O-YMgSEeiGN6N5S8hV9Q" element="_H0NJMMgSEeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_H0O-YsgSEeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1735,7 +1735,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_BDyNA8gMEeiGN6N5S8hV9Q" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_BDyNBMgMEeiGN6N5S8hV9Q" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_BDyNBcgMEeiGN6N5S8hV9Q" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BDxl8cgMEeiGN6N5S8hV9Q" x="4620" y="7260" width="2588" height="3251"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BDxl8cgMEeiGN6N5S8hV9Q" x="2244" y="5280" width="3513" height="5235"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_hA8GIMgMEeiGN6N5S8hV9Q" element="_hA64AMgMEeiGN6N5S8hV9Q" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
             <children xmi:type="notation:DecorationNode" xmi:id="_hA8tMMgMEeiGN6N5S8hV9Q" type="ImageCompartment">
@@ -1981,22 +1981,29 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hWYnIMgLEeiGN6N5S8hV9Q" name="Corretor">
-      <ownedAttribute xmi:id="_v3gHMMgLEeiGN6N5S8hV9Q" name="Nome" visibility="private"/>
-      <ownedAttribute xmi:id="_yeGWAMgLEeiGN6N5S8hV9Q" name="Telefone" visibility="private"/>
-      <ownedAttribute xmi:id="_yvavgMgLEeiGN6N5S8hV9Q" name="Email" visibility="private"/>
+      <ownedAttribute xmi:id="_v3gHMMgLEeiGN6N5S8hV9Q" name="idCorretor" visibility="private"/>
+      <ownedAttribute xmi:id="_yeGWAMgLEeiGN6N5S8hV9Q" name="nome" visibility="private"/>
+      <ownedAttribute xmi:id="_yvavgMgLEeiGN6N5S8hV9Q" name="email" visibility="private"/>
       <ownedAttribute xmi:id="_dp6qgMgNEeiGN6N5S8hV9Q" name="controle_relatório" visibility="private" type="_hA64AMgMEeiGN6N5S8hV9Q" association="_dp41UMgNEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dp7RkcgNEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dp7RkMgNEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_9JC48MgPEeiGN6N5S8hV9Q" name="solicita dados dos corretores"/>
+      <ownedAttribute xmi:id="_tamuEOOCEeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedOperation xmi:id="_9JC48MgPEeiGN6N5S8hV9Q" name="buscarDadosCorretor"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_BDwX0MgMEeiGN6N5S8hV9Q" name="Apólice">
-      <ownedAttribute xmi:id="_DKokwMgMEeiGN6N5S8hV9Q" name="Status" visibility="private"/>
+      <ownedAttribute xmi:id="_DKokwMgMEeiGN6N5S8hV9Q" name="idApolice" visibility="private"/>
       <ownedAttribute xmi:id="_eoekgMgNEeiGN6N5S8hV9Q" name="controle_relatório" visibility="private" type="_hA64AMgMEeiGN6N5S8hV9Q" association="_eocvUMgNEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eofLkcgNEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eofLkMgNEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_6KF0gMgPEeiGN6N5S8hV9Q" name="solicita dados das apólices"/>
+      <ownedAttribute xmi:id="_zeVLEOOCEeiBXshb1vdprw" name="dataInicio" visibility="private"/>
+      <ownedAttribute xmi:id="_ziD0gOOCEeiBXshb1vdprw" name="dataFim" visibility="private"/>
+      <ownedAttribute xmi:id="_zk0NkOOCEeiBXshb1vdprw" name="status" visibility="private"/>
+      <ownedAttribute xmi:id="_zno4EOOCEeiBXshb1vdprw" name="RENAVAM" visibility="private"/>
+      <ownedOperation xmi:id="_6KF0gMgPEeiGN6N5S8hV9Q" name="consultarDados"/>
+      <ownedOperation xmi:id="_X5KJYOODEeiBXshb1vdprw" name="gerarApolice"/>
+      <ownedOperation xmi:id="_YALXYOODEeiBXshb1vdprw" name="alterarStatus"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_QIh-kMgMEeiGN6N5S8hV9Q" name="Relatório">
       <ownedAttribute xmi:id="_SNm0sMgMEeiGN6N5S8hV9Q" name="Data_Inicial" visibility="private"/>
@@ -2024,16 +2031,16 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fg7PccgNEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fg7PcMgNEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_I2Gn4MgOEeiGN6N5S8hV9Q" name="Solicita relatório"/>
-      <ownedOperation xmi:id="_qy03sM2CEei9qPt5pbR36g" name="verificar consistencia data"/>
+      <ownedOperation xmi:id="_I2Gn4MgOEeiGN6N5S8hV9Q" name="solicitaRelatorio"/>
+      <ownedOperation xmi:id="_qy03sM2CEei9qPt5pbR36g" name="verificaConsistenciaData"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_lb9f8MgMEeiGN6N5S8hV9Q" name="tela_relatório">
       <ownedAttribute xmi:id="_K_AqkMgNEeiGN6N5S8hV9Q" name="controle_relatório" visibility="private" type="_hA64AMgMEeiGN6N5S8hV9Q" association="_K--1YMgNEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K_AqksgNEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K_AqkcgNEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_RRZvEM2GEei9qPt5pbR36g" name="solicitar periodo"/>
-      <ownedOperation xmi:id="_bZ6QIM2GEei9qPt5pbR36g" name="apresentar mensagem erro"/>
+      <ownedOperation xmi:id="_RRZvEM2GEei9qPt5pbR36g" name="solicitarPeriodo"/>
+      <ownedOperation xmi:id="_bZ6QIM2GEei9qPt5pbR36g" name="apresentarMensagemDeErro"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_K--1YMgNEeiGN6N5S8hV9Q" memberEnd="_K-_ccMgNEeiGN6N5S8hV9Q _K_AqkMgNEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_dp41UMgNEeiGN6N5S8hV9Q" memberEnd="_dp5cYMgNEeiGN6N5S8hV9Q _dp6qgMgNEeiGN6N5S8hV9Q"/>
@@ -2413,115 +2420,144 @@
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_9JC48cgPEeiGN6N5S8hV9Q" name="SendOperationEvent3" operation="_9JC48MgPEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_9JDgAMgPEeiGN6N5S8hV9Q" name="ReceiveOperationEvent3" operation="_9JC48MgPEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_6MVawMgQEeiGN6N5S8hV9Q" name="Cliente">
-      <ownedAttribute xmi:id="_FCsgUMgREeiGN6N5S8hV9Q" name="CPF" visibility="private"/>
+      <ownedAttribute xmi:id="_FCsgUMgREeiGN6N5S8hV9Q" name="idCliente" visibility="private"/>
       <ownedAttribute xmi:id="_aAmWQMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_aAlvMMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aAm9UcgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aAm9UMgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_0jnFcMgVEei1-YbUR8G-pg" name="buscar_cliente"/>
-      <ownedOperation xmi:id="_mMIfwM2KEeiUWsWhRzdcqA" name="preen"/>
+      <ownedAttribute xmi:id="_Q_bAgON6EeiBXshb1vdprw" name="nome" visibility="private"/>
+      <ownedAttribute xmi:id="_SeBFcON6EeiBXshb1vdprw" name="cpf" visibility="private"/>
+      <ownedAttribute xmi:id="_Sy6-cON6EeiBXshb1vdprw" name="sexo" visibility="private"/>
+      <ownedAttribute xmi:id="_TCLicON6EeiBXshb1vdprw" name="endereco" visibility="private"/>
+      <ownedAttribute xmi:id="_TP_U8ON6EeiBXshb1vdprw" name="cnh" visibility="private"/>
+      <ownedAttribute xmi:id="_Te4FgON6EeiBXshb1vdprw" name="nacionalidade" visibility="private"/>
+      <ownedAttribute xmi:id="_To8AcON6EeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedAttribute xmi:id="_Ty3YgON6EeiBXshb1vdprw" name="email" visibility="private"/>
+      <ownedAttribute xmi:id="_T45IAON6EeiBXshb1vdprw" name="dataDeNascimento" visibility="private"/>
+      <ownedOperation xmi:id="_0jnFcMgVEei1-YbUR8G-pg" name="buscarCliente"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_AdaXQMgREeiGN6N5S8hV9Q" name="Corretor">
       <ownedAttribute xmi:id="_YdzGwMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_YdyfsMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ydzt0cgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ydzt0MgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_5jEhoMjcEeiAe8bNAfWZjQ" name="dados_corretor" visibility="private"/>
-      <ownedOperation xmi:id="_3LIZ4MjcEeiAe8bNAfWZjQ" name="buscar_dados_corretor"/>
+      <ownedAttribute xmi:id="_5jEhoMjcEeiAe8bNAfWZjQ" name="idCorretor" visibility="private"/>
+      <ownedAttribute xmi:id="_atv8cON5EeiBXshb1vdprw" name="nome" visibility="private"/>
+      <ownedAttribute xmi:id="_a2oysON5EeiBXshb1vdprw" name="email" visibility="private"/>
+      <ownedAttribute xmi:id="_a7mLMON5EeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedOperation xmi:id="_3LIZ4MjcEeiAe8bNAfWZjQ" name="buscarDadosCorretor"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_DobhwMgREeiGN6N5S8hV9Q" name="Veículo">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DobhwMgREeiGN6N5S8hV9Q" name="Veiculo">
       <ownedAttribute xmi:id="_iRB7YMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_iRAGMMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iRB7YsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iRB7YcgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_BBNuMMjdEeiAe8bNAfWZjQ" name="dados_veiculo" visibility="private"/>
-      <ownedOperation xmi:id="_LVKxsMgWEei1-YbUR8G-pg" name="buscar_veiculo"/>
+      <ownedAttribute xmi:id="_JgqTcON7EeiBXshb1vdprw" name="RENAVAM" visibility="private"/>
+      <ownedAttribute xmi:id="_JlskcON7EeiBXshb1vdprw" name="modelo" visibility="private"/>
+      <ownedAttribute xmi:id="_JqWa8ON7EeiBXshb1vdprw" name="cor" visibility="private"/>
+      <ownedAttribute xmi:id="_JuUU8ON7EeiBXshb1vdprw" name="marca" visibility="private"/>
+      <ownedAttribute xmi:id="_JwYxgON7EeiBXshb1vdprw" name="placa" visibility="private"/>
+      <ownedAttribute xmi:id="_JyhfgON7EeiBXshb1vdprw" name="ano" visibility="private"/>
+      <ownedOperation xmi:id="_LVKxsMgWEei1-YbUR8G-pg" name="buscarVeiculo"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_HI4wwMgREeiGN6N5S8hV9Q" name="Tabela FIPE">
-      <ownedAttribute xmi:id="_LkyUUMgREeiGN6N5S8hV9Q" name="Valor FIPE" visibility="private"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HI4wwMgREeiGN6N5S8hV9Q" name="TabelaFIPE">
+      <ownedAttribute xmi:id="_LkyUUMgREeiGN6N5S8hV9Q" name="idVeiculo" visibility="private"/>
       <ownedAttribute xmi:id="_japO0MgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_janZoMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_japO0sgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_japO0cgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_YR9YQMgWEei1-YbUR8G-pg" name="consultar_valor_fipe"/>
-      <ownedOperation xmi:id="_Pz5LEM2NEeiUWsWhRzdcqA" name="consultar_valor_fipe"/>
+      <ownedAttribute xmi:id="_7qVVcON9EeiBXshb1vdprw" name="valorFIPE" visibility="private"/>
+      <ownedOperation xmi:id="_Pz5LEM2NEeiUWsWhRzdcqA" name="consultarValorFIPE"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_NxAUQMgREeiGN6N5S8hV9Q" name="Franquia">
-      <ownedAttribute xmi:id="_OvMa0MgREeiGN6N5S8hV9Q" name="Tipo_franquia" visibility="private"/>
-      <ownedAttribute xmi:id="_O8J4wMgREeiGN6N5S8hV9Q" name="Valor_franquia" visibility="private"/>
+      <ownedAttribute xmi:id="_OvMa0MgREeiGN6N5S8hV9Q" name="idFranquia" visibility="private"/>
+      <ownedAttribute xmi:id="_O8J4wMgREeiGN6N5S8hV9Q" name="valorFranquia" visibility="private"/>
       <ownedAttribute xmi:id="_m9wJMMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_m9viIMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m9wwQcgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m9wwQMgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_XmtgwON-EeiBXshb1vdprw" name="tipoFranquia" visibility="private"/>
+      <ownedOperation xmi:id="_FMF3MOOMEeiBXshb1vdprw" name="obterValorFranquia"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_V4Cs0MgREeiGN6N5S8hV9Q" name="Corretora">
-      <ownedAttribute xmi:id="_XDuc0MgREeiGN6N5S8hV9Q" name="Dados_corretora" visibility="private"/>
+      <ownedAttribute xmi:id="_XDuc0MgREeiGN6N5S8hV9Q" name="cnpjCorretora" visibility="private"/>
       <ownedAttribute xmi:id="_g5EC4MgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_g5CNsMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g5EC4sgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g5EC4cgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_su-ZkMgXEei1-YbUR8G-pg" name="buscar_dados_corretora"/>
+      <ownedAttribute xmi:id="_pIK-oON5EeiBXshb1vdprw" name="razaoSocial" visibility="private"/>
+      <ownedAttribute xmi:id="_qkfLoON5EeiBXshb1vdprw" name="endereco" visibility="private"/>
+      <ownedAttribute xmi:id="_qnZVsON5EeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedAttribute xmi:id="_qq5VoON5EeiBXshb1vdprw" name="email" visibility="private"/>
+      <ownedOperation xmi:id="_su-ZkMgXEei1-YbUR8G-pg" name="buscarDadosCorretora"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_bMOjQMgREeiGN6N5S8hV9Q" name="Acessórios">
-      <ownedAttribute xmi:id="_ci-TwMgREeiGN6N5S8hV9Q" name="Acessórios" visibility="private"/>
       <ownedAttribute xmi:id="_n78PwMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_n77BoMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n78PwsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n78PwcgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_3fIl8MgWEei1-YbUR8G-pg" name="buscar_acessorios"/>
+      <ownedAttribute xmi:id="_ipKXAON9EeiBXshb1vdprw" name="idAcessorio" visibility="private"/>
+      <ownedAttribute xmi:id="_iu0TEON9EeiBXshb1vdprw" name="tipoAcessorio" visibility="private"/>
+      <ownedAttribute xmi:id="_izdigON9EeiBXshb1vdprw" name="valorAcessorio" visibility="private"/>
+      <ownedAttribute xmi:id="_OK6icOODEeiBXshb1vdprw" name="idCompra" visibility="private"/>
+      <ownedOperation xmi:id="_3fIl8MgWEei1-YbUR8G-pg" name="buscarAcessorio"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_e1iMQMgREeiGN6N5S8hV9Q" name="Apólice">
+    <packagedElement xmi:type="uml:Class" xmi:id="_e1iMQMgREeiGN6N5S8hV9Q" name="Apolice">
       <ownedAttribute xmi:id="_lWFn0MgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_lWEZsMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lWGO4MgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lWFn0cgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_CzfwgM2FEeiUWsWhRzdcqA" name="valor_total_apolice" visibility="private"/>
-      <ownedAttribute xmi:id="_DNIYgM2FEeiUWsWhRzdcqA" name="favorecido" visibility="private"/>
-      <ownedAttribute xmi:id="_DRoeAM2FEeiUWsWhRzdcqA" name="veiculo" visibility="private"/>
-      <ownedAttribute xmi:id="_DT69AM2FEeiUWsWhRzdcqA" name="franquia" visibility="private"/>
-      <ownedAttribute xmi:id="_DVrQgM2FEeiUWsWhRzdcqA" name="valor_FIPE" visibility="private"/>
-      <ownedAttribute xmi:id="_DXRzAM2FEeiUWsWhRzdcqA" name="valor_determinado" visibility="private"/>
-      <ownedAttribute xmi:id="_DYzdAM2FEeiUWsWhRzdcqA" name="valor_liquido_premio" visibility="private"/>
-      <ownedAttribute xmi:id="_DaQOgM2FEeiUWsWhRzdcqA" name="valores_cobertura" visibility="private"/>
-      <ownedAttribute xmi:id="_DbtAAM2FEeiUWsWhRzdcqA" name="valor_premio" visibility="private"/>
-      <ownedAttribute xmi:id="_DdER8M2FEeiUWsWhRzdcqA" name="valor_iof" visibility="private"/>
-      <ownedOperation xmi:id="_JRs6gMjZEeiAe8bNAfWZjQ" name="gerar_apolice"/>
+      <ownedAttribute xmi:id="_FfD-4ON-EeiBXshb1vdprw" name="idApolice" visibility="private"/>
+      <ownedAttribute xmi:id="_FhH0YON-EeiBXshb1vdprw" name="dataInicio" visibility="private"/>
+      <ownedAttribute xmi:id="_FjB44ON-EeiBXshb1vdprw" name="dataFim" visibility="private"/>
+      <ownedAttribute xmi:id="_Fk3E4ON-EeiBXshb1vdprw" name="status" visibility="private"/>
+      <ownedAttribute xmi:id="_FmsQ4ON-EeiBXshb1vdprw" name="RENAVAM" visibility="private"/>
+      <ownedOperation xmi:id="_JRs6gMjZEeiAe8bNAfWZjQ" name="gerarApolice"/>
+      <ownedOperation xmi:id="_PizicOODEeiBXshb1vdprw" name="consultarDados"/>
+      <ownedOperation xmi:id="_QXcrcOODEeiBXshb1vdprw" name="alterarStatus"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_y6BOQMgREeiGN6N5S8hV9Q" name="Compra">
-      <ownedAttribute xmi:id="_1Na0QMgREeiGN6N5S8hV9Q" name="Valor_liquido_premios" visibility="private"/>
-      <ownedAttribute xmi:id="_28WbQMgREeiGN6N5S8hV9Q" name="Valor_franquia" visibility="private"/>
-      <ownedAttribute xmi:id="__C65wMgREeiGN6N5S8hV9Q" name="Valor_IOF" visibility="private"/>
-      <ownedAttribute xmi:id="__XhQwMgREeiGN6N5S8hV9Q" name="Valores_cobertura" visibility="private"/>
-      <ownedAttribute xmi:id="_AlCMwMgSEeiGN6N5S8hV9Q" name="Tipo_valores" visibility="private"/>
-      <ownedAttribute xmi:id="_3M-4QMgREeiGN6N5S8hV9Q" name="Valor_FIPE" visibility="private"/>
-      <ownedAttribute xmi:id="_3fXowMgREeiGN6N5S8hV9Q" name="Valor_determinado" visibility="private"/>
       <ownedAttribute xmi:id="_qRFiMMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_qRE7IMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qRFiMsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qRFiMcgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_vFK_YMjcEeiAe8bNAfWZjQ" name="attribute1" visibility="private"/>
-      <ownedOperation xmi:id="_qV8soMjbEeiAe8bNAfWZjQ" name="preencher_cliente"/>
-      <ownedOperation xmi:id="_tOBtAMjbEeiAe8bNAfWZjQ" name="preencher_veiculo"/>
-      <ownedOperation xmi:id="_xicIgMjbEeiAe8bNAfWZjQ" name="preencher_tipos_valores"/>
-      <ownedOperation xmi:id="_6MQeAMjbEeiAe8bNAfWZjQ" name="preencher_franquia"/>
-      <ownedOperation xmi:id="_9m2VkMjbEeiAe8bNAfWZjQ" name="preencher_valores_cobertura"/>
-      <ownedOperation xmi:id="_EUNlcMjcEeiAe8bNAfWZjQ" name="preencher_acessorios"/>
-      <ownedOperation xmi:id="_IFPnEMjcEeiAe8bNAfWZjQ" name="preencher_valor_liquido"/>
-      <ownedOperation xmi:id="_K4SWcMjcEeiAe8bNAfWZjQ" name="preencher_iof"/>
-      <ownedOperation xmi:id="_NxkQsMjcEeiAe8bNAfWZjQ" name="preencher_valor_total"/>
-      <ownedOperation xmi:id="_TJA2gMjcEeiAe8bNAfWZjQ" name="preencher_dados_corretor"/>
-      <ownedOperation xmi:id="_Z70AAMjcEeiAe8bNAfWZjQ" name="preencher_dados_corretora"/>
-      <ownedOperation xmi:id="_cwZAcMjcEeiAe8bNAfWZjQ" name="solicitar_dados"/>
-      <ownedOperation xmi:id="_9-FqUM2QEeiUWsWhRzdcqA" name="atualiza dados"/>
+      <ownedAttribute xmi:id="_bFFMcON7EeiBXshb1vdprw" name="idCompra" visibility="private"/>
+      <ownedAttribute xmi:id="_bJkq4ON7EeiBXshb1vdprw" name="idVeiculo" visibility="private"/>
+      <ownedAttribute xmi:id="_bL3J4ON7EeiBXshb1vdprw" name="idCorretor" visibility="private"/>
+      <ownedAttribute xmi:id="_bNik4ON7EeiBXshb1vdprw" name="cnpjCorretora" visibility="private"/>
+      <ownedAttribute xmi:id="_bPEO4ON7EeiBXshb1vdprw" name="tipoValores" visibility="private"/>
+      <ownedAttribute xmi:id="_bQrYcON7EeiBXshb1vdprw" name="valorLiquidoPremio" visibility="private"/>
+      <ownedAttribute xmi:id="_bSRT4ON7EeiBXshb1vdprw" name="valorIOF" visibility="private"/>
+      <ownedAttribute xmi:id="_bTuFYON7EeiBXshb1vdprw" name="valorFIPE" visibility="private"/>
+      <ownedAttribute xmi:id="_bVUn4ON7EeiBXshb1vdprw" name="valorCobertura" visibility="private"/>
+      <ownedAttribute xmi:id="_bXAC4ON7EeiBXshb1vdprw" name="valorDeterminado" visibility="private"/>
+      <ownedAttribute xmi:id="_bYwWYON7EeiBXshb1vdprw" name="idApolice" visibility="private"/>
+      <ownedAttribute xmi:id="_baNH4ON7EeiBXshb1vdprw" name="Veiculo" visibility="private"/>
+      <ownedAttribute xmi:id="_bb9bYON7EeiBXshb1vdprw" name="idFranquia" visibility="private"/>
+      <ownedAttribute xmi:id="_bfsr4ON7EeiBXshb1vdprw" name="idCliente" visibility="private"/>
+      <ownedOperation xmi:id="_qV8soMjbEeiAe8bNAfWZjQ" name="preencherCliente"/>
+      <ownedOperation xmi:id="_tOBtAMjbEeiAe8bNAfWZjQ" name="preencherVeiculo"/>
+      <ownedOperation xmi:id="_xicIgMjbEeiAe8bNAfWZjQ" name="preencherTipoValores"/>
+      <ownedOperation xmi:id="_6MQeAMjbEeiAe8bNAfWZjQ" name="preencherFranquia"/>
+      <ownedOperation xmi:id="_9m2VkMjbEeiAe8bNAfWZjQ" name="preencherValoresCobertura"/>
+      <ownedOperation xmi:id="_EUNlcMjcEeiAe8bNAfWZjQ" name="preencherAcessorios"/>
+      <ownedOperation xmi:id="_IFPnEMjcEeiAe8bNAfWZjQ" name="preencherValorLiquido"/>
+      <ownedOperation xmi:id="_K4SWcMjcEeiAe8bNAfWZjQ" name="preencherIOF"/>
+      <ownedOperation xmi:id="_NxkQsMjcEeiAe8bNAfWZjQ" name="preencherValorTotal"/>
+      <ownedOperation xmi:id="_TJA2gMjcEeiAe8bNAfWZjQ" name="preencherDadosCorretor"/>
+      <ownedOperation xmi:id="_Z70AAMjcEeiAe8bNAfWZjQ" name="preencherDadosCorretora"/>
+      <ownedOperation xmi:id="_cwZAcMjcEeiAe8bNAfWZjQ" name="solicitarDados"/>
+      <ownedOperation xmi:id="_9-FqUM2QEeiUWsWhRzdcqA" name="atualizaDados"/>
+      <ownedOperation xmi:id="_dY1dIOOOEeiBXshb1vdprw" name="preencheDadosCopra"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_H0NJMMgSEeiGN6N5S8hV9Q" name="Pagamento">
-      <ownedAttribute xmi:id="_IkIKQMgSEeiGN6N5S8hV9Q" name="Valor_total_apólice" visibility="private"/>
+      <ownedAttribute xmi:id="_IkIKQMgSEeiGN6N5S8hV9Q" name="valorTotalApolice" visibility="private"/>
       <ownedAttribute xmi:id="_o4DSsMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_o4CroMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o4D5wMgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o4DSscgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_NTAUMMgSEeiGN6N5S8hV9Q" name="controle_compra">
+    <packagedElement xmi:type="uml:Class" xmi:id="_NTAUMMgSEeiGN6N5S8hV9Q" name="ControleCompra">
       <ownedAttribute xmi:id="_Ydzt0sgUEeiGN6N5S8hV9Q" name="corretor" visibility="private" type="_AdaXQMgREeiGN6N5S8hV9Q" association="_YdyfsMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yd0U4cgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yd0U4MgUEeiGN6N5S8hV9Q" value="1"/>
@@ -2570,25 +2606,25 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qRGJQsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qRGJQcgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_lSr5EMgVEei1-YbUR8G-pg" name="solicitar_compra"/>
-      <ownedOperation xmi:id="_imvawMgWEei1-YbUR8G-pg" name="calcular_franquia"/>
-      <ownedOperation xmi:id="_-1d6UMgWEei1-YbUR8G-pg" name="calcular_valor_liquido_premios"/>
-      <ownedOperation xmi:id="_CTncMMgXEei1-YbUR8G-pg" name="calcular_iof"/>
-      <ownedOperation xmi:id="_Dz1RwMgXEei1-YbUR8G-pg" name="gerar_valor_total"/>
-      <ownedOperation xmi:id="_QoAH0MgXEei1-YbUR8G-pg" name="buscar_corretor"/>
-      <ownedOperation xmi:id="_jpe0sMgXEei1-YbUR8G-pg" name="buscar_dados_corretora"/>
-      <ownedOperation xmi:id="_DmNQAMgYEei1-YbUR8G-pg" name="sistema_gera_salva_apólice"/>
-      <ownedOperation xmi:id="_xOWhIMjWEeiAe8bNAfWZjQ" name="solicitar_dados_corretor"/>
-      <ownedOperation xmi:id="_Lx8CoMjZEeiAe8bNAfWZjQ" name="salvar_apolice"/>
-      <ownedOperation xmi:id="_rdV3gM2GEeiUWsWhRzdcqA" name="retorna erro"/>
-      <ownedOperation xmi:id="_BmyTgM2KEeiUWsWhRzdcqA" name="retorna erro"/>
-      <ownedOperation xmi:id="_OOkTYM2KEeiUWsWhRzdcqA" name="buscar_cliente"/>
-      <ownedOperation xmi:id="_L2b3AM2NEeiUWsWhRzdcqA" name="apresentar_tipos_valores"/>
-      <ownedOperation xmi:id="_h46aQM2OEeiUWsWhRzdcqA" name="apresentar_tipos_valores"/>
-      <ownedOperation xmi:id="_S3X4QM2PEeiUWsWhRzdcqA" name="solicita dados"/>
-      <ownedOperation xmi:id="_4gmjYM2PEeiUWsWhRzdcqA" name="cancela compra"/>
+      <ownedOperation xmi:id="_lSr5EMgVEei1-YbUR8G-pg" name="solicitaCompra"/>
+      <ownedOperation xmi:id="_imvawMgWEei1-YbUR8G-pg" name="calcularFranquia"/>
+      <ownedOperation xmi:id="_-1d6UMgWEei1-YbUR8G-pg" name="calcularValorLiquidoPremios"/>
+      <ownedOperation xmi:id="_CTncMMgXEei1-YbUR8G-pg" name="calcularIOF"/>
+      <ownedOperation xmi:id="_Dz1RwMgXEei1-YbUR8G-pg" name="gerarValorTotal"/>
+      <ownedOperation xmi:id="_QoAH0MgXEei1-YbUR8G-pg" name="buscarCorretor"/>
+      <ownedOperation xmi:id="_jpe0sMgXEei1-YbUR8G-pg" name="buscarDadosCorretora"/>
+      <ownedOperation xmi:id="_DmNQAMgYEei1-YbUR8G-pg" name="sistemaGeraSalvaApolice"/>
+      <ownedOperation xmi:id="_xOWhIMjWEeiAe8bNAfWZjQ" name="solicitarDadosCorretor"/>
+      <ownedOperation xmi:id="_Lx8CoMjZEeiAe8bNAfWZjQ" name="salvarApolice"/>
+      <ownedOperation xmi:id="_rdV3gM2GEeiUWsWhRzdcqA" name="retornarErro"/>
+      <ownedOperation xmi:id="_OOkTYM2KEeiUWsWhRzdcqA" name="buscarCliente"/>
+      <ownedOperation xmi:id="_L2b3AM2NEeiUWsWhRzdcqA" name="apresentarTipoValores"/>
+      <ownedOperation xmi:id="_S3X4QM2PEeiUWsWhRzdcqA" name="solicitaDados"/>
+      <ownedOperation xmi:id="_4gmjYM2PEeiUWsWhRzdcqA" name="cancelaCompra"/>
+      <ownedOperation xmi:id="_-HjoAOOMEeiBXshb1vdprw" name="calcularValorCobertura"/>
+      <ownedOperation xmi:id="_s1JPkOONEeiBXshb1vdprw" name="calculaValorAcessorios"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_QoK5MMgSEeiGN6N5S8hV9Q" name="tela_compra">
+    <packagedElement xmi:type="uml:Class" xmi:id="_QoK5MMgSEeiGN6N5S8hV9Q" name="TelaCompra">
       <ownedAttribute xmi:id="_eZ_YYMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_eZ9jMMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eZ_YYsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eZ_YYcgUEeiGN6N5S8hV9Q" value="1"/>
@@ -2623,18 +2659,20 @@
       <ownedOperation xmi:id="_5yBZ4M2NEeiUWsWhRzdcqA" name="solicita valor determinado"/>
       <ownedOperation xmi:id="_9ke-4M2NEeiUWsWhRzdcqA" name="solicita valor determinado"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_T-8AsMgSEeiGN6N5S8hV9Q" name="tela_confirma_compra">
+    <packagedElement xmi:type="uml:Class" xmi:id="_T-8AsMgSEeiGN6N5S8hV9Q" name="TelaConfirmaPedido">
       <ownedAttribute xmi:id="_dN_fUMgUEeiGN6N5S8hV9Q" name="controle_compra" visibility="private" type="_NTAUMMgSEeiGN6N5S8hV9Q" association="_dN-RMMgUEeiGN6N5S8hV9Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dN_fUsgUEeiGN6N5S8hV9Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dN_fUcgUEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_hNxukMjYEeiAe8bNAfWZjQ" name="apresentar_dados_compra"/>
-      <ownedOperation xmi:id="_khaCgMjYEeiAe8bNAfWZjQ" name="finalizar_compra"/>
-      <ownedOperation xmi:id="_uOd9sMjYEeiAe8bNAfWZjQ" name="confirmar_compra_pagar"/>
-      <ownedOperation xmi:id="__vcvsM2PEeiUWsWhRzdcqA" name="cancela compra"/>
-      <ownedOperation xmi:id="_Ew7FgM2QEeiUWsWhRzdcqA" name="solicita dados"/>
-      <ownedOperation xmi:id="_7uHLwM2QEeiUWsWhRzdcqA" name="solicita novos dados"/>
-      <ownedOperation xmi:id="_TO7KsM2REeiUWsWhRzdcqA" name="atualiza dados apresentados"/>
+      <ownedOperation xmi:id="_hNxukMjYEeiAe8bNAfWZjQ" name="apresentarDadosCompra"/>
+      <ownedOperation xmi:id="_khaCgMjYEeiAe8bNAfWZjQ" name="finalizarCompra"/>
+      <ownedOperation xmi:id="_uOd9sMjYEeiAe8bNAfWZjQ" name="confirmarCompraPagar"/>
+      <ownedOperation xmi:id="__vcvsM2PEeiUWsWhRzdcqA" name="cancelaCompra"/>
+      <ownedOperation xmi:id="_Ew7FgM2QEeiUWsWhRzdcqA" name="solicitaDados"/>
+      <ownedOperation xmi:id="_7uHLwM2QEeiUWsWhRzdcqA" name="solicitaNovosDados"/>
+      <ownedOperation xmi:id="_TO7KsM2REeiUWsWhRzdcqA" name="atualizaDadosApresentados"/>
+      <ownedOperation xmi:id="_amgOgOOFEeiBXshb1vdprw" name="solicitaCompraDeSeguro"/>
+      <ownedOperation xmi:id="_QN-v8OOPEeiBXshb1vdprw" name="mostraDados"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_YdyfsMgUEeiGN6N5S8hV9Q" memberEnd="_YdzGwMgUEeiGN6N5S8hV9Q _Ydzt0sgUEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_aAlvMMgUEeiGN6N5S8hV9Q" memberEnd="_aAmWQMgUEeiGN6N5S8hV9Q _aAnkYMgUEeiGN6N5S8hV9Q"/>
@@ -2648,7 +2686,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_n77BoMgUEeiGN6N5S8hV9Q" memberEnd="_n78PwMgUEeiGN6N5S8hV9Q _n7820MgUEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_o4CroMgUEeiGN6N5S8hV9Q" memberEnd="_o4DSsMgUEeiGN6N5S8hV9Q _o4D5wcgUEeiGN6N5S8hV9Q"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_qRE7IMgUEeiGN6N5S8hV9Q" memberEnd="_qRFiMMgUEeiGN6N5S8hV9Q _qRGJQMgUEeiGN6N5S8hV9Q"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Hby38MgMEei1-YbUR8G-pg" name="Controle_apólice">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Hby38MgMEei1-YbUR8G-pg" name="ControleApolice">
       <ownedAttribute xmi:id="_FaQBgsgNEei1-YbUR8G-pg" name="tela_editar_status_apólice" visibility="private" type="_ZvdckMgMEei1-YbUR8G-pg" association="_FaG3kMgNEei1-YbUR8G-pg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FaQBhMgNEei1-YbUR8G-pg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FaQBg8gNEei1-YbUR8G-pg" value="1"/>
@@ -2657,30 +2695,33 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J3vghsgNEei1-YbUR8G-pg" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J3vghcgNEei1-YbUR8G-pg"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_qV6RcMgMEei1-YbUR8G-pg" name="alterar_status_apolice"/>
-      <ownedOperation xmi:id="_Drfx8MgTEei1-YbUR8G-pg" name="verificar_consistencia"/>
+      <ownedOperation xmi:id="_qV6RcMgMEei1-YbUR8G-pg" name="alterarStatusApolice"/>
+      <ownedOperation xmi:id="_Drfx8MgTEei1-YbUR8G-pg" name="verificaConsistencia"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_WJbxEMgMEei1-YbUR8G-pg" name="Apólice">
-      <ownedAttribute xmi:id="_f_fQMMgMEei1-YbUR8G-pg" name="data_inicio" visibility="private"/>
-      <ownedAttribute xmi:id="_i-zhAMgMEei1-YbUR8G-pg" name="data_fim" visibility="private"/>
-      <ownedAttribute xmi:id="_jFNrAMgMEei1-YbUR8G-pg" name="status_apolice" visibility="private"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WJbxEMgMEei1-YbUR8G-pg" name="Apolice">
+      <ownedAttribute xmi:id="_f_fQMMgMEei1-YbUR8G-pg" name="idApolice" visibility="private"/>
+      <ownedAttribute xmi:id="_i-zhAMgMEei1-YbUR8G-pg" name="dataInicio" visibility="private"/>
+      <ownedAttribute xmi:id="_jFNrAMgMEei1-YbUR8G-pg" name="dataFim" visibility="private"/>
       <ownedAttribute xmi:id="_J3vggcgNEei1-YbUR8G-pg" name="controle_apólice" visibility="private" type="_Hby38MgMEei1-YbUR8G-pg" association="_J3vggMgNEei1-YbUR8G-pg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J3vgg8gNEei1-YbUR8G-pg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J3vggsgNEei1-YbUR8G-pg" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_6LIdsMgMEei1-YbUR8G-pg" name="consultar_dados"/>
-      <ownedOperation xmi:id="_-hRXgMgMEei1-YbUR8G-pg" name="alterar_status"/>
+      <ownedAttribute xmi:id="_IZnPAON_EeiBXshb1vdprw" name="status" visibility="private"/>
+      <ownedAttribute xmi:id="_IdNVkON_EeiBXshb1vdprw" name="RENAVAM" visibility="private"/>
+      <ownedOperation xmi:id="_6LIdsMgMEei1-YbUR8G-pg" name="consultarDados"/>
+      <ownedOperation xmi:id="_-hRXgMgMEei1-YbUR8G-pg" name="alterarStatus"/>
+      <ownedOperation xmi:id="_RFBf8ON_EeiBXshb1vdprw" name="gerarApolice"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_ZvdckMgMEei1-YbUR8G-pg" name="Tela_editar_status_apólice">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZvdckMgMEei1-YbUR8G-pg" name="TelaEditarStatusApolice">
       <ownedAttribute xmi:id="_FaG3kcgNEei1-YbUR8G-pg" name="controle_apólice" visibility="private" type="_Hby38MgMEei1-YbUR8G-pg" association="_FaG3kMgNEei1-YbUR8G-pg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FaQBgcgNEei1-YbUR8G-pg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FaQBgMgNEei1-YbUR8G-pg" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_B-RC0MgNEei1-YbUR8G-pg" name="alterar_status_apolice"/>
-      <ownedOperation xmi:id="_5lSW8MgSEei1-YbUR8G-pg" name="solicita_novo_status"/>
-      <ownedOperation xmi:id="_ynBH0MgTEei1-YbUR8G-pg" name="inserir_novo_status"/>
-      <ownedOperation xmi:id="_p8KGsM2IEei0XOuxZDcErg" name="Apresenta mensagem de erro"/>
-      <ownedOperation xmi:id="_66QqgNMCEeipUaHctl3P9A" name="cancela_operaçao"/>
+      <ownedOperation xmi:id="_B-RC0MgNEei1-YbUR8G-pg" name="alterarStatusApolice"/>
+      <ownedOperation xmi:id="_5lSW8MgSEei1-YbUR8G-pg" name="solicitaNovoStatus"/>
+      <ownedOperation xmi:id="_ynBH0MgTEei1-YbUR8G-pg" name="inserirNovoStatus"/>
+      <ownedOperation xmi:id="_p8KGsM2IEei0XOuxZDcErg" name="apresentaMensagemDeErro"/>
+      <ownedOperation xmi:id="_66QqgNMCEeipUaHctl3P9A" name="cancelaOperacao"/>
       <ownedReception xmi:id="_twHqUcgTEei1-YbUR8G-pg" signal="_twHqUMgTEei1-YbUR8G-pg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_FaG3kMgNEei1-YbUR8G-pg" memberEnd="_FaG3kcgNEei1-YbUR8G-pg _FaQBgsgNEei1-YbUR8G-pg"/>
@@ -5177,7 +5218,7 @@
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_9kfl8M2NEeiUWsWhRzdcqA" name="SendOperationEvent57" operation="_9ke-4M2NEeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_9kfl8c2NEeiUWsWhRzdcqA" name="ReceiveOperationEvent57" operation="_9ke-4M2NEeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:CreationEvent" xmi:id="_gTf7o82OEeiUWsWhRzdcqA" name="CreationEvent1"/>
-    <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_h46aQc2OEeiUWsWhRzdcqA" name="SendOperationEvent55" operation="_h46aQM2OEeiUWsWhRzdcqA"/>
+    <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_h46aQc2OEeiUWsWhRzdcqA" name="SendOperationEvent55"/>
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_j1Ek8M2OEeiUWsWhRzdcqA" name="SendOperationEvent58" operation="_L2b3AM2NEeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="__vdWwM2PEeiUWsWhRzdcqA" name="SendOperationEvent21" operation="__vcvsM2PEeiUWsWhRzdcqA"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="__vdWwc2PEeiUWsWhRzdcqA" name="ReceiveOperationEvent21" operation="__vcvsM2PEeiUWsWhRzdcqA"/>
@@ -5558,6 +5599,19 @@
       <ownedAttribute xmi:id="_Ht-5MOHsEeiJVZH4Y5PGzg" name="CNPJCorretora" visibility="private"/>
       <ownedAttribute xmi:id="_HhxpMOHsEeiJVZH4Y5PGzg" name="Finalizar:Botao" visibility="private"/>
       <ownedAttribute xmi:id="_HRqwoOHsEeiJVZH4Y5PGzg" name="Cancelar:Botao" visibility="private"/>
+      <ownedOperation xmi:id="_veacEOOGEeiBXshb1vdprw" name="solicitaNovaCompra"/>
+      <ownedOperation xmi:id="_p5F84OOHEeiBXshb1vdprw" name="insereCPF"/>
+      <ownedOperation xmi:id="_JXOXsOOIEeiBXshb1vdprw" name="solicitaCPF"/>
+      <ownedOperation xmi:id="_GzW3UOOJEeiBXshb1vdprw" name="preencheCliente"/>
+      <ownedOperation xmi:id="_qZb-8OOJEeiBXshb1vdprw" name="obterRENAVAM"/>
+      <ownedOperation xmi:id="_zd96gOOJEeiBXshb1vdprw" name="obterCPF"/>
+      <ownedOperation xmi:id="_E5D4YOOKEeiBXshb1vdprw" name="preencheVeiculo"/>
+      <ownedOperation xmi:id="_Ga3z8OOLEeiBXshb1vdprw" name="obterTipoValor"/>
+      <ownedOperation xmi:id="_h8NCAOOLEeiBXshb1vdprw" name="obterValorDeterminado"/>
+      <ownedOperation xmi:id="_xskjcOOLEeiBXshb1vdprw" name="obterTipoFranquia"/>
+      <ownedOperation xmi:id="_UhVi4OOMEeiBXshb1vdprw" name="apresentaValorFranquia"/>
+      <ownedOperation xmi:id="_HSkmEOONEeiBXshb1vdprw" name="obterAcessorios"/>
+      <ownedOperation xmi:id="_6s2mQOONEeiBXshb1vdprw" name="apresentaValorTotal"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Vd5l0OHsEeiJVZH4Y5PGzg" name="TelaConfirmarCompra">
       <generalization xmi:id="_vM0loOHtEeiJVZH4Y5PGzg" general="_sjp9QOHoEeiJVZH4Y5PGzg"/>
