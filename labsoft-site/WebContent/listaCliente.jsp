@@ -27,6 +27,10 @@
 			<th>Email</th>
 			<th>Telefone</th>
 			<th>Endereço</th>
+			<th>Sexo</th>
+			<th>Nacionalidade</th>
+			<th>DataNascimento</th>
+			<th>CNH</th>
 		</tr>
 		<% Set<Integer> keySet = clienteList.keySet(); %>
 		<% for(Integer id : keySet){%>
@@ -38,6 +42,10 @@
 				<td><%= cliente.getEmail() %></td>
 				<td><%= cliente.getTelefone() %></td>
 				<td><%= cliente.getEndereco() %></td>
+				<td><%= cliente.getSexo() %></td>
+				<td><%= cliente.getNacionalidade() %></td>
+				<td><%= cliente.getDataNascimento() %></td>
+				<td><%= cliente.getCNH() %></td>
 			</tr>
 		<% } %>
 	</table>

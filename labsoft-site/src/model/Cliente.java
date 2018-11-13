@@ -1,22 +1,31 @@
 package model;
 
 public class Cliente {
+	private int id;
 	private String cpf;
 	private String endereco;
 	private String telefone;
 	private String nome;
 	private String email;
-	private int id;
+	private String sexo;
+	private String nacionalidade;
+	private String dataNascimento;
+	private String cnh;
 	
 	public Cliente() {}
 	
-	public Cliente(String cpf, String endereco, String telefone, String nome, String email, int id) {
+	public Cliente(String cpf, String endereco, String telefone, String nome, String email, int id,
+			String sexo, String nacionalidade, String dataNascimento, String cnh) {
 		this.id = id;
 		this.cpf = cpf;
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.nome = nome;
 		this.email = email;
+		this.sexo = sexo;
+		this.nacionalidade = nacionalidade;
+		this.dataNascimento = dataNascimento;
+		this.cnh = cnh;
 	}
 	public String getCPF() {
 		return this.cpf;
@@ -51,9 +60,31 @@ public class Cliente {
 	public int getId() {
 		return id;
 	}
-	
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+	public String getSexo() {
+		return this.sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	public String getNacionalidade() {
+		return this.nacionalidade;
+	}
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	public String getDataNascimento() {
+		return this.dataNascimento;
+	}
+	public String getCNH() {
+		return this.cnh;
+	}
+	public void setCNH(String cnh) {
+		this.cnh = cnh;
+	}
 }

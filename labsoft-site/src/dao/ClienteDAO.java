@@ -28,9 +28,10 @@ public class ClienteDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("INSERT INTO Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email) "
+				String.format("INSERT INTO Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH)) "
 						+ "VALUES (%d, %s, %s, %s, %s)", 
-						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail()));
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), 
+						cliente.getEmail(), cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH()));
 		
 		statement.close();
 		
@@ -63,10 +64,10 @@ public class ClienteDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("UPDATE Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email) "
-						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, CPF = %s, Telefone = %s, Email = %s", 
-						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail()));
-		
+				String.format("UPDATE Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH)) "
+						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, CPF = %s, Telefone = %s, Email = %s, Sexo = %s, Nacionalidade = %s, DataNascimento = %s, CNH = %s", 
+						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail(), 
+						cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH()));
 		statement.close();
 		
 		return true;
@@ -95,7 +96,10 @@ public class ClienteDAO {
 		cliente.setTelefone(resultSet.getString("Telefone"));
 		cliente.setNome(resultSet.getString("Nome"));
 		cliente.setEmail(resultSet.getString("Email"));
-		
+		cliente.setSexo(resultSet.getString("Sexo"));
+		cliente.setNacionalidade(resultSet.getString("Nacionalidade"));
+		cliente.setDataNascimento(resultSet.getString("DataNascimento"));
+		cliente.setCNH(resultSet.getString("CNH"));
 		return cliente;
 	}
 }
