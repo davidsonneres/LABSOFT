@@ -1,7 +1,7 @@
 package model;
 
 import java.text.SimpleDateFormat;
-import java.sql.Date;
+import java.util.Date;
 
 public class Apolice {
 	public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
