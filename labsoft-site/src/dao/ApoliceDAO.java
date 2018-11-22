@@ -3,11 +3,12 @@ package dao;
 import java.util.Map;
 
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+import java.sql.Date;
 import java.util.HashMap;
 import model.Apolice;
 
@@ -26,12 +27,12 @@ public class ApoliceDAO {
 	}
 	
 	public boolean create(Apolice apolice) throws SQLException{
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Statement statement = connection.createStatement();
-		
 		statement.executeUpdate(
 				String.format("INSERT INTO Apolice (IdApolice, DataInicio, DataFim, Status)"
-						+ "VALUES (%d, %s, %s, %s)", 
-						apolice.getId(), apolice.getDataInicio(), apolice.getDataFim(), apolice.getStatus()));
+						+ "VALUES (%d, '%s', '%s', '%s');", 
+						apolice.getId(), format.format(apolice.getDataInicio()), format.format(apolice.getDataFim()), apolice.getStatus()));
 		
 		statement.close();
 		
@@ -40,15 +41,19 @@ public class ApoliceDAO {
 	
 	public Apolice findByPrimaryKey(int id) throws SQLException {
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Apolice WHERE IdApolice=%d", id));
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Apolice WHERE IdApolice=%d;", id));
+		Apolice apolice = null;
+		if (resultSet.next()){
+			apolice = createApolice(resultSet);	
+		}
 		statement.close();
-		return createApolice(resultSet);
+		return apolice;
 	}
 	
 	public Map<Integer, Apolice> getAll() throws SQLException {
 		Map<Integer, Apolice> apoliceList = new HashMap<>();
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM Cliente");
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM Cliente;");
 		
 		while(resultSet.next()) {
 			Apolice apolice = createApolice(resultSet);
@@ -61,12 +66,13 @@ public class ApoliceDAO {
 	}
 	
 	public boolean update(Apolice apolice) throws SQLException {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
 				String.format("UPDATE Apolice (IdApolice, DataInicio, DataFim, Status) "
-						+ "SET IdApolice = %d, DataInicio = %s, DataFim = %s, Status = %s", 
-						apolice.getId(), apolice.getDataInicio(), apolice.getDataFim(), apolice.getStatus()));
+						+ "SET IdApolice = %d, DataInicio = %s, DataFim = %s, Status = %s;", 
+						apolice.getId(), format.format(apolice.getDataInicio()), format.format(apolice.getDataFim()), apolice.getStatus()));
 		statement.close();
 		
 		return true;
@@ -76,7 +82,7 @@ public class ApoliceDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("DELETE FROM Apolice WHERE IdApolice=%d", id));
+				String.format("DELETE FROM Apolice WHERE IdApolice=%d;", id));
 		
 		statement.close();
 		
