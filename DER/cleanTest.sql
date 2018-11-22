@@ -1,0 +1,1 @@
+DELETE FROM Apolice WHERE IdApolice = 999;
