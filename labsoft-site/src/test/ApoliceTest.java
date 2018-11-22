@@ -14,7 +14,7 @@ public class ApoliceTest {
 	
 	@Before
 	public void cria() {
-		apolice = new Apolice(44444, new Date(1540112345), new Date(1540198765L), "ativo");
+		apolice = new Apolice(44444, new Date(1540112345), new Date(1540198765L), "Ativo");
 	}
 	@Test
 	public void testGetId() {
@@ -40,13 +40,13 @@ public class ApoliceTest {
 
 	@Test
 	public void testGetDataFim() {
-		assertEquals("Erro", new Date(1540212345), apolice.getDataFim());
+		assertEquals("Erro", new Date(1540212345).toString(), apolice.getDataFim().toString());
 	}
 
 	@Test
 	public void testSetDataFim() {
 		apolice.setDataFim(new Date(1540254321));
-		assertEquals("Erro", new Date(1540254321), apolice.getDataFim());
+		assertEquals("Erro", new Date(1540254321).toString(), apolice.getDataFim().toString());
 	}
 
 	@Test
