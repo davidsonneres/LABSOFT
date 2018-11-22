@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%@page import="java.util.ArrayList"%>
-	<%@page import="java.util.Date"%>
+	<%@page import="java.sql.Date"%>
 	<%@page import="java.util.List"%>
 	<%@page import="java.util.Set"%>
 	<%@page import="java.util.Map"%>

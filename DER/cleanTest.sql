@@ -1,1 +1,1 @@
-DELETE FROM Apolice WHERE IdApolice = 999;
+DELETE FROM Apolice WHERE IdApolice in (1002,1003,1004,1005);

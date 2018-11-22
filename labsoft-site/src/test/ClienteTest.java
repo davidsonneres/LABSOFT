@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class ClienteTest {
 	@Before 
 	public void cria(){
 		tester = new Cliente("123.123.132-99", "Rua Cebola", "(11)99999999", "Joao Silva", "joao.silva@email.com", 333333,
-			"masculino", "brasileira", new Date(1540144800), "12312312312", "12345");
+			"masculino", "brasileira", new Date(1540144800L), "12312312312", "12345");
 	}
 	
 	@Test

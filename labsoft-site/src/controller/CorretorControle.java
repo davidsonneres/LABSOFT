@@ -37,10 +37,10 @@ public class CorretorControle extends HttpServlet {
     public CorretorControle() {
         // TODO Auto-generated constructor stub
     	super();
-    	list.put(01, new Corretor(01,"Tomaz Ferreira","11912344321","tomaz.ferreira@hotmail.com"));
-    	list.put(02, new Corretor(02,"Bruno Lopez","11912355321","bruno.lopez@hotmail.com"));
-    	list.put(03, new Corretor(03,"Altenor Oliveira","11912564321","altnor.oliveira@hotmail.com"));
-    	list.put(04, new Corretor(04,"Alberto Ramos","11912904321","alberto.ramos@hotmail.com"));
+    	list.put(01, new Corretor(01,"Tomaz Ferreira","11912344321","tomaz.ferreira@hotmail.com", "1234"));
+    	list.put(02, new Corretor(02,"Bruno Lopez","11912355321","bruno.lopez@hotmail.com", "1234"));
+    	list.put(03, new Corretor(03,"Altenor Oliveira","11912564321","altnor.oliveira@hotmail.com", "1234"));
+    	list.put(04, new Corretor(04,"Alberto Ramos","11912904321","alberto.ramos@hotmail.com", "1234"));
     	
     }
 
