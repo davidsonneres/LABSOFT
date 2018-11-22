@@ -25,6 +25,9 @@
             <children xsi:type="notation:Shape" xmi:id="_EmlMEN4KEeiA1o3OyXZfAA" type="Column" element="_EmbbEN4KEeiA1o3OyXZfAA" fontName="Segoe UI">
               <layoutConstraint xsi:type="notation:Bounds" xmi:id="_EmlMEd4KEeiA1o3OyXZfAA"/>
             </children>
+            <children xsi:type="notation:Shape" xmi:id="_n5hocO51Eei94bfsg_xtaQ" type="Column" element="_n5YegO51Eei94bfsg_xtaQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_n5hoce51Eei94bfsg_xtaQ"/>
+            </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_HQJr2d4JEeiA1o3OyXZfAA" sortingKeys="Natural:Ascending"/>
           </children>
           <children xmi:id="_HQJr2t4JEeiA1o3OyXZfAA" visible="false" type="Index.Compartment">
@@ -106,6 +109,9 @@
             </children>
             <children xsi:type="notation:Shape" xmi:id="_fm5csuN5Eeilwf4BfuAFbw" type="Column" element="_fm5csON5Eeilwf4BfuAFbw" fontName="Segoe UI">
               <layoutConstraint xsi:type="notation:Bounds" xmi:id="_fm5cs-N5Eeilwf4BfuAFbw"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_s2bnUu51Eei94bfsg_xtaQ" type="Column" element="_s2bnUO51Eei94bfsg_xtaQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_s2bnU-51Eei94bfsg_xtaQ"/>
             </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_l07nWt4KEeiA1o3OyXZfAA" sortingKeys="Natural:Ascending"/>
           </children>
@@ -690,6 +696,9 @@
     <columns xmi:id="_EmbbEN4KEeiA1o3OyXZfAA" name="Telefone">
       <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EmbbEd4KEeiA1o3OyXZfAA" name="CHAR" length="20"/>
     </columns>
+    <columns xmi:id="_n5YegO51Eei94bfsg_xtaQ" name="Senha">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_n5Yege51Eei94bfsg_xtaQ" name="CHAR" length="50"/>
+    </columns>
     <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_j7pDEN4NEeiA1o3OyXZfAA" name="Corretor_PK" members="_gpjnQN4NEeiA1o3OyXZfAA" ForeignKey="_zi-qYOHpEeizwZ_l9KHKyw"/>
   </SQLTables:PersistentTable>
   <SQLTables:PersistentTable xmi:id="_GhINMN4KEeiA1o3OyXZfAA" name="Apolice" schema="_gwxb0N4IEeiA1o3OyXZfAA" referencingForeignKeys="_DKDAkOOEEeilwf4BfuAFbw">
@@ -737,6 +746,9 @@
     </columns>
     <columns xmi:id="_fm5csON5Eeilwf4BfuAFbw" name="CNH">
       <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_fm5cseN5Eeilwf4BfuAFbw" name="CHAR" length="30"/>
+    </columns>
+    <columns xmi:id="_s2bnUO51Eei94bfsg_xtaQ" name="Senha">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_s2bnUe51Eei94bfsg_xtaQ" name="CHAR" length="50"/>
     </columns>
     <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_xf-8YN4OEeiA1o3OyXZfAA" name="Cliente_PK" members="_8QwMwN4NEeiA1o3OyXZfAA" ForeignKey="_KGG5EOHqEeizwZ_l9KHKyw"/>
   </SQLTables:PersistentTable>
