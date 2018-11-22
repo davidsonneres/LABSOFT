@@ -2096,6 +2096,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dp7RkMgNEeiGN6N5S8hV9Q" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_tamuEOOCEeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedAttribute xmi:id="_cfjqEO52Eeih-J-5wDSAHw" name="senha" visibility="private"/>
       <ownedOperation xmi:id="_9JC48MgPEeiGN6N5S8hV9Q" name="buscarDadosCorretor"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_BDwX0MgMEeiGN6N5S8hV9Q" name="Apólice">
@@ -2541,6 +2542,7 @@
       <ownedAttribute xmi:id="_To8AcON6EeiBXshb1vdprw" name="telefone" visibility="private"/>
       <ownedAttribute xmi:id="_Ty3YgON6EeiBXshb1vdprw" name="email" visibility="private"/>
       <ownedAttribute xmi:id="_T45IAON6EeiBXshb1vdprw" name="dataDeNascimento" visibility="private"/>
+      <ownedAttribute xmi:id="_Zt9sMO52Eeih-J-5wDSAHw" name="senha" visibility="private"/>
       <ownedOperation xmi:id="_0jnFcMgVEei1-YbUR8G-pg" name="buscarCliente"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_AdaXQMgREeiGN6N5S8hV9Q" name="Corretor">
@@ -2552,6 +2554,7 @@
       <ownedAttribute xmi:id="_atv8cON5EeiBXshb1vdprw" name="nome" visibility="private"/>
       <ownedAttribute xmi:id="_a2oysON5EeiBXshb1vdprw" name="email" visibility="private"/>
       <ownedAttribute xmi:id="_a7mLMON5EeiBXshb1vdprw" name="telefone" visibility="private"/>
+      <ownedAttribute xmi:id="_acpXIO52Eeih-J-5wDSAHw" name="senha" visibility="private"/>
       <ownedOperation xmi:id="_3LIZ4MjcEeiAe8bNAfWZjQ" name="buscarDadosCorretor"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_DobhwMgREeiGN6N5S8hV9Q" name="Veiculo">

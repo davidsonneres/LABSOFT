@@ -11,6 +11,7 @@ public class Cliente {
 	private String nacionalidade;
 	private String dataNascimento;
 	private String cnh;
+	private String senha;
 	
 	public Cliente() {}
 	
@@ -87,4 +88,12 @@ public class Cliente {
 	public void setCNH(String cnh) {
 		this.cnh = cnh;
 	}
+	
+	public String getSenha() {
+		return this.senha;
+	}
+	
+	public void setSenha(String senha) {
+		this.senha = senha
+	}	
 }
