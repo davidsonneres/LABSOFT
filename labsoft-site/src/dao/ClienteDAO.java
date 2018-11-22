@@ -28,10 +28,11 @@ public class ClienteDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("INSERT INTO Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH)) "
-						+ "VALUES (%d, %s, %s, %s, %s)", 
+				String.format("INSERT INTO Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH, Senha)) "
+						+ "VALUES (%d, %s, %s, %s, %s, %s)", 
 						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), 
-						cliente.getEmail(), cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH()));
+						cliente.getEmail(), cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH(),
+						cliente.getSenha()));
 		
 		statement.close();
 		
@@ -64,10 +65,10 @@ public class ClienteDAO {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("UPDATE Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH)) "
-						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, CPF = %s, Telefone = %s, Email = %s, Sexo = %s, Nacionalidade = %s, DataNascimento = %s, CNH = %s", 
+				String.format("UPDATE Cliente (IdCliente, Nome, Endereco, CPF, Telefone, Email, Sexo, Nacionalidade, DataNascimento, CNH, Senha)) "
+						+ "SET IdCliente = %d, Nome = %s, Endereco = %s, CPF = %s, Telefone = %s, Email = %s, Sexo = %s, Nacionalidade = %s, DataNascimento = %s, CNH = %s, Senha = %s", 
 						cliente.getId(), cliente.getNome(), cliente.getEndereco(), cliente.getCPF(), cliente.getEndereco(), cliente.getEmail(), 
-						cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH()));
+						cliente.getSexo(), cliente.getNacionalidade(), cliente.getDataNascimento(), cliente.getCNH(), cliente.getSenha()));
 		statement.close();
 		
 		return true;
@@ -100,6 +101,7 @@ public class ClienteDAO {
 		cliente.setNacionalidade(resultSet.getString("Nacionalidade"));
 		cliente.setDataNascimento(resultSet.getString("DataNascimento"));
 		cliente.setCNH(resultSet.getString("CNH"));
+		cliente.setSenha(resultSet.getString("Senha"));
 		return cliente;
 	}
 }

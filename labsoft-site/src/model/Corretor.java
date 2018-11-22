@@ -7,6 +7,8 @@ public class Corretor {
 	private String email;
 	private String senha;
 	
+	public Corretor(){};
+	
 	public Corretor (int id, String nome, String telefone, String email){
 		this.idCorretor = id;
 		this.nome = nome;
@@ -26,7 +28,9 @@ public class Corretor {
 	public String getEmail(){
 		return email;
 	}
-
+	public void setIdCorretor(int idCorretor) {
+		this.idCorretor = idCorretor;
+	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -44,6 +48,6 @@ public class Corretor {
 	}
 	
 	public void setSenha(String senha) {
-		this.senha = senha
+		this.senha = senha;
 	}
 }

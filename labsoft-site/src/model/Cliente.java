@@ -94,6 +94,6 @@ public class Cliente {
 	}
 	
 	public void setSenha(String senha) {
-		this.senha = senha
+		this.senha = senha;
 	}	
 }
