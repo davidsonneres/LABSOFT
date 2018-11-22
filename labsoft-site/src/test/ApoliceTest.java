@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,7 @@ public class ApoliceTest {
 	Apolice apolice;
 	@Before
 	public void cria() {
-		apolice = new Apolice(44444, new Date(1540112345), new Date(1540198765), "ativo");
+		apolice = new Apolice(44444, new Date(1540112345), new Date(1540198765L), "ativo");
 	}
 	
 	@Test

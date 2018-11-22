@@ -27,12 +27,11 @@ public class ApoliceDAO {
 	}
 	
 	public boolean create(Apolice apolice) throws SQLException{
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Statement statement = connection.createStatement();
 		statement.executeUpdate(
 				String.format("INSERT INTO Apolice (IdApolice, DataInicio, DataFim, Status)"
 						+ "VALUES (%d, '%s', '%s', '%s');", 
-						apolice.getId(), format.format(apolice.getDataInicio()), format.format(apolice.getDataFim()), apolice.getStatus()));
+						apolice.getId(), apolice.getDataInicio(), apolice.getDataFim(), apolice.getStatus()));
 		
 		statement.close();
 		
@@ -66,19 +65,19 @@ public class ApoliceDAO {
 	}
 	
 	public boolean update(Apolice apolice) throws SQLException {
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(
-				String.format("UPDATE Apolice (IdApolice, DataInicio, DataFim, Status) "
-						+ "SET IdApolice = %d, DataInicio = %s, DataFim = %s, Status = %s;", 
-						apolice.getId(), format.format(apolice.getDataInicio()), format.format(apolice.getDataFim()), apolice.getStatus()));
+				String.format("UPDATE Apolice "
+						+ "SET DataInicio = '%s', DataFim = '%s', Status = '%s'"
+						+ "WHERE IdApolice = %d;", 
+						apolice.getDataInicio(), apolice.getDataFim(), apolice.getStatus(), apolice.getId()));
 		statement.close();
 		
 		return true;
 	}
 	
-	public boolean remove(int id) throws SQLException {
+	public boolean delete(int id) throws SQLException {
 		Statement statement = connection.createStatement();
 		
 		statement.executeUpdate(

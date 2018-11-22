@@ -42,8 +42,12 @@ public class ClienteDAO {
 	public Cliente findByPrimaryKey(int id) throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Cliente WHERE IdCliente=%d", id));
+		Cliente cliente = null;
+		if (resultSet.next()) {
+			cliente = createClient(resultSet);
+		} 
 		statement.close();
-		return createClient(resultSet);
+		return cliente;
 	}
 	
 	public Map<Integer, Cliente> getAll() throws SQLException {
@@ -99,7 +103,7 @@ public class ClienteDAO {
 		cliente.setEmail(resultSet.getString("Email"));
 		cliente.setSexo(resultSet.getString("Sexo"));
 		cliente.setNacionalidade(resultSet.getString("Nacionalidade"));
-		cliente.setDataNascimento(resultSet.getString("DataNascimento"));
+		cliente.setDataNascimento(resultSet.getDate("DataNascimento"));
 		cliente.setCNH(resultSet.getString("CNH"));
 		cliente.setSenha(resultSet.getString("Senha"));
 		return cliente;
