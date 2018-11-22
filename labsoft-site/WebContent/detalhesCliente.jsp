@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<%@page import="java.util.Date"%>
+	<%@page import="java.sql.Date"%>
 	<%@page import="java.util.List"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Cliente" %>

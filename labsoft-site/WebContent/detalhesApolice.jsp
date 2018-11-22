@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@page import="java.util.Date"%>
+	<%@page import="java.sql.Date"%>
 	<%@page import="java.util.List"%>
 	<%@page import="java.util.Map"%>
 	<%@page import="java.text.SimpleDateFormat" %>
