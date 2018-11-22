@@ -9,11 +9,12 @@ public class Corretor {
 	
 	public Corretor(){};
 	
-	public Corretor (int id, String nome, String telefone, String email){
+	public Corretor (int id, String nome, String telefone, String email, String senha){
 		this.idCorretor = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
+		this.senha = senha;
 	}
 	
 	public int getIdCorretor(){

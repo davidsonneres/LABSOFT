@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class Cliente {
 	private int id;
 	private String cpf;
@@ -9,14 +11,14 @@ public class Cliente {
 	private String email;
 	private String sexo;
 	private String nacionalidade;
-	private String dataNascimento;
+	private Date dataNascimento;
 	private String cnh;
 	private String senha;
 	
 	public Cliente() {}
 	
 	public Cliente(String cpf, String endereco, String telefone, String nome, String email, int id,
-			String sexo, String nacionalidade, String dataNascimento, String cnh) {
+			String sexo, String nacionalidade, Date dataNascimento, String cnh, String senha) {
 		this.id = id;
 		this.cpf = cpf;
 		this.endereco = endereco;
@@ -27,6 +29,7 @@ public class Cliente {
 		this.nacionalidade = nacionalidade;
 		this.dataNascimento = dataNascimento;
 		this.cnh = cnh;
+		this.senha = senha;
 	}
 	public String getCPF() {
 		return this.cpf;
@@ -76,10 +79,10 @@ public class Cliente {
 	public void setNacionalidade(String nacionalidade) {
 		this.nacionalidade = nacionalidade;
 	}
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public String getDataNascimento() {
+	public Date getDataNascimento() {
 		return this.dataNascimento;
 	}
 	public String getCNH() {
