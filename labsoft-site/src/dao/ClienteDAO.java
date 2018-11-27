@@ -50,6 +50,17 @@ public class ClienteDAO {
 		return cliente;
 	}
 	
+	
+	public Cliente findByPrimaryCPF(String cpf) throws SQLException {
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Cliente WHERE CPF='%s'", cpf));
+		Cliente cliente = null;
+		if (resultSet.next()) {
+			cliente = createClient(resultSet);
+		} 
+		statement.close();
+		return cliente;
+	}
 	public Map<Integer, Cliente> getAll() throws SQLException {
 		Map<Integer, Cliente> clientList = new HashMap<>();
 		Statement statement = connection.createStatement();

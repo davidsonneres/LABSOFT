@@ -30,6 +30,7 @@ public class MainControle extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 	/**
@@ -41,6 +42,7 @@ public class MainControle extends HttpServlet {
 		
 		// TODO VERIFICAR LOGIN
 		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 }

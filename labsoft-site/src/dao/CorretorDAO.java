@@ -27,8 +27,12 @@ public class CorretorDAO {
 	public Corretor findByPrimaryKey(int id) throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Corretor WHERE IdCorretor=%d", id));
+		Corretor corretor = null;
+		if (resultSet.next()) {
+			corretor = createCorretor(resultSet);
+		}
 		statement.close();
-		return createCorretor(resultSet);
+		return corretor;
 	}
 	
 	public Map<Integer, Corretor> getAll() throws SQLException {
