@@ -12,31 +12,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script>
-	    	function checkCPF() {
-	    		cpf = $("#input-cpf").val();
-	    		window.location.href = "ControleCompra?type=cpf&cpf=" + cpf;
-	    		//alert("CPF: " + cpf);
-	    		//$.ajax({
-	    		//	url: "http://localhost:8080/labsoft-site/ControleCompra?type=cpf&cpf=" + cpf,
-	    		//	type: "GET",
-	    		//	success: function(result) {
-	    		//		alert(result);
-	    		//		console.log(result);
-	    		//	},
-		    	//	error: function(error) {
-		    	//		alert(error);
-		    	//		console.log(error);
-		    	//	}
-	    		//});
-	    	}
-	    </script>
 
     <title>Comprar seguro</title>
 </head>
 <body>
 	<%@page import="model.Cliente"%>
+	<%@page import="model.Veiculo" %>
 	<% Cliente cliente = (Cliente) request.getAttribute("cliente");%>
+	<% Veiculo veiculo = (Veiculo) request.getAttribute("veiculo");%>
 	<% Boolean firstAccess = (Boolean) request.getAttribute("firstAccess"); %>
 	
     <div class="container">
@@ -44,6 +27,13 @@
     	<% if (firstAccess != null && cliente == null) { %>
 		<div class="alert alert-danger alert-dismissible fade show" role="alert">
 		  CPF Inválido
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<% } else if (firstAccess != null & veiculo == null){%>
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		  RENAVAM Inválido
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		    <span aria-hidden="true">&times;</span>
 		  </button>
@@ -125,25 +115,48 @@
 
           <h2>Dados veículo</h2>
           <div class="form-row">
+            <div class="form-group col-sm-10">
+              <label for="input-renavam">RENAVAM</label>
+              <input type="text" name="renavam" class="form-control" id="input-renavam" placeholder="Digite o RENAVAM do veículo"
+              		value=<%= veiculo != null ? veiculo.getRenavam() : "" %>>
+            </div>
+
+			<div class="form-group col-sm-2">
+			    <input type="button" value="Verificar" id="button-verificar-renavam" onClick="checkRenavam()">
+			</div>
+          </div>
+          
+          
+          <div class="form-row">
             <div class="form-group col-sm-6">
               <label for="input-marca">Marca</label>
-              <input type="text" class="form-control" id="input-marca" placeholder="Marca">
+              <input type="text" class="form-control" id="input-marca" placeholder="Marca"
+              		value=<%= veiculo != null ? veiculo.getMarca() : "" %> <%= veiculo != null ? "disabled" : "" %>>
             </div>
 
             <div class="form-group col-sm-6">
               <label for="input-modelo">Modelo</label>
-              <input type="text" class="form-control" id="input-modelo" placeholder="Modelo">
+              <input type="text" class="form-control" id="input-modelo" placeholder="Modelo"
+              		value=<%= veiculo != null ? veiculo.getModelo() : "" %> <%= veiculo != null ? "disabled" : "" %>>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="input-tipo-valor">Tipo de Valor</label>
-            <select class="form-control" id="input-tipo-valor">
-              <option>FIPE</option>
-              <option>Determinado</option>
-            </select>
-          </div>
-
+		  
+		  <div>
+			  <div class="col-sm-6">
+		          <div class="form-group">
+		            <label for="input-tipo-valor">Tipo de Valor</label>
+		            <select class="form-control" id="input-tipo-valor" onchange="insertCamposValorDeterminado()">
+		              <option selected="selected">FIPE</option>
+		              <option>Determinado</option>
+		            </select>
+		          </div>
+	          </div>
+	          <div class="col-sm-6">
+	          	<span id="valor-determinado">
+	          		<label id="valor-determinado-valor" <%= veiculo == null ? "disabled" : "" %>><%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "" %></label>
+	          	</span>
+	          </div>
+		  </div>
           <div class="form-group">
             <label for="input-franquia">Franquia</label>
             <select class="form-control" id="input-franquia">
@@ -177,5 +190,33 @@
         </form>
       </div>
     </div>
+    
+    <script>
+		function insertCamposValorDeterminado() {
+			container = $("#valor-determinado");
+			container.empty();
+			if ($("#input-tipo-valor option:selected").text() == "FIPE") {
+				$("<label id='valor-determinado-valor'>" + <%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "" %> + "</label>").appendTo(container);
+			} else {
+				$("<input id="valor-determinado-valor" placeholder="Digite o valor"></input>").appendTo(container);
+			}
+		};
+	
+    	function checkCPF() {
+    		cpf = $("#input-cpf").val();
+    		window.location.href = "ControleCompra?type=cpf&cpf=" + cpf;
+    	}
+    	
+    	function checkRenavam() {
+    		renavam = $("#input-renavam").val();
+    		url = window.location.href;
+    		renavamIndex = url.indexOf("&renavam=");
+    		if (renavamIndex < 0) {
+    			window.location.href += "&renavam=" + renavam;
+    		} else {
+    			window.location.href = url.substring(0, renavamIndex) + "&renavam=" + renavam;
+    		}	
+    	}
+    </script>
   </body>
 </html>

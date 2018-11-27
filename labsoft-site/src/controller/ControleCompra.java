@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.ClienteDAO;
+import dao.VeiculoDAO;
 
 /**
  * Servlet implementation class ControleCompra
@@ -19,12 +20,14 @@ import dao.ClienteDAO;
 public class ControleCompra extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ClienteDAO clienteDAO;   
+    private VeiculoDAO veiculoDAO;
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ControleCompra() {
         super();
         clienteDAO = new ClienteDAO();
+        veiculoDAO = new VeiculoDAO();
     }
 
 	/**
@@ -39,6 +42,15 @@ public class ControleCompra extends HttpServlet {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
+			
+			if (request.getParameter("renavam") != null) {
+				try {
+					request.setAttribute("veiculo", veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaCompra.jsp");
