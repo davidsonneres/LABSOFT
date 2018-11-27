@@ -3,7 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<%@page import="model.Cliente"%>
+	<%@page import="model.Veiculo" %>
+	<% Cliente cliente = (Cliente) request.getAttribute("cliente");%>
+	<% Veiculo veiculo = (Veiculo) request.getAttribute("veiculo");%>
+	<% Boolean firstAccess = (Boolean) request.getAttribute("firstAccess"); %>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -13,15 +19,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+	<script>
+		function insertCamposValorDeterminado() {
+			container = $("#valor-determinado");
+			container.empty();
+			if ($("#input-tipo-valor option:selected").text() == "FIPE") {
+				$("<label id='valor-determinado-valor'>" + "<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>" + "</label>").appendTo(container);
+			} else {
+				$("<input id='valor-determinado-valor' placeholder='Digite o valor'></input>").appendTo(container);
+			}
+		};
+	
+    	function checkCPF() {
+    		cpf = $("#input-cpf").val();
+    		window.location.href = "ControleCompra?type=cpf&cpf=" + cpf;
+    	}
+    	
+    	function checkRenavam() {
+    		renavam = $("#input-renavam").val();
+    		url = window.location.href;
+    		renavamIndex = url.indexOf("&renavam=");
+    		if (renavamIndex < 0) {
+    			window.location.href += "&renavam=" + renavam;
+    		} else {
+    			window.location.href = url.substring(0, renavamIndex) + "&renavam=" + renavam;
+    		}	
+    	}
+    </script>
+
     <title>Comprar seguro</title>
 </head>
 <body>
-	<%@page import="model.Cliente"%>
-	<%@page import="model.Veiculo" %>
-	<% Cliente cliente = (Cliente) request.getAttribute("cliente");%>
-	<% Veiculo veiculo = (Veiculo) request.getAttribute("veiculo");%>
-	<% Boolean firstAccess = (Boolean) request.getAttribute("firstAccess"); %>
-	
+
     <div class="container">
     
     	<% if (firstAccess != null && cliente == null) { %>
@@ -152,8 +181,9 @@
 		          </div>
 	          </div>
 	          <div class="col-sm-6">
+	          	<label>Valor em R$</label>
 	          	<span id="valor-determinado">
-	          		<label id="valor-determinado-valor" <%= veiculo == null ? "disabled" : "" %>><%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "" %></label>
+	          		<label id="valor-determinado-valor" <%= veiculo == null ? "disabled" : "" %>><%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %></label>
 	          	</span>
 	          </div>
 		  </div>
@@ -191,32 +221,5 @@
       </div>
     </div>
     
-    <script>
-		function insertCamposValorDeterminado() {
-			container = $("#valor-determinado");
-			container.empty();
-			if ($("#input-tipo-valor option:selected").text() == "FIPE") {
-				$("<label id='valor-determinado-valor'>" + <%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "" %> + "</label>").appendTo(container);
-			} else {
-				$("<input id="valor-determinado-valor" placeholder="Digite o valor"></input>").appendTo(container);
-			}
-		};
-	
-    	function checkCPF() {
-    		cpf = $("#input-cpf").val();
-    		window.location.href = "ControleCompra?type=cpf&cpf=" + cpf;
-    	}
-    	
-    	function checkRenavam() {
-    		renavam = $("#input-renavam").val();
-    		url = window.location.href;
-    		renavamIndex = url.indexOf("&renavam=");
-    		if (renavamIndex < 0) {
-    			window.location.href += "&renavam=" + renavam;
-    		} else {
-    			window.location.href = url.substring(0, renavamIndex) + "&renavam=" + renavam;
-    		}	
-    	}
-    </script>
   </body>
 </html>
