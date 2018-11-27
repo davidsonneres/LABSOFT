@@ -61,10 +61,10 @@
       </div>
     </div>
 
-	<a href="CompraControle" type="button" class="btn btn-success">Comprar Seguro</a>
-	<a href="RelatorioControle" type="button" class="btn btn-success">Gerar Relatórios</a>
-	<a href="ApoliceStatusControle" type="button" class="btn btn-success">Alterar Status de Apólice</a>
-	<a href="ApolicePendenteControle" type="button" class="btn btn-success">Apólice Pendente</a>
+	<a href="ControleCompra" type="button" class="btn btn-success">Comprar Seguro</a>
+	<a href="ControleRelatorio" type="button" class="btn btn-success">Gerar Relatórios</a>
+	<a href="ControleApoliceStatus" type="button" class="btn btn-success">Alterar Status de Apólice</a>
+	<a href="ControleApolicePendente" type="button" class="btn btn-success">Apólice Pendente</a>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

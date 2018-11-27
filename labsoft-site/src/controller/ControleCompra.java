@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +10,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ClienteDAO;
+
 /**
- * Servlet implementation class MainControle
+ * Servlet implementation class ControleCompra
  */
-@WebServlet("/")
-public class MainControle extends HttpServlet {
+@WebServlet("/ControleCompra")
+public class ControleCompra extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    private ClienteDAO clienteDAO;   
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MainControle() {
+    public ControleCompra() {
         super();
-        // TODO Auto-generated constructor stub
+        clienteDAO = new ClienteDAO();
     }
 
 	/**
@@ -29,8 +32,18 @@ public class MainControle extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+		if (request.getParameter("type") != null && request.getParameter("type").equals("cpf")) {
+			try {
+				request.setAttribute("cliente", clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
+				request.setAttribute("firstAccess", false);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaCompra.jsp");
 		requestDispatcher.forward(request, response);
+		
 	}
 
 	/**
@@ -38,11 +51,7 @@ public class MainControle extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		doGet(request, response);
-		
-		// TODO VERIFICAR LOGIN
-		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
-		requestDispatcher.forward(request, response);
+		doGet(request, response);
 	}
 
 }
