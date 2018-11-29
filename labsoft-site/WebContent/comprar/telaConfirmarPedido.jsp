@@ -4,6 +4,7 @@
 <html>
 <head>
 	<%@page import="model.Compra" %>
+	<%@page import="model.Acessorio" %>
 	<% Compra compra = (Compra) request.getAttribute("compra");%>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -36,7 +37,16 @@
           	<p>Determinado: R$ <%= compra.getValorDeterminado() %>
           <% } %>
 
-          <p>Acessórios: Vidro: R$10.000,00</p>
+          <p>Acessórios:</p>
+          <% if (compra.getAcessorios().size() > 0) {%>
+          	<% for (Acessorio acessorio : compra.getAcessorios()) { %>
+          		<p><%= acessorio.getTipoAcessorio() %>: R$ <%= acessorio.getValorAcessorio() %></p>
+          	<% } %>
+
+          <% } else { %>
+          <p>Nenhum</p>
+          <% } %>
+          <br>
           <p>IOF: R$5.000,00</p>
           <p>Total: R$200.000,00</p>
 		

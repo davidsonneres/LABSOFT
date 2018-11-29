@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.ClienteDAO;
 import dao.VeiculoDAO;
+import dao.AcessorioDAO;
+import model.Acessorio;
 import model.Cliente;
 import model.Compra;
 
@@ -23,6 +27,7 @@ public class ControleCompra extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ClienteDAO clienteDAO;   
     private VeiculoDAO veiculoDAO;
+    private AcessorioDAO acessorioDAO;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -30,6 +35,7 @@ public class ControleCompra extends HttpServlet {
         super();
         clienteDAO = new ClienteDAO();
         veiculoDAO = new VeiculoDAO();
+        acessorioDAO = new AcessorioDAO();
     }
 
 	/**
@@ -74,6 +80,21 @@ public class ControleCompra extends HttpServlet {
 			if (tipoValor.equals("Determinado")) {
 				compra.setValorDeterminado(Float.valueOf((String) request.getParameter("valor-determinado")));
 			}
+			
+			List<Acessorio> acessorioList = new ArrayList<>();
+			System.out.println((String) request.getParameter("vidro"));
+			System.out.println((String) request.getParameter("retrovisor"));
+			
+			if (request.getParameter("vidro") != null) {
+				acessorioList.add(acessorioDAO.findByType("Vidro"));
+			}
+			
+			if (request.getParameter("retrovisor") != null) {
+				acessorioList.add(acessorioDAO.findByType("Retrovisor"));
+			}
+			
+			compra.setAcessorios(acessorioList);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

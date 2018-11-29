@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 public class Compra {
 	private int idCompra;
 	private int idCorretor;
@@ -13,12 +15,13 @@ public class Compra {
 	private float valorDeterminado;
 	private Veiculo veiculo;
 	private Cliente cliente;
+	private List<Acessorio> acessorioList;
 	
 	public Compra() {}
 	
 	public Compra(int idCompra, int idCorretor, int idApolice, int idFranquia,
 			String cnpjCorretora, String tipoValor, float valorLiquidoPremios, float valorIOF, float valorFIPE,
-			float valorCobertura, float valorDeterminado, Veiculo veiculo, Cliente cliente){
+			float valorCobertura, float valorDeterminado, Veiculo veiculo, Cliente cliente, List<Acessorio> acessorioList){
 		this.idCompra = idCompra;
 		this.idCorretor = idCorretor;
 		this.idApolice = idApolice;
@@ -31,6 +34,7 @@ public class Compra {
 		this.valorDeterminado = valorDeterminado;
 		this.veiculo = veiculo;
 		this.cliente = cliente;
+		this.acessorioList = acessorioList;
 	}
 	
 	
@@ -105,6 +109,12 @@ public class Compra {
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+	public List<Acessorio> getAcessorios() {
+		return this.acessorioList;
+	}
+	public void setAcessorios(List<Acessorio> acessorioList) {
+		this.acessorioList = acessorioList;
 	}
 	
 	

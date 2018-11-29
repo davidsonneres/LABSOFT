@@ -199,12 +199,12 @@
           <h2>Acessórios</h2>
 
           <div class="form-check">
-           <input type="checkbox" class="form-check-input" id="vidro">
+           <input name="vidro" type="checkbox" class="form-check-input" id="vidro">
            <label class="form-check-label" for="vidro">Vidro</label>
          </div>
 
          <div class="form-check">
-           <input type="checkbox" class="form-check-input" id="retrovisor">
+           <input name="retrovisor" type="checkbox" class="form-check-input" id="retrovisor">
            <label class="form-check-label" for="retrovisor">Retrovisor</label>
           </div>
 
