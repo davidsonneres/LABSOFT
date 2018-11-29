@@ -16,12 +16,13 @@ public class Compra {
 	private Veiculo veiculo;
 	private Cliente cliente;
 	private List<Acessorio> acessorioList;
+	private String tipoFranquia;
 	
 	public Compra() {}
 	
 	public Compra(int idCompra, int idCorretor, int idApolice, int idFranquia,
 			String cnpjCorretora, String tipoValor, float valorLiquidoPremios, float valorIOF, float valorFIPE,
-			float valorCobertura, float valorDeterminado, Veiculo veiculo, Cliente cliente, List<Acessorio> acessorioList){
+			float valorCobertura, float valorDeterminado, Veiculo veiculo, Cliente cliente, List<Acessorio> acessorioList, String tipoFranquia){
 		this.idCompra = idCompra;
 		this.idCorretor = idCorretor;
 		this.idApolice = idApolice;
@@ -35,6 +36,7 @@ public class Compra {
 		this.veiculo = veiculo;
 		this.cliente = cliente;
 		this.acessorioList = acessorioList;
+		this.tipoFranquia = tipoFranquia;
 	}
 	
 	
@@ -115,6 +117,13 @@ public class Compra {
 	}
 	public void setAcessorios(List<Acessorio> acessorioList) {
 		this.acessorioList = acessorioList;
+	}
+	public String getTipoFranquia() {
+		return this.tipoFranquia;
+	}
+	
+	public void setTipoFranquia(String tipoFranquia) {
+		this.tipoFranquia = tipoFranquia;
 	}
 	
 	

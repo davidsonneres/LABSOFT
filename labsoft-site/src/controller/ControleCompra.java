@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import dao.AcessorioDAO;
 import model.Acessorio;
 import model.Cliente;
 import model.Compra;
+import util.Calcula;
 
 /**
  * Servlet implementation class ControleCompra
@@ -77,22 +79,34 @@ public class ControleCompra extends HttpServlet {
 			compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
 			String tipoValor = (String) request.getParameter("tipo-valor");
 			compra.setTipoValor(tipoValor);
+			float valorCobertura = 0;
 			if (tipoValor.equals("Determinado")) {
-				compra.setValorDeterminado(Float.valueOf((String) request.getParameter("valor-determinado")));
+				valorCobertura = Float.valueOf((String) request.getParameter("valor-determinado"));
+				compra.setValorDeterminado(valorCobertura);
+			} else {
+				valorCobertura = compra.getVeiculo().getFipe().getValorFIPE();
 			}
 			
 			List<Acessorio> acessorioList = new ArrayList<>();
-			System.out.println((String) request.getParameter("vidro"));
-			System.out.println((String) request.getParameter("retrovisor"));
 			
+			float valorAcessorios = 0;
 			if (request.getParameter("vidro") != null) {
-				acessorioList.add(acessorioDAO.findByType("Vidro"));
+				Acessorio acessorio = acessorioDAO.findByType("Vidro");
+				acessorioList.add(acessorio);
+				valorAcessorios += acessorio.getValorAcessorio();
 			}
 			
 			if (request.getParameter("retrovisor") != null) {
-				acessorioList.add(acessorioDAO.findByType("Retrovisor"));
+				Acessorio acessorio = acessorioDAO.findByType("Retrovisor");
+				acessorioList.add(acessorio);
+				valorAcessorios += acessorio.getValorAcessorio();
 			}
 			
+			compra.setTipoFranquia((String) request.getParameter("franquia"));
+			compra.setValorCobertura(valorCobertura);
+			double premioLiquido = Calcula.premioLiquido(valorCobertura, compra.getTipoFranquia(), calculaIdade(compra.getCliente().getDataNascimento(), new java.util.Date()), valorAcessorios, 100000);
+			compra.setValorLiquidoPremios((float) premioLiquido);
+			compra.setValorIOF((float) Calcula.calculaIOF(premioLiquido));
 			compra.setAcessorios(acessorioList);
 			
 		} catch (SQLException e) {
@@ -105,5 +119,10 @@ public class ControleCompra extends HttpServlet {
 		requestDispatcher.forward(request, response);
 	}
 
+	private int calculaIdade(Date nascimento, java.util.Date hoje) {
+		int anoNascimento = Integer.valueOf(nascimento.toString().split("-")[0]);
+		int anoHoje =  hoje.getYear();
+		return anoHoje - anoNascimento;
+	}
 
 }

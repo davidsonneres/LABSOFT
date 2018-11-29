@@ -47,11 +47,13 @@
           <p>Nenhum</p>
           <% } %>
           <br>
-          <p>IOF: R$5.000,00</p>
-          <p>Total: R$200.000,00</p>
+          <p>Franquia: <%= compra.getTipoFranquia() %></p>
+          <p>Prêmio Líquido: R$ <%= compra.getValorLiquidoPremios() %></p>
+          <p>IOF: R$ <%= compra.getValorIOF() %></p>
+          <p>Total: R$ <%= compra.getValorLiquidoPremios() + compra.getValorIOF() %></p>
 		
 
-          <a href="inicial.html" type="button" class="btn btn-success">Confirmar Compra</a>
+          <a href="telaInicial.jsp" type="button" class="btn btn-success">Confirmar Compra</a>
           <a href="comprarSeguro.html" type="button" class="btn btn-primary">Editar dados</a>
           <a href="inicial.html" type="button" class="btn btn-danger">Cancelar</a>
         </form>
