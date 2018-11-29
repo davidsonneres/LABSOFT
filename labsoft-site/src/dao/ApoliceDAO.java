@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Date;
 import java.util.HashMap;
 import model.Apolice;
+import model.Cliente;
 
 public class ApoliceDAO {
 	private Connection connection;
@@ -63,6 +64,12 @@ public class ApoliceDAO {
 		statement.close();
 		return apoliceList;
 	}
+	
+	
+
+	
+	
+	
 	
 	public boolean update(Apolice apolice) throws SQLException {
 		Statement statement = connection.createStatement();

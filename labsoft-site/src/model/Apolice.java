@@ -2,6 +2,9 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Apolice {
 	public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -51,6 +54,18 @@ public class Apolice {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
 	
 //	public Cliente getCliente() {
 //		return cliente;
