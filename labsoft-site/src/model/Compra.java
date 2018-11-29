@@ -2,37 +2,35 @@ package model;
 
 public class Compra {
 	private int idCompra;
-	private int idVeiculo;
 	private int idCorretor;
 	private int idApolice;
 	private int idFranquia;
-	private int idCliente;
 	private String cnpjCorretora;
 	private String tipoValor;
 	private float valorLiquidoPremios;
 	private float valorIOF;
-	private float valorFIPE;
 	private float valorCobertura;
 	private float valorDeterminado;
 	private Veiculo veiculo;
+	private Cliente cliente;
 	
-	public Compra(int idCompra, int idVeiculo, int idCorretor, int idApolice, int idFranquia, int idCliente,
+	public Compra() {}
+	
+	public Compra(int idCompra, int idCorretor, int idApolice, int idFranquia,
 			String cnpjCorretora, String tipoValor, float valorLiquidoPremios, float valorIOF, float valorFIPE,
-			float valorCobertura, float valorDeterminado, Veiculo veiculo){
+			float valorCobertura, float valorDeterminado, Veiculo veiculo, Cliente cliente){
 		this.idCompra = idCompra;
-		this.idVeiculo = idVeiculo;
 		this.idCorretor = idCorretor;
 		this.idApolice = idApolice;
 		this.idFranquia = idFranquia;
-		this.idCliente = idCliente;
 		this.cnpjCorretora = cnpjCorretora;
 		this.tipoValor = tipoValor;
 		this.valorLiquidoPremios = valorLiquidoPremios;
 		this.valorIOF = valorIOF;
-		this.valorFIPE = valorFIPE;
 		this.valorCobertura = valorCobertura;
 		this.valorDeterminado = valorDeterminado;
 		this.veiculo = veiculo;
+		this.cliente = cliente;
 	}
 	
 	
@@ -41,12 +39,6 @@ public class Compra {
 	}
 	public void setIdCompra(int idCompra) {
 		this.idCompra = idCompra;
-	}
-	public int getIdVeiculo() {
-		return idVeiculo;
-	}
-	public void setIdVeiculo(int idVeiculo) {
-		this.idVeiculo = idVeiculo;
 	}
 	public int getIdCorretor() {
 		return idCorretor;
@@ -65,12 +57,6 @@ public class Compra {
 	}
 	public void setIdFranquia(int idFranquia) {
 		this.idFranquia = idFranquia;
-	}
-	public int getIdCliente() {
-		return idCliente;
-	}
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
 	}
 	public String getCnpjCorretora() {
 		return cnpjCorretora;
@@ -96,12 +82,6 @@ public class Compra {
 	public void setValorIOF(float valorIOF) {
 		this.valorIOF = valorIOF;
 	}
-	public float getValorFIPE() {
-		return valorFIPE;
-	}
-	public void setValorFIPE(float valorFIPE) {
-		this.valorFIPE = valorFIPE;
-	}
 	public float getValorCobertura() {
 		return valorCobertura;
 	}
@@ -119,6 +99,12 @@ public class Compra {
 	}
 	public void setVeiculo(Veiculo veiculo) {
 		this.veiculo = veiculo;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 	
 	

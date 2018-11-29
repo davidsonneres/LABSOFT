@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.ClienteDAO;
 import dao.VeiculoDAO;
+import model.Cliente;
+import model.Compra;
 
 /**
  * Servlet implementation class ControleCompra
@@ -63,7 +65,24 @@ public class ControleCompra extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Compra compra = new Compra();
+		try {
+			compra.setCliente(clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
+			compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
+			String tipoValor = (String) request.getParameter("tipo-valor");
+			compra.setTipoValor(tipoValor);
+			if (tipoValor.equals("Determinado")) {
+				compra.setValorDeterminado(Float.valueOf((String) request.getParameter("valor-determinado")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("compra", compra);
+		
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaConfirmarPedido.jsp");
+		requestDispatcher.forward(request, response);
 	}
+
 
 }
