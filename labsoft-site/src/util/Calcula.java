@@ -4,10 +4,10 @@ public class Calcula {
 
 public static double franquiaCasco ( double valorContratacao, String tipoFranquia ) {    
 			   
-	if (tipoFranquia == "Obrigatoria"){
+	if (tipoFranquia.equals("Obrigatória")){
 		return valorContratacao*0.08;
 	}
-	else if (tipoFranquia == "Majorada"){
+	else if (tipoFranquia.equals("Majorada")){
 		return valorContratacao*0.1;
 	}
 	else {
@@ -27,10 +27,10 @@ public static double premioCasco ( double valorContratacao, String tipoFranquia,
 			   
 	if( idade >= 18  && idade <= 25){
 		
-		if (tipoFranquia == "Obrigatoria"){
+		if (tipoFranquia.equals("Obrigatória")){
 			return valorContratacao*0.04 ;
 		}
-		else if (tipoFranquia == "Majorada"){
+		else if (tipoFranquia.equals("Majorada")){
 		   return valorContratacao*0.025 ;
 		}
 		else {
@@ -38,10 +38,10 @@ public static double premioCasco ( double valorContratacao, String tipoFranquia,
 			 }			
 	}
 	else{
-		if (tipoFranquia == "Obrigatoria"){
+		if (tipoFranquia.equals("Obrigatória")){
 			return valorContratacao*0.03;
 		}
-		else if (tipoFranquia == "Majorada"){
+		else if (tipoFranquia.equals("Majorada")){
 			return valorContratacao*0.02;
 		}
 		else {
@@ -71,13 +71,17 @@ public static double calculaIOF ( double valor) {
 	return valor*0.0738;
 } 
 	
-public static double premioTotal ( double valorContratacao, String tipoFranquia, int idade, double valorVidro, double valorLanterna , double valorCobertura) {    
+public static double premioLiquido ( double valorContratacao, String tipoFranquia, int idade, double valorAcessorios , double valorCobertura) {    
 	double valor;
 	
-	valor = premioCasco(valorContratacao,tipoFranquia,idade) + 0.005*(valorLanterna + valorVidro) + premioDanosCorporais (valorCobertura) + premioDanosCorporais (valorCobertura);
+	valor = premioCasco(valorContratacao,tipoFranquia,idade) + 0.005*valorAcessorios + premioDanosCorporais (valorCobertura) + premioDanosCorporais (valorCobertura);
 	
-	return valor + calculaIOF(valor) ;
+	return valor;
 } 
+
+public static double premioTotal(double premioLiquido) {
+	return premioLiquido + calculaIOF(premioLiquido);
+}
 
 
 

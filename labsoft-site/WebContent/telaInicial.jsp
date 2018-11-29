@@ -12,6 +12,13 @@
 </head>
 <body>
 
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		  Pedido realizado com sucesso
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+
 <div id="header-bottom">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><i class="fas fa-car"></i> SS Seguros</a>
