@@ -52,12 +52,12 @@ public class ApoliceDAO {
 	public Map<Integer, Apolice> getAll() throws SQLException {
 		Map<Integer, Apolice> apoliceList = new HashMap<>();
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM Cliente;");
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM Apolice;");
 		
 		while(resultSet.next()) {
 			Apolice apolice = createApolice(resultSet);
 
-			apoliceList.put(resultSet.getInt("IdCliente"), apolice);
+			apoliceList.put(resultSet.getInt("IdApolice"), apolice);
 		}
 		
 		statement.close();
