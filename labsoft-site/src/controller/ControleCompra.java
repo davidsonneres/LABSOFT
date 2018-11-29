@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.ClienteDAO;
 import dao.VeiculoDAO;
+import dao.AcessorioDAO;
+import model.Acessorio;
+import model.Cliente;
+import model.Compra;
 
 /**
  * Servlet implementation class ControleCompra
@@ -21,6 +27,7 @@ public class ControleCompra extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ClienteDAO clienteDAO;   
     private VeiculoDAO veiculoDAO;
+    private AcessorioDAO acessorioDAO;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -28,6 +35,7 @@ public class ControleCompra extends HttpServlet {
         super();
         clienteDAO = new ClienteDAO();
         veiculoDAO = new VeiculoDAO();
+        acessorioDAO = new AcessorioDAO();
     }
 
 	/**
@@ -63,7 +71,39 @@ public class ControleCompra extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Compra compra = new Compra();
+		try {
+			compra.setCliente(clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
+			compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
+			String tipoValor = (String) request.getParameter("tipo-valor");
+			compra.setTipoValor(tipoValor);
+			if (tipoValor.equals("Determinado")) {
+				compra.setValorDeterminado(Float.valueOf((String) request.getParameter("valor-determinado")));
+			}
+			
+			List<Acessorio> acessorioList = new ArrayList<>();
+			System.out.println((String) request.getParameter("vidro"));
+			System.out.println((String) request.getParameter("retrovisor"));
+			
+			if (request.getParameter("vidro") != null) {
+				acessorioList.add(acessorioDAO.findByType("Vidro"));
+			}
+			
+			if (request.getParameter("retrovisor") != null) {
+				acessorioList.add(acessorioDAO.findByType("Retrovisor"));
+			}
+			
+			compra.setAcessorios(acessorioList);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("compra", compra);
+		
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaConfirmarPedido.jsp");
+		requestDispatcher.forward(request, response);
 	}
+
 
 }

@@ -24,9 +24,9 @@
 			container = $("#valor-determinado");
 			container.empty();
 			if ($("#input-tipo-valor option:selected").text() == "FIPE") {
-				$("<label id='valor-determinado-valor'>" + "<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>" + "</label>").appendTo(container);
+				$("<input type='label' name='valor-determinado' id='valor-determinado-valor' disabled value=" + <%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %> + ">").appendTo(container);
 			} else {
-				$("<input id='valor-determinado-valor' placeholder='Digite o valor'></input>").appendTo(container);
+				$("<input type='number' name='valor-determinado' id='valor-determinado-valor' placeholder='Digite o valor'></input>").appendTo(container);
 			}
 		};
 	
@@ -72,7 +72,7 @@
       <h1>Compre seguro</h1>
 
       <div class="container w-75">
-        <form>
+        <form method="POST">
           <h2>Dados do segurado</h2>
           <div class="form-row">
             <div class="form-group col-sm-5">
@@ -82,12 +82,12 @@
             </div>
 
 			<div class="form-group col-sm-2">
-			    <input type="button" value="Verificar" id="button-verificar" onClick="checkCPF()">
+				<input type="button" value="Verificar" id="button-verificar" onClick="checkCPF()">
 			</div>
 
             <div class="form-group col-sm-5">
               <label for="input-sexo">Sexo</label>
-              <select class="form-control" id="input-sexo" <%= cliente != null ? "disabled" : "" %>>
+              <select class="form-control" name="sexo" id="input-sexo" <%= cliente != null ? "disabled" : "" %>>
                 <option <%= cliente != null && cliente.getSexo().equals("Masculino") ? "selected='selected'" : "" %>>Masculino</option>
                 <option <%= cliente != null && cliente.getSexo().equals("Feminino") ? "selected='selected'" : "" %>>Feminino</option>
                 <option <%= cliente != null && cliente.getSexo().equals("Outros") ? "selected='selected'" : "" %>>Outros</option>
@@ -174,7 +174,7 @@
 			  <div class="col-sm-6">
 		          <div class="form-group">
 		            <label for="input-tipo-valor">Tipo de Valor</label>
-		            <select class="form-control" id="input-tipo-valor" onchange="insertCamposValorDeterminado()">
+		            <select name='tipo-valor' class="form-control" id="input-tipo-valor" onchange="insertCamposValorDeterminado()">
 		              <option selected="selected">FIPE</option>
 		              <option>Determinado</option>
 		            </select>
@@ -183,13 +183,13 @@
 	          <div class="col-sm-6">
 	          	<label>Valor em R$</label>
 	          	<span id="valor-determinado">
-	          		<label id="valor-determinado-valor" <%= veiculo == null ? "disabled" : "" %>><%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %></label>
+	          		<input type="label" name="valor-determinado" id="valor-determinado-valor" disabled value='<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>'>
 	          	</span>
 	          </div>
 		  </div>
           <div class="form-group">
             <label for="input-franquia">Franquia</label>
-            <select class="form-control" id="input-franquia">
+            <select name="franquia" class="form-control" id="input-franquia">
               <option>Majorada</option>
               <option>Obrigatória</option>
               <option>Reduzida</option>
@@ -199,23 +199,17 @@
           <h2>Acessórios</h2>
 
           <div class="form-check">
-           <input type="checkbox" class="form-check-input" id="vidro">
+           <input name="vidro" type="checkbox" class="form-check-input" id="vidro">
            <label class="form-check-label" for="vidro">Vidro</label>
          </div>
 
          <div class="form-check">
-           <input type="checkbox" class="form-check-input" id="retrovisor">
+           <input name="retrovisor" type="checkbox" class="form-check-input" id="retrovisor">
            <label class="form-check-label" for="retrovisor">Retrovisor</label>
           </div>
 
-          <h2>Valor total</h2>
-          <p>FIPE: R$100.000,00</p>
-          <p>Acessórios: Vidro: R$10.000,00</p>
-          <p>IOF: R$5.000,00</p>
-          <p>Total: R$200.000,00</p>
 
-
-          <a href="confirmarCompra.html" type="button" class="btn btn-success">Finalizar</a>
+          <input type="submit" class="btn btn-success" value="Next">
           <a href="inicial.html" type="button" class="btn btn-danger">Cancelar</a>
         </form>
       </div>
