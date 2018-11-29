@@ -3494,10 +3494,6 @@
                 <children xmi:type="umlnotation:UMLShape" xmi:id="_Glg0Is2GEeiUWsWhRzdcqA" element="_b1wkM8jcEeiAe8bNAfWZjQ" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                   <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Glg0I82GEeiUWsWhRzdcqA" x="-1" y="1322" height="1322"/>
                 </children>
-                <children xmi:type="umlnotation:UMLShape" xmi:id="_VyUVgM2GEeiUWsWhRzdcqA" element="_VxU3AM2GEeiUWsWhRzdcqA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_VyUVgs2GEeiUWsWhRzdcqA" type="guard"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VyUVgc2GEeiUWsWhRzdcqA" x="740" y="6389"/>
-                </children>
                 <children xmi:type="umlnotation:UMLShape" xmi:id="_tNgl4M2MEeiUWsWhRzdcqA" element="_tMkKsM2MEeiUWsWhRzdcqA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                   <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_tNgl4s2MEeiUWsWhRzdcqA" element="_tMkxwM2MEeiUWsWhRzdcqA">
                     <children xmi:type="umlnotation:UMLShape" xmi:id="_tNgl482MEeiUWsWhRzdcqA" element="_tMkxwc2MEeiUWsWhRzdcqA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -5706,6 +5702,7 @@
       <ownedAttribute xmi:id="_IP9k4OHsEeiJVZH4Y5PGzg" name="ValorTotal" visibility="private"/>
       <ownedAttribute xmi:id="_HhxpMOHsEeiJVZH4Y5PGzg" name="Finalizar:Botao" visibility="private"/>
       <ownedAttribute xmi:id="_HRqwoOHsEeiJVZH4Y5PGzg" name="Cancelar:Botao" visibility="private"/>
+      <ownedAttribute xmi:id="_hKFG4PJEEeiCmtPWpJX2EQ" name="Verificar:Botao" visibility="private"/>
       <ownedOperation xmi:id="_veacEOOGEeiBXshb1vdprw" name="solicitaNovaCompra"/>
       <ownedOperation xmi:id="_p5F84OOHEeiBXshb1vdprw" name="insereCPF"/>
       <ownedOperation xmi:id="_JXOXsOOIEeiBXshb1vdprw" name="solicitaCPF"/>
