@@ -87,3 +87,10 @@ INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor,
 					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
 					ValorDeterminado, IdApolice, RENAVAM, IdFranquia, IdCliente)
 VALUES (2, 2, "29.777.007/0001-04", "Determinado", 3000, 200, 100000, 50000, 150000, 2, "05721178473", 2, 2);
+
+-- ACESSORIOCOMPRA
+INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
+VALUES (1, 1);
+
+INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
+VALUES (2, 1);

@@ -352,18 +352,15 @@
             <layoutConstraint xsi:type="notation:Bounds" xmi:id="_dB0vhuOHEeilwf4BfuAFbw"/>
           </children>
           <children xmi:id="_dB0vh-OHEeilwf4BfuAFbw" type="Key.Compartment">
-            <children xsi:type="notation:Shape" xmi:id="_x97WAOOHEeilwf4BfuAFbw" type="Key" element="_n-f4cOOHEeilwf4BfuAFbw" fontName="Segoe UI">
-              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_x97WAeOHEeilwf4BfuAFbw"/>
+            <children xsi:type="notation:Shape" xmi:id="_7B680PWgEei9acYO2bdNjg" type="Key" element="_5xKBwOOHEeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_7B680fWgEei9acYO2bdNjg"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_7G1SAPWgEei9acYO2bdNjg" type="Key" element="_AvzO4OOIEeilwf4BfuAFbw" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_7G1SAfWgEei9acYO2bdNjg"/>
             </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_dB0viOOHEeilwf4BfuAFbw" sortingKeys="Natural:Ascending"/>
           </children>
           <children xmi:id="_dB0vieOHEeilwf4BfuAFbw" type="Column.Compartment">
-            <children xsi:type="notation:Shape" xmi:id="_5xKBwuOHEeilwf4BfuAFbw" type="Column" element="_5xKBwOOHEeilwf4BfuAFbw" fontName="Segoe UI">
-              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_5xKBw-OHEeilwf4BfuAFbw"/>
-            </children>
-            <children xsi:type="notation:Shape" xmi:id="_Av8_4OOIEeilwf4BfuAFbw" type="Column" element="_AvzO4OOIEeilwf4BfuAFbw" fontName="Segoe UI">
-              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Av8_4eOIEeilwf4BfuAFbw"/>
-            </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_dB0viuOHEeilwf4BfuAFbw" sortingKeys="Natural:Ascending"/>
           </children>
           <children xmi:id="_dB0vi-OHEeilwf4BfuAFbw" visible="false" type="Index.Compartment">
@@ -910,19 +907,16 @@
     </constraints>
   </SQLTables:PersistentTable>
   <SQLTables:PersistentTable xmi:id="_dB0vgOOHEeilwf4BfuAFbw" name="AcessorioCompra" schema="_gwxb0N4IEeiA1o3OyXZfAA">
-    <columns xmi:id="_n-f4cOOHEeilwf4BfuAFbw" name="IdAcessorioCompra" nullable="false">
-      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_n-f4ceOHEeilwf4BfuAFbw" name="CHAR" length="5"/>
-    </columns>
     <columns xmi:id="_5xKBwOOHEeilwf4BfuAFbw" name="IdAcessorio" nullable="false">
       <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_5xKBweOHEeilwf4BfuAFbw" name="INT" primitiveType="INTEGER"/>
     </columns>
     <columns xmi:id="_AvzO4OOIEeilwf4BfuAFbw" name="IdCompra" nullable="false">
       <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_AvzO4eOIEeilwf4BfuAFbw" name="INT" primitiveType="INTEGER"/>
     </columns>
-    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_x9xlAOOHEeilwf4BfuAFbw" name="AcessorioCompra_PK" members="_n-f4cOOHEeilwf4BfuAFbw"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_x9xlAOOHEeilwf4BfuAFbw" name="AcessorioCompra_PK" members="_5xKBwOOHEeilwf4BfuAFbw _AvzO4OOIEeilwf4BfuAFbw"/>
     <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_5xA30OOHEeilwf4BfuAFbw" name="AcessorioTemCompra" members="_5xKBwOOHEeilwf4BfuAFbw" onDelete="CASCADE" uniqueConstraint="_2O5GEN4PEeiA1o3OyXZfAA" referencedTable="_VhkboN4MEeiA1o3OyXZfAA">
       <eAnnotations xmi:id="_5xA30eOHEeilwf4BfuAFbw" source="FK_MODELING_RELATIONSHIP">
-        <details xmi:id="_5xA30uOHEeilwf4BfuAFbw" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_5xA30uOHEeilwf4BfuAFbw" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
         <details xmi:id="_5xA30-OHEeilwf4BfuAFbw" key="FK_CHILD_MULTIPLICITY" value="1"/>
         <details xmi:id="_5xA31OOHEeilwf4BfuAFbw" key="FK_CHILD_ROLE_NAME" value=""/>
         <details xmi:id="_5xA31eOHEeilwf4BfuAFbw" key="FK_PARENT_MULTIPLICITY" value="1"/>
@@ -931,7 +925,7 @@
     </constraints>
     <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_AvqE8OOIEeilwf4BfuAFbw" name="CompraTemAcessorio" members="_AvzO4OOIEeilwf4BfuAFbw" onDelete="CASCADE" uniqueConstraint="_-CghIOHlEeizwZ_l9KHKyw" referencedTable="_zfGRQN4KEeiA1o3OyXZfAA">
       <eAnnotations xmi:id="_AvqE8eOIEeilwf4BfuAFbw" source="FK_MODELING_RELATIONSHIP">
-        <details xmi:id="_AvqE8uOIEeilwf4BfuAFbw" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_AvqE8uOIEeilwf4BfuAFbw" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
         <details xmi:id="_AvqE8-OIEeilwf4BfuAFbw" key="FK_CHILD_MULTIPLICITY" value="1"/>
         <details xmi:id="_AvqE9OOIEeilwf4BfuAFbw" key="FK_CHILD_ROLE_NAME" value=""/>
         <details xmi:id="_AvqE9eOIEeilwf4BfuAFbw" key="FK_PARENT_MULTIPLICITY" value="1"/>
