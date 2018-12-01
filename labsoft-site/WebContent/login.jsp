@@ -11,14 +11,24 @@
     <title>SS Seguros</title>
 </head>
 <body>
-	<form action="" method="post">
+	<% Object successfulLogin = request.getAttribute("login"); %>
+	<% if (successfulLogin != null && !(boolean) successfulLogin) { %>
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+	  Usuário ou senha incorreto
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<% } %>
+
+	<form method="post">
 	  <div class="form-group">
-	    <label for="username">Usuário</label>
-	    <input type="text" class="form-control" id="username"placeholder="Digite o usuário">
+	    <label for="username">CPF</label>
+	    <input name="cpf" type="text" class="form-control" id="username"placeholder="Digite o cpf">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Senha</label>
-	    <input type="password" class="form-control" id="password" placeholder="Digite a senha">
+	    <input name="senha" type="password" class="form-control" id="password" placeholder="Digite a senha">
 	  </div>
 	  <button type="submit" class="btn btn-primary">Login</button>
 	</form>

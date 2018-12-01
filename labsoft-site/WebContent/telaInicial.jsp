@@ -12,33 +12,64 @@
 </head>
 <body>
 
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+	  Pedido realizado com sucesso
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	
+	<% String permission = (String) session.getAttribute("permission"); %>
+	<% boolean firstLogin = (boolean) session.getAttribute("first-login"); %>
+	<% if (firstLogin && permission.equals("cliente")) { %>
 		<div class="alert alert-success alert-dismissible fade show" role="alert">
-		  Pedido realizado com sucesso
+		  Logado como Cliente
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
-
-<div id="header-bottom">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><i class="fas fa-car"></i> SS Seguros</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="comprarSeguro.html">Comprar seguro</a>
-            <a class="nav-item nav-link" href="gerarRelatorio.html">Gerar relat&oacute;rios</a>
-            <a class="nav-item nav-link" href="alterarStatus.html">Alterar status da ap&oacute;lice</a>
-            <form>
-              <input type="text" name="user" placeholder="Usu&aacute;rio">
-              <input type="password" name="pass" placeholder="Senha">
-              <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
+		<% session.setAttribute("first-login", false); %>
+	<% } else if (firstLogin && permission.equals("corretor")) {%>
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		  Logado como Corretor
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<% session.setAttribute("first-login", false); %>
+	<% } %>
+	
+	<div id="header-bottom">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><i class="fas fa-car"></i> SS Seguros</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="ControleCompra">Comprar seguro</a>
+					</li>
+					<% if (permission.equals("corretor")) {%>
+						<li class="nav-item">
+							<a class="nav-link" href="ControleRelatorio">Gerar relat&oacute;rios</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="ApoliceControle">Alterar status da ap&oacute;lice</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="ControleApolicePendente">Ap&oacute;lices pendentes</a>
+						</li>
+					<% } %>
+				</ul>
+				<ul class="navbar-nav">
+					<div class="navbar-nav align-items-end">
+						<a class="nav-item nav-link active" href="?logout=true">Logout</a>
+					</div>	
+				</ul>
+			</div>
+		</nav>
+	</div>
 
     <div class="jumbotron jumbotron-fluid" id="jumbo-imagem">
       <div class="container">

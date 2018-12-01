@@ -6,15 +6,17 @@ public class Corretor {
 	private String telefone;
 	private String email;
 	private String senha;
+	private String cpf;
 	
 	public Corretor(){};
 	
-	public Corretor (int id, String nome, String telefone, String email, String senha){
+	public Corretor (int id, String nome, String telefone, String email, String senha, String cpf){
 		this.idCorretor = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
 		this.senha = senha;
+		this.cpf = cpf;
 	}
 	
 	public int getIdCorretor(){
@@ -50,5 +52,13 @@ public class Corretor {
 	
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	
+	public String getCPF() {
+		return this.cpf;
+	}
+	
+	public void setCPF(String cpf) {
+		this.cpf = cpf;
 	}
 }

@@ -8,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+
+import model.Cliente;
 import model.Corretor;
 
 public class CorretorDAO {
@@ -31,6 +33,17 @@ public class CorretorDAO {
 		if (resultSet.next()) {
 			corretor = createCorretor(resultSet);
 		}
+		statement.close();
+		return corretor;
+	}
+	
+	public Corretor findByPrimaryCPF(String cpf) throws SQLException {
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Corretor WHERE CPF='%s'", cpf));
+		Corretor corretor = null;
+		if (resultSet.next()) {
+			corretor = createCorretor(resultSet);
+		} 
 		statement.close();
 		return corretor;
 	}
@@ -61,6 +74,7 @@ public class CorretorDAO {
 		corretor.setNome(resultSet.getString("Nome"));
 		corretor.setEmail(resultSet.getString("Email"));
 		corretor.setSenha(resultSet.getString("Senha"));
+		corretor.setCPF(resultSet.getString("CPF"));
 		return corretor;
 	}
 }
