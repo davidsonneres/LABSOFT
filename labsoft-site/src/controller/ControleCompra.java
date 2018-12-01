@@ -15,9 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.ClienteDAO;
+import dao.CompraDAO;
+import dao.CorretorDAO;
+import dao.CorretoraDAO;
 import dao.VeiculoDAO;
 import dao.AcessorioDAO;
+import dao.ApoliceDAO;
 import model.Acessorio;
+import model.Apolice;
 import model.Cliente;
 import model.Compra;
 import util.Calcula;
@@ -31,6 +36,10 @@ public class ControleCompra extends HttpServlet {
     private ClienteDAO clienteDAO;   
     private VeiculoDAO veiculoDAO;
     private AcessorioDAO acessorioDAO;
+    private CompraDAO compraDAO;
+    private ApoliceDAO apoliceDAO;
+    private CorretoraDAO corretoraDAO;
+    private CorretorDAO corretorDAO;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -39,6 +48,10 @@ public class ControleCompra extends HttpServlet {
         clienteDAO = new ClienteDAO();
         veiculoDAO = new VeiculoDAO();
         acessorioDAO = new AcessorioDAO();
+        compraDAO = new CompraDAO();
+        apoliceDAO = new ApoliceDAO();
+        corretoraDAO = new CorretoraDAO();
+        corretorDAO = new CorretorDAO();
     }
 
 	/**
@@ -85,6 +98,7 @@ public class ControleCompra extends HttpServlet {
 				compra.setCliente(clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
 				compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
 				String tipoValor = (String) request.getParameter("tipo-valor");
+				
 				compra.setTipoValor(tipoValor);
 				float valorCobertura = 0;
 				if (tipoValor.equals("Determinado")) {
@@ -125,8 +139,29 @@ public class ControleCompra extends HttpServlet {
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaConfirmarPedido.jsp");
 			requestDispatcher.forward(request, response);
 	    } else {
-	    	compraDAO.create((Compra) session.getAttribute("compra"));
-	    	session.removeAttribute("compra");
+	    	Compra compra = (Compra) session.getAttribute("compra");
+	    	try {
+				compra.setIdCompra(compraDAO.getLastCompraId() + 1);
+				Apolice apolice = new Apolice();
+				apolice.setId(apoliceDAO.getLastApoliceId() + 1);
+				apolice.setStatus("Pendente");
+				apoliceDAO.create(apolice);
+				
+				compra.setApolice(apolice);
+				compra.setCorretor(corretorDAO.findByPrimaryCPF("319.032.943-55"));
+				compra.setCorretora(corretoraDAO.findByPrimaryKey("29.777.007/0001-04"));
+				
+		    	compraDAO.create(compra);
+		    	session.removeAttribute("compra");
+		    	
+		    	request.setAttribute("successCompra", true);
+		    	
+				RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
+				requestDispatcher.forward(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 	}
 

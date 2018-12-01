@@ -108,4 +108,14 @@ public class ApoliceDAO {
 		Apolice apolice = new Apolice(id, dataInicio, dataFim, status);
 		return apolice;
 	}
+	
+	public int getLastApoliceId() throws SQLException {
+		Statement statement = connection.createStatement();
+		int lastApoliceId = 0;
+		ResultSet resultSet = statement.executeQuery("SELECT IdApolice FROM Apolice ORDER BY IdApolice DESC;");
+		if (resultSet.next()) {
+			lastApoliceId = resultSet.getInt("IdApolice");
+		}
+		return lastApoliceId;
+	}
 }

@@ -65,7 +65,7 @@ public class AcessorioDAO {
 		connection.close();
 	}
 	
-	private Acessorio createAcessorio(ResultSet resultSet) throws SQLException {
+	public Acessorio createAcessorio(ResultSet resultSet) throws SQLException {
 		Acessorio acessorio = new Acessorio();
 		acessorio.setId(resultSet.getInt("IdAcessorio"));
 		acessorio.setTipoAcessorio(resultSet.getString("TipoAcessorio"));

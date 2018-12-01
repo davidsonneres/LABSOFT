@@ -11,13 +11,16 @@
     <title>SS Seguros</title>
 </head>
 <body>
-
+	<% Object successCompra = request.getAttribute("successCompra");%>
+	<% if(successCompra != null && (boolean) successCompra) {%>
 	<div class="alert alert-success alert-dismissible fade show" role="alert">
 	  Pedido realizado com sucesso
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	    <span aria-hidden="true">&times;</span>
 	  </button>
 	</div>
+	<% request.setAttribute("successCompra", false); %>
+	<% } %>
 	
 	<% String permission = (String) session.getAttribute("permission"); %>
 	<% boolean firstLogin = (boolean) session.getAttribute("first-login"); %>

@@ -170,23 +170,22 @@
             </div>
           </div>
 		  
-		  <div>
-			  <div class="col-sm-6">
-		          <div class="form-group">
-		            <label for="input-tipo-valor">Tipo de Valor</label>
-		            <select name='tipo-valor' class="form-control" id="input-tipo-valor" onchange="insertCamposValorDeterminado()">
-		              <option selected="selected">FIPE</option>
-		              <option>Determinado</option>
-		            </select>
-		          </div>
+
+	          <div class="form-group">
+	            <label for="input-tipo-valor">Tipo de Valor</label>
+	            <select name="tipo-valor" class="form-control" id="input-tipo-valor" onchange="insertCamposValorDeterminado()">
+	              <option selected="selected" value="FIPE">FIPE</option>
+	              <option value="Determinado">Determinado</option>
+	            </select>
 	          </div>
-	          <div class="col-sm-6">
-	          	<label>Valor em R$</label>
-	          	<span id="valor-determinado">
-	          		<input type="label" name="valor-determinado" id="valor-determinado-valor" disabled value='<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>'>
-	          	</span>
-	          </div>
-		  </div>
+
+	
+          	<label>Valor em R$</label>
+          	<span id="valor-determinado">
+          		<input type="text" name="valor-determinado" id="valor-determinado-valor" disabled value='<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>'>
+          	</span>
+
+
           <div class="form-group">
             <label for="input-franquia">Franquia</label>
             <select name="franquia" class="form-control" id="input-franquia">

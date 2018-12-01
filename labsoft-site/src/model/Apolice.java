@@ -16,6 +16,8 @@ public class Apolice {
 //	private Veiculo veiculo;
 //	private Compra compra;
 	
+	public Apolice(){}
+	
 	public Apolice(int id, Date dataInicio, Date dataFim, String status){
 		this.id = id;
 		this.dataInicio = dataInicio;
