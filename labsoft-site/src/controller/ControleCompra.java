@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.ClienteDAO;
 import dao.VeiculoDAO;
@@ -73,50 +74,60 @@ public class ControleCompra extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Compra compra = new Compra();
-		try {
-			compra.setCliente(clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
-			compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
-			String tipoValor = (String) request.getParameter("tipo-valor");
-			compra.setTipoValor(tipoValor);
-			float valorCobertura = 0;
-			if (tipoValor.equals("Determinado")) {
-				valorCobertura = Float.valueOf((String) request.getParameter("valor-determinado"));
-				compra.setValorDeterminado(valorCobertura);
-			} else {
-				valorCobertura = compra.getVeiculo().getFipe().getValorFIPE();
-			}
-			
-			List<Acessorio> acessorioList = new ArrayList<>();
-			
-			float valorAcessorios = 0;
-			if (request.getParameter("vidro") != null) {
-				Acessorio acessorio = acessorioDAO.findByType("Vidro");
-				acessorioList.add(acessorio);
-				valorAcessorios += acessorio.getValorAcessorio();
-			}
-			
-			if (request.getParameter("retrovisor") != null) {
-				Acessorio acessorio = acessorioDAO.findByType("Retrovisor");
-				acessorioList.add(acessorio);
-				valorAcessorios += acessorio.getValorAcessorio();
-			}
-			
-			compra.setTipoFranquia((String) request.getParameter("franquia"));
-			compra.setValorCobertura(valorCobertura);
-			double premioLiquido = Calcula.premioLiquido(valorCobertura, compra.getTipoFranquia(), calculaIdade(compra.getCliente().getDataNascimento(), new java.util.Date()), valorAcessorios, 100000);
-			compra.setValorLiquidoPremios((float) premioLiquido);
-			compra.setValorIOF((float) Calcula.calculaIOF(premioLiquido));
-			compra.setAcessorios(acessorioList);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		request.setAttribute("compra", compra);
 		
-		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaConfirmarPedido.jsp");
-		requestDispatcher.forward(request, response);
+	    // Create a session object if it is already not  created.
+	    HttpSession session = request.getSession(true);
+	    
+	    String confirm = (String) request.getAttribute("confirm");
+	    if (confirm == null) {
+	    	Compra compra = new Compra();
+			try {
+				compra.setCliente(clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
+				compra.setVeiculo(veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
+				String tipoValor = (String) request.getParameter("tipo-valor");
+				compra.setTipoValor(tipoValor);
+				float valorCobertura = 0;
+				if (tipoValor.equals("Determinado")) {
+					valorCobertura = Float.valueOf((String) request.getParameter("valor-determinado"));
+					compra.setValorDeterminado(valorCobertura);
+				} else {
+					valorCobertura = compra.getVeiculo().getFipe().getValorFIPE();
+				}
+				
+				List<Acessorio> acessorioList = new ArrayList<>();
+				
+				float valorAcessorios = 0;
+				if (request.getParameter("vidro") != null) {
+					Acessorio acessorio = acessorioDAO.findByType("Vidro");
+					acessorioList.add(acessorio);
+					valorAcessorios += acessorio.getValorAcessorio();
+				}
+				
+				if (request.getParameter("retrovisor") != null) {
+					Acessorio acessorio = acessorioDAO.findByType("Retrovisor");
+					acessorioList.add(acessorio);
+					valorAcessorios += acessorio.getValorAcessorio();
+				}
+				
+				compra.setTipoFranquia((String) request.getParameter("franquia"));
+				compra.setValorCobertura(valorCobertura);
+				double premioLiquido = Calcula.premioLiquido(valorCobertura, compra.getTipoFranquia(), calculaIdade(compra.getCliente().getDataNascimento(), new java.util.Date()), valorAcessorios, 100000);
+				compra.setValorLiquidoPremios((float) premioLiquido);
+				compra.setValorIOF((float) Calcula.calculaIOF(premioLiquido));
+				compra.setAcessorios(acessorioList);
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			session.setAttribute("compra", compra);
+			
+			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaConfirmarPedido.jsp");
+			requestDispatcher.forward(request, response);
+	    } else {
+	    	compraDAO.create((Compra) session.getAttribute("compra"));
+	    	session.removeAttribute("compra");
+	    }
 	}
 
 	private int calculaIdade(Date nascimento, java.util.Date hoje) {
