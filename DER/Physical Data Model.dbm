@@ -28,6 +28,9 @@
             <children xsi:type="notation:Shape" xmi:id="_n5hocO51Eei94bfsg_xtaQ" type="Column" element="_n5YegO51Eei94bfsg_xtaQ" fontName="Segoe UI">
               <layoutConstraint xsi:type="notation:Bounds" xmi:id="_n5hoce51Eei94bfsg_xtaQ"/>
             </children>
+            <children xsi:type="notation:Shape" xmi:id="_fSjRYPVhEeiozY4IvZvKUg" type="Column" element="_fRp5gPVhEeiozY4IvZvKUg" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_fSjRYfVhEeiozY4IvZvKUg"/>
+            </children>
             <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_HQJr2d4JEeiA1o3OyXZfAA" sortingKeys="Natural:Ascending"/>
           </children>
           <children xmi:id="_HQJr2t4JEeiA1o3OyXZfAA" visible="false" type="Index.Compartment">
@@ -698,6 +701,9 @@
     </columns>
     <columns xmi:id="_n5YegO51Eei94bfsg_xtaQ" name="Senha">
       <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_n5Yege51Eei94bfsg_xtaQ" name="CHAR" length="50"/>
+    </columns>
+    <columns xmi:id="_fRp5gPVhEeiozY4IvZvKUg" name="CPF">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_fRp5gfVhEeiozY4IvZvKUg" name="CHAR" length="20"/>
     </columns>
     <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_j7pDEN4NEeiA1o3OyXZfAA" name="Corretor_PK" members="_gpjnQN4NEeiA1o3OyXZfAA" ForeignKey="_zi-qYOHpEeizwZ_l9KHKyw"/>
   </SQLTables:PersistentTable>
