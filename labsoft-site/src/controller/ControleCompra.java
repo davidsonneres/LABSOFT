@@ -91,7 +91,7 @@ public class ControleCompra extends HttpServlet {
 	    // Create a session object if it is already not  created.
 	    HttpSession session = request.getSession(true);
 	    
-	    String confirm = (String) request.getAttribute("confirm");
+	    String confirm = (String) request.getParameter("confirm");
 	    if (confirm == null) {
 	    	Compra compra = new Compra();
 			try {
@@ -170,5 +170,4 @@ public class ControleCompra extends HttpServlet {
 		int anoHoje =  hoje.getYear();
 		return anoHoje - anoNascimento;
 	}
-
 }

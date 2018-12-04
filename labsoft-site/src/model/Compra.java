@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Compra {
 	private int idCompra;
-	private String cnpjCorretora;
 	private String tipoValor;
 	private float valorLiquidoPremios;
 	private float valorIOF;
@@ -17,8 +16,7 @@ public class Compra {
 	private Apolice apolice;
 	private Corretor corretor;
 	private Corretora corretora;
-	private Franquia franquia;
-	
+
 	public Compra() {}
 	
 	public int getIdCompra() {
@@ -26,18 +24,6 @@ public class Compra {
 	}
 	public void setIdCompra(int idCompra) {
 		this.idCompra = idCompra;
-	}
-	public Franquia getFranquia() {
-		return franquia;
-	}
-	public void setFranquia(Franquia franquia) {
-		this.franquia = franquia;
-	}
-	public String getCnpjCorretora() {
-		return cnpjCorretora;
-	}
-	public void setCnpjCorretora(String cnpjCorretora) {
-		this.cnpjCorretora = cnpjCorretora;
 	}
 	public String getTipoValor() {
 		return tipoValor;

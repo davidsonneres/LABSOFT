@@ -11,6 +11,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import model.Acessorio;
 import model.Apolice;
@@ -42,18 +43,21 @@ public class CompraDAO {
 	
 	public boolean create(Compra compra) throws SQLException{
 		Statement statement = connection.createStatement();
-		statement.executeUpdate(
-				String.format("INSERT INTO Compra (IdCompra, IdVeiculo, IdCorretor, CNPJCorretora,"
-						+ "TipoValores, ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,"
-						+ "ValorDeterminado, IdApolice, RENAVAM, IdFranquia, IdCliente)"
-						+ "VALUES (%d,%d,%d, '%s', '%s', '%s','%s', '%s', '%s','%s', %d,'%s',%d,%d);", 
-						compra.getIdCompra(), compra.getVeiculo().getFipe().getIdVeiculo(),
-						compra.getCorretor().getIdCorretor(), compra.getCnpjCorretora(),
+		String query = 
+				String.format(Locale.US, "INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora,"
+						+ "TipoValor, ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,"
+						+ "ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)"
+						+ " VALUES (%d, %d, '%s', '%s', %.2f, %.2f, %.2f, %.2f, %.2f, %d, '%s', '%s', %d);", 
+						compra.getIdCompra(), 
+						compra.getCorretor().getIdCorretor(), compra.getCorretora().getCNPJCorretora(),
 						compra.getTipoValor(), compra.getValorLiquidoPremios(),
 						compra.getValorIOF(), compra.getValorCobertura(), 
 						compra.getVeiculo().getFipe().getValorFIPE(), compra.getValorDeterminado(),
 						compra.getApolice().getId(), compra.getVeiculo().getRenavam(), 
-						compra.getFranquia().getIdFranquia(), compra.getCliente().getId()));
+						compra.getTipoFranquia(), compra.getCliente().getId());
+		// System.out.println(query);
+		
+		statement.executeUpdate(query);
 		
 		for (Acessorio acessorio : compra.getAcessorios()) {
 			statement.executeUpdate(
@@ -98,10 +102,10 @@ public class CompraDAO {
 		compra.setVeiculo(veiculoDAO.findByPrimaryKey(resultSet.getString("RENAVAM")));	
 		compra.setCorretor(corretorDAO.findByPrimaryKey(resultSet.getInt("IdCorretor")));
 		compra.setApolice(apoliceDAO.findByPrimaryKey(resultSet.getInt("IdApolice")));
-		compra.setFranquia(franquiaDAO.findByPrimaryKey(resultSet.getInt("IdFranquia")));;
 		compra.setCliente(clienteDAO.findByPrimaryKey(resultSet.getInt("IdCliente")));
 		compra.setCorretora(corretoraDAO.findByPrimaryKey(resultSet.getString("CNPJCorretora")));
-		compra.setTipoValor(resultSet.getString("TipoValores"));;
+		compra.setTipoValor(resultSet.getString("TipoValor"));
+		compra.setTipoFranquia(resultSet.getString("TipoFranquia"));
 		compra.setValorLiquidoPremios(resultSet.getFloat("ValorLiquidoPremios"));;
 		compra.setValorIOF(resultSet.getFloat("ValorIOF"));
 		compra.setValorCobertura(resultSet.getFloat("ValorCobertura"));
