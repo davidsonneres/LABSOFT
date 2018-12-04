@@ -9,8 +9,8 @@ import java.sql.Statement;
 public class Apolice {
 	public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 	private int id;
-	private Date dataInicio = new Date(946692000000L);
-	private Date dataFim = new Date(946692000000L);
+	private Date dataInicio = new Date(0L);
+	private Date dataFim = new Date(0L);
 	private String status;
 //	private Cliente cliente;
 //	private Veiculo veiculo;

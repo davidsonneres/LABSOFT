@@ -60,9 +60,6 @@
 						<li class="nav-item">
 							<a class="nav-link" href="ApoliceControle">Alterar status da ap&oacute;lice</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="ControleApolicePendente">Ap&oacute;lices pendentes</a>
-						</li>
 					<% } %>
 				</ul>
 				<ul class="navbar-nav">
@@ -101,11 +98,6 @@
 
       </div>
     </div>
-
-	<a href="ControleCompra" type="button" class="btn btn-success">Comprar Seguro</a>
-	<a href="ControleRelatorio" type="button" class="btn btn-success">Gerar Relatórios</a>
-	<a href="ApoliceControle" type="button" class="btn btn-success">Alterar Status de Apólice</a>
-	<a href="ControleApolicePendente" type="button" class="btn btn-success">Apólice Pendente</a>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

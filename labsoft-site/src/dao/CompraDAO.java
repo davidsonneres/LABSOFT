@@ -92,7 +92,25 @@ public class CompraDAO {
 		return compraList;
 	}
 	
-	
+	public List<Compra> getByPeriod(Date dataInicio, Date dataFim) throws SQLException {
+		Statement statement = connection.createStatement();
+		List<Compra> compraList = new ArrayList<>();
+		ResultSet resultSet = statement.executeQuery(
+				String.format("SELECT * FROM (Compra INNER JOIN Apolice ON Compra.IdApolice = Apolice.IdApolice) WHERE DataInicio >= '%s' AND DataInicio <= '%s';", dataInicio, dataFim));
+		
+		while(resultSet.next()) {
+			int idCompra = resultSet.getInt("IdCompra");
+			Statement acessoriosStatement = connection.createStatement();
+			ResultSet acessorioSet = acessoriosStatement.executeQuery(String.format("SELECT * FROM (AcessorioCompra INNER JOIN Acessorios ON AcessorioCompra.IdAcessorio = Acessorios.IdAcessorio) WHERE IdCompra=%d;", idCompra));
+			Compra compra = createCompra(resultSet, createAcessorio(acessorioSet));
+			acessoriosStatement.close();
+			
+			compraList.add(compra);
+		}
+		
+		statement.close();
+		return compraList;
+	}
 	
 	
 	private Compra createCompra(ResultSet resultSet, List<Acessorio> acessorioList) throws SQLException {
