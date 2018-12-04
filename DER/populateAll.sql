@@ -70,23 +70,16 @@ VALUES ("70988870046", "J6 2.0 JET Flex 5p Mec.", 2015, "JAC", "Azul", "NAX-1410
 INSERT INTO Veiculo (RENAVAM, Modelo, Ano, Marca, Cor, Placa, IdVeiculo)
 VALUES ("37458080976", "HOVER CUV 2.4 16V 5p Mec.", 2008, "GREAT WALL", "Prata", "MMN-0363", 4);
 
--- FRANQUIA 
-INSERT INTO Franquia (IdFranquia, TipoFranquia, ValorFranquia)
-VALUES (1, "Vidro", 5000.00);
-
-INSERT INTO Franquia (IdFranquia, TipoFranquia, ValorFranquia)
-VALUES (2, "Retrovisor", 1000.00);
-
 -- COMPRA
 INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
 					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
-					ValorDeterminado, IdApolice, RENAVAM, IdFranquia, IdCliente)
-VALUES (1, 1, "29.777.007/0001-04", "FIPE", 2000, 200, 100000, 50000, 0, 1, "05721178473", 1, 1);
+					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
+VALUES (1, 1, "29.777.007/0001-04", "FIPE", 2000, 200, 100000, 50000, 0, 1, "05721178473", "Majorada", 1);
 
 INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
 					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
-					ValorDeterminado, IdApolice, RENAVAM, IdFranquia, IdCliente)
-VALUES (2, 2, "29.777.007/0001-04", "Determinado", 3000, 200, 100000, 50000, 150000, 2, "05721178473", 2, 2);
+					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
+VALUES (2, 2, "29.777.007/0001-04", "Determinado", 3000, 200, 100000, 50000, 150000, 2, "05721178473", "Reduzida", 2);
 
 -- ACESSORIOCOMPRA
 INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
