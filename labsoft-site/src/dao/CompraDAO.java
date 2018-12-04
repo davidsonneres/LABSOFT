@@ -150,11 +150,33 @@ public class CompraDAO {
 		return lastCompraId;
 	}
 	
-
+	public Compra findByApoliceID(int id) throws SQLException{
+		Compra compra = null;
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM Compra WHERE IdApolice = %d;", id));
+		if(resultSet.next()) {
+			Statement acessorioStatement = connection.createStatement();
+			int idCompra = resultSet.getInt("IdCompra");
+			ResultSet acessorioSet = acessorioStatement.executeQuery(String.format("SELECT * FROM (AcessorioCompra INNER JOIN Acessorios ON AcessorioCompra.IdAcessorio = Acessorios.IdAcessorio) WHERE IdCompra=%d;", idCompra));
+			compra = createCompra(resultSet, createAcessorio(acessorioSet));
+			acessorioStatement.close();		
+		}
+		statement.close();
+		return compra;
+	}	
 	
-	
-	
-	
+	public boolean update(Compra compra) throws SQLException {
+		Statement statement = connection.createStatement();
+		
+		statement.executeUpdate(
+				String.format("UPDATE Compra "
+						+ "SET IdCorretor = %d"
+						+ "WHERE IdCompra = %d;", 
+						compra.getCorretor().getIdCorretor(), compra.getIdCompra()));
+		statement.close();
+		
+		return true;
+	}
 	
 	
 	
