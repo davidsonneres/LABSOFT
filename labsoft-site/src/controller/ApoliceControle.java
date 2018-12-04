@@ -15,10 +15,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.ApoliceDAO;
+import dao.CompraDAO;
+import dao.CorretorDAO;
 import model.Apolice;
 import model.Cliente;
+import model.Compra;
+import model.Corretor;
 
 /**
  * Servlet implementation class Controle
@@ -28,7 +33,8 @@ public class ApoliceControle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<Integer, Apolice> apoliceList = new HashMap<>();  
 	private ApoliceDAO apoliceDAO = new ApoliceDAO();
-	
+	private CorretorDAO corretorDAO = new CorretorDAO();
+	private CompraDAO compraDAO = new CompraDAO();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -74,8 +80,11 @@ public class ApoliceControle extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
+			HttpSession session = request.getSession(true);
 			Apolice apolice = apoliceDAO.findByPrimaryKey(Integer.parseInt(request.getParameter("id")));
 			String novoStatus = request.getParameter("status");
+			Corretor corretor = corretorDAO.findByPrimaryCPF((String)session.getAttribute("corretorCPF"));
+			Compra compra = compraDAO.findByApoliceID(apolice.getId());
 			if(novoStatus.equals("Cancelado") && new java.util.Date().after(apolice.getDataFim())){
 				
 			} else if(novoStatus.equals("Ativo") && new java.util.Date().after(apolice.getDataFim())){
@@ -84,8 +93,17 @@ public class ApoliceControle extends HttpServlet {
 				
 			} else if(novoStatus.equals("Ativo") && apolice.getStatus().equals("Cancelado")) {
 				
+			} else if(novoStatus.equals("Ativo") && apolice.getStatus().equals("Pendente")){
+				compra.setCorretor(corretor);
+				apolice.setDataInicio(new java.sql.Date(new java.util.Date().getTime()));
+				apolice.setDataFim(new java.sql.Date(new java.util.Date().getTime()+63072000000L));
+				apolice.setStatus(novoStatus);
+				apoliceDAO.update(apolice);
+				compra.setApolice(apolice);
+				compraDAO.update(compra);
 			}
 			else {
+				System.out.println("to aqui");
 				apolice.setStatus(novoStatus);
 				apoliceDAO.update(apolice);
 			}
