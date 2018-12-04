@@ -89,6 +89,7 @@ public class MainControle extends HttpServlet {
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
 			requestDispatcher.forward(request, response);
 	    } else if (corretor != null && corretor.getSenha().equals(senha)) {
+	    	session.setAttribute("corretorCPF", cpf);
 	    	session.setAttribute("permission", "corretor");
 	    	session.setAttribute("first-login", true);
 	    	
