@@ -79,7 +79,17 @@ VALUES (1, 1, "29.777.007/0001-04", "FIPE", 2000, 200, 100000, 50000, 0, 1, "057
 INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
 					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
 					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
-VALUES (2, 2, "29.777.007/0001-04", "Determinado", 3000, 200, 100000, 50000, 150000, 2, "05721178473", "Reduzida", 2);
+VALUES (2, 2, "29.777.007/0001-04", "Determinado", 3000, 200, 150000, 50000, 150000, 2, "31851002781", "Reduzida", 2);
+
+INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
+					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
+					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
+VALUES (3, 1, "29.777.007/0001-04", "FIPE", 4000, 300, 200000, 50000, 0, 3, "70988870046", "Obrigatória", 3);
+
+INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
+					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
+					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
+VALUES (4, 2, "29.777.007/0001-04", "Determinado", 5000, 400, 250000, 200000, 500000, 20, "37458080976", "Reduzida", 4);
 
 -- ACESSORIOCOMPRA
 INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
@@ -87,3 +97,6 @@ VALUES (1, 1);
 
 INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
 VALUES (2, 1);
+
+INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
+VALUES (1, 2);
