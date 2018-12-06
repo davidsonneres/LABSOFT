@@ -170,23 +170,14 @@ public class CompraDAO {
 		
 		statement.executeUpdate(
 				String.format("UPDATE Compra "
-						+ "SET IdCorretor = %d"
+						+ "SET IdCorretor = %d "
 						+ "WHERE IdCompra = %d;", 
 						compra.getCorretor().getIdCorretor(), compra.getIdCompra()));
 		statement.close();
 		
 		return true;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 }
 
