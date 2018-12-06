@@ -57,7 +57,7 @@ public class ApoliceControle extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		if (request.getParameter("id") == null) {
+		if (request.getParameter("id") == null || request.getAttribute("isValid") != null) {
 			try {
 				apoliceList = apoliceDAO.getAll();
 		    } catch (SQLException e) {
@@ -120,8 +120,7 @@ public class ApoliceControle extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listaApolice.jsp");
-		requestDispatcher.forward(request, response);
+		doGet(request, response);
 	}
 
 }
