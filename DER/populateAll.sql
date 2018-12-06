@@ -31,7 +31,7 @@ INSERT INTO Apolice (IdApolice, DataInicio, DataFim, Status)
 VALUES (3, "1992-05-03", "1997-10-10", "Encerrado");
 
 INSERT INTO Apolice (IdApolice, DataInicio, DataFim, Status)
-VALUES (20, "1996-05-03", "2000-10-10", "Pendente");
+VALUES (4, "2016-05-03", "2019-10-10", "Ativo");
 
 -- CORRETOR
 INSERT INTO Corretor (IdCorretor, Nome, Email, Telefone, Senha, CPF)
@@ -89,7 +89,7 @@ VALUES (3, 1, "29.777.007/0001-04", "FIPE", 4000, 300, 200000, 50000, 0, 3, "709
 INSERT INTO Compra (IdCompra, IdCorretor, CNPJCorretora, TipoValor, 
 					ValorLiquidoPremios, ValorIOF, ValorCobertura, ValorFIPE,
 					ValorDeterminado, IdApolice, RENAVAM, TipoFranquia, IdCliente)
-VALUES (4, 2, "29.777.007/0001-04", "Determinado", 5000, 400, 250000, 200000, 500000, 20, "37458080976", "Reduzida", 4);
+VALUES (4, 2, "29.777.007/0001-04", "Determinado", 5000, 400, 250000, 200000, 500000, 4, "37458080976", "Reduzida", 4);
 
 -- ACESSORIOCOMPRA
 INSERT INTO AcessorioCompra (IdAcessorio, IdCompra)
