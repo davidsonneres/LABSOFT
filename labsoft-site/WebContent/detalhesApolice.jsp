@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 <title>Insert title here</title>
 </head>
 <script type="text/javascript">
@@ -19,6 +23,7 @@
 	<%@page import="java.util.Map"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Apolice" %>
+	
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>
 	<% Apolice apolice = (Apolice) request.getAttribute("apolice");%>
 	<h1>Apólice</h1>

@@ -85,10 +85,11 @@ public class ApoliceControle extends HttpServlet {
 			String novoStatus = request.getParameter("status");
 			Corretor corretor = corretorDAO.findByPrimaryCPF((String)session.getAttribute("corretorCPF"));
 			Compra compra = compraDAO.findByApoliceID(apolice.getId());
-			
+			apoliceList = apoliceDAO.getAll();
+			request.setAttribute("apoliceList", apoliceList);
 			
 			if(novoStatus.equals("Cancelado") && new java.util.Date().after(apolice.getDataFim())){
-				
+				request.setAttribute("isValid", false);
 			} else if(novoStatus.equals("Ativo") && apolice.getStatus().equals("Pendente")){
 				compra.setCorretor(corretor);
 				apolice.setDataInicio(new java.sql.Date(new java.util.Date().getTime()));
@@ -97,16 +98,20 @@ public class ApoliceControle extends HttpServlet {
 				apoliceDAO.update(apolice);
 				compra.setApolice(apolice);
 				compraDAO.update(compra);
+				
+				request.setAttribute("isValid", true);
 			} else if(novoStatus.equals("Ativo") && new java.util.Date().after(apolice.getDataFim())){
-				
+				request.setAttribute("isValid", false);
 			} else if(novoStatus.equals("Encerrado") && new java.util.Date().before(apolice.getDataFim())) {
-				
+				request.setAttribute("isValid", false);
 			} else if(novoStatus.equals("Ativo") && apolice.getStatus().equals("Cancelado")) {
-				
+				request.setAttribute("isValid", false);
 			} 
 			else {
 				apolice.setStatus(novoStatus);
 				apoliceDAO.update(apolice);
+				
+				request.setAttribute("isValid", true);
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
@@ -115,9 +120,8 @@ public class ApoliceControle extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		doGet(request, response);
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listaApolice.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 }

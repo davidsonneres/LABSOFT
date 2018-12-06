@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 <title>Insert title here</title>
 </head>
 <body>
@@ -14,6 +18,22 @@
 	<%@page import="java.util.List"%>
 	<%@page import="java.text.SimpleDateFormat" %>
 	<%@page import="model.Apolice" %>
+	<% Object isValid = request.getAttribute("isValid"); %>
+	<% if(isValid != null && (boolean) isValid) {%>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+	  Alteração de status feita com sucesso
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<% } else if (isValid != null && !(boolean) isValid) {%>
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+	  Alteração inválida
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<% } %>
 
 	<h1>Lista de Apólices</h1>
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>
@@ -37,7 +57,7 @@
 		<% } %>
 	</table>
 	
-	<a href="">Inicial</a>
+	<a href="/labsoft-site">Inicial</a>
 	
 </body>
 </html>
