@@ -209,7 +209,7 @@
 
 
           <input type="submit" class="btn btn-success" value="Next">
-          <a href="inicial.html" type="button" class="btn btn-danger">Cancelar</a>
+          <a href="/labsoft-site/" type="button" class="btn btn-danger">Cancelar</a>
         </form>
       </div>
     </div>
