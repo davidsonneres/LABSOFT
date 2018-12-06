@@ -24,9 +24,9 @@
 			container = $("#valor-determinado");
 			container.empty();
 			if ($("#input-tipo-valor option:selected").text() == "FIPE") {
-				$("<input type='label' name='valor-determinado' id='valor-determinado-valor' disabled value=" + <%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %> + ">").appendTo(container);
+				$("<input type='label' name='valor-determinado' id='valor-determinado-valor' disabled required='required' value=" + <%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %> + ">").appendTo(container);
 			} else {
-				$("<input type='number' name='valor-determinado' id='valor-determinado-valor' placeholder='Digite o valor'></input>").appendTo(container);
+				$("<input type='number' name='valor-determinado' id='valor-determinado-valor' required='required' placeholder='Digite o valor'></input>").appendTo(container);
 			}
 		};
 	
@@ -77,7 +77,7 @@
           <div class="form-row">
             <div class="form-group col-sm-5">
               <label for="input-cpf">CPF</label>
-              <input type="text" name="cpf" class="form-control" id="input-cpf" placeholder="Digite seu CPF"
+              <input type="text" name="cpf" class="form-control" id="input-cpf" required="required" placeholder="Digite seu CPF"
               		value=<%= cliente != null ? cliente.getCPF() : "" %>>
             </div>
 
@@ -97,20 +97,20 @@
 
           <div class="form-group">
             <label for="input-nome-segurado">Nome Completo</label>
-            <input type="text" class="form-control" id="input-nome-segurado" placeholder="Nome Completo"
+            <input type="text" class="form-control" id="input-nome-segurado" required="required" placeholder="Nome Completo"
             		value='<%= cliente != null ? cliente.getNome() : "" %>' <%= cliente != null ? "disabled" : "" %>>
           </div>
 
           <div class="form-row">
             <div class="form-group col-sm-8">
               <label for="input-nacionalidade">Nacionalidade</label>
-              <input type="text" class="form-control" id="input-nacionalidade" placeholder="Nacionalidade"
+              <input type="text" class="form-control" id="input-nacionalidade" required="required" placeholder="Nacionalidade"
               		 value=<%= cliente != null ? cliente.getNacionalidade() : "" %> <%= cliente != null ? "disabled" : "" %>>
             </div>
 
             <div class="form-group col-sm-4">
               <label for="input-data-nascimento">Data de nascimento</label>
-              <input type="date" class="form-control" id="input-data-nascimento" placeholder="Data de nascimento"
+              <input type="date" class="form-control" id="input-data-nascimento" required="required" placeholder="Data de nascimento"
               		 value=<%= cliente != null ? cliente.getDataNascimento().toString() : "" %> <%= cliente != null ? "disabled" : "" %>>
             </div>
           </div>
@@ -118,26 +118,26 @@
           <div class="form-row">
             <div class="form-group col-sm-8">
               <label for="input-email">Email</label>
-              <input type="text" class="form-control" id="input-email" placeholder="Email"
+              <input type="text" class="form-control" id="input-email" required="required" placeholder="Email"
               		value='<%= cliente != null ? cliente.getEmail() : "" %>' <%= cliente != null ? "disabled" : "" %>>
             </div>
 
             <div class="form-group col-sm-4">
               <label for="input-telefone">Telefone</label>
-              <input type="text" class="form-control" id="input-telefone" placeholder="Telefone"
+              <input type="text" class="form-control" id="input-telefone" required="required" placeholder="Telefone"
               		value='<%= cliente != null ? cliente.getTelefone() : "" %>' <%= cliente != null ? "disabled" : "" %>>
             </div>
           </div>
 
           <div class="form-row">
              <label for="input-cnh">CNH</label>
-             <input type="text" class="form-control" id="input-cnh" placeholder="CNH"
+             <input type="text" class="form-control" id="input-cnh" required="required" placeholder="CNH"
              		value=<%= cliente != null ? cliente.getCNH() : "" %> <%= cliente != null ? "disabled" : "" %>>
           </div>
 
           <div class="form-row">
             <label for="input-endereço">Endereço</label>
-            <input type="text" class="form-control" id="input-endereço" placeholder="Endereço"
+            <input type="text" class="form-control" id="input-endereço" required="required" placeholder="Endereço"
             		value='<%= cliente != null ? cliente.getEndereco() : "" %>' <%= cliente != null ? "disabled" : "" %>>
           </div>
 
@@ -146,7 +146,7 @@
           <div class="form-row">
             <div class="form-group col-sm-10">
               <label for="input-renavam">RENAVAM</label>
-              <input type="text" name="renavam" class="form-control" id="input-renavam" placeholder="Digite o RENAVAM do veículo"
+              <input type="text" name="renavam" class="form-control" id="input-renavam" required="required" placeholder="Digite o RENAVAM do veículo"
               		value=<%= veiculo != null ? veiculo.getRenavam() : "" %>>
             </div>
 
@@ -159,13 +159,13 @@
           <div class="form-row">
             <div class="form-group col-sm-6">
               <label for="input-marca">Marca</label>
-              <input type="text" class="form-control" id="input-marca" placeholder="Marca"
+              <input type="text" class="form-control" id="input-marca" required="required" placeholder="Marca"
               		value=<%= veiculo != null ? veiculo.getMarca() : "" %> <%= veiculo != null ? "disabled" : "" %>>
             </div>
 
             <div class="form-group col-sm-6">
               <label for="input-modelo">Modelo</label>
-              <input type="text" class="form-control" id="input-modelo" placeholder="Modelo"
+              <input type="text" class="form-control" id="input-modelo" required="required" placeholder="Modelo"
               		value=<%= veiculo != null ? veiculo.getModelo() : "" %> <%= veiculo != null ? "disabled" : "" %>>
             </div>
           </div>
@@ -182,7 +182,7 @@
 	
           	<label>Valor em R$</label>
           	<span id="valor-determinado">
-          		<input type="text" name="valor-determinado" id="valor-determinado-valor" disabled value='<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>'>
+          		<input type="text" name="valor-determinado" id="valor-determinado-valor" disabled required="required" value='<%= veiculo != null ? veiculo.getFipe().getValorFIPE() : "0.00" %>'>
           	</span>
 
 

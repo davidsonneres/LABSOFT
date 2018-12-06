@@ -24,11 +24,11 @@
 	<form method="post">
 	  <div class="form-group">
 	    <label for="username">CPF</label>
-	    <input name="cpf" type="text" class="form-control" id="username"placeholder="Digite o cpf">
+	    <input name="cpf" type="text" class="form-control" id="username" required="required" placeholder="Digite o cpf">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Senha</label>
-	    <input name="senha" type="password" class="form-control" id="password" placeholder="Digite a senha">
+	    <input name="senha" type="password" class="form-control" id="password" required="required" placeholder="Digite a senha">
 	  </div>
 	  <button type="submit" class="btn btn-primary">Login</button>
 	</form>
