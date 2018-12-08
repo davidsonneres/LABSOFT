@@ -5,6 +5,7 @@
 	<% Cliente cliente = (Cliente) request.getAttribute("cliente");%>
 	<% Veiculo veiculo = (Veiculo) request.getAttribute("veiculo");%>
 	<% Boolean firstAccess = (Boolean) request.getAttribute("firstAccess"); %>
+	<% Boolean firstVehicle = (Boolean) request.getAttribute("firstVehicle"); %>
 	<script>
 		function insertCamposValorDeterminado() {
 			container = $("#valor-determinado");
@@ -25,10 +26,17 @@
     		renavam = $("#input-renavam").val();
     		url = window.location.href;
     		renavamIndex = url.indexOf("&renavam=");
-    		if (renavamIndex < 0) {
-    			window.location.href += "&renavam=" + renavam;
+    		questionIndex = url.indexOf("?");
+    		append = "";
+    		if (questionIndex < 0) {
+    			append = "?";
     		} else {
-    			window.location.href = url.substring(0, renavamIndex) + "&renavam=" + renavam;
+    			append = "&";
+    		}
+    		if (renavamIndex < 0) {
+    			window.location.href += append + "renavam=" + renavam;
+    		} else {
+    			window.location.href = url.substring(0, renavamIndex) + append + "renavam=" + renavam;
     		}	
     	}
     </script>
@@ -44,7 +52,8 @@
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
-		<% } else if (firstAccess != null & veiculo == null){%>
+		<% } %>
+		<% if (firstVehicle != null & veiculo == null){%>
 		<div class="alert alert-danger alert-dismissible fade show" role="alert">
 		  RENAVAM Inválido
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">

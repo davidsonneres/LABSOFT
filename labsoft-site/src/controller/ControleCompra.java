@@ -59,7 +59,7 @@ public class ControleCompra extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if (request.getParameter("type") != null && request.getParameter("type").equals("cpf")) {
+		if (request.getParameter("cpf") != null) {
 			try {
 				request.setAttribute("cliente", clienteDAO.findByPrimaryCPF((String) request.getParameter("cpf")));
 				request.setAttribute("firstAccess", false);
@@ -67,16 +67,18 @@ public class ControleCompra extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			if (request.getParameter("renavam") != null) {
-				try {
-					request.setAttribute("veiculo", veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+		}
+		
+		if (request.getParameter("renavam") != null) {
+			try {
+				request.setAttribute("veiculo", veiculoDAO.findByPrimaryKey((String) request.getParameter("renavam")));
+				request.setAttribute("firstVehicle", false);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
+		
 		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/comprar/telaCompra.jsp");
 		requestDispatcher.forward(request, response);
 		
