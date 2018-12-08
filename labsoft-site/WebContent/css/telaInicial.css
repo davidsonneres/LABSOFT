@@ -1,0 +1,18 @@
+#jumbo-inicial {
+	background-image: url("https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: calc(100vh);
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar {
+	padding-bottom: 0px;
+}
+
+.money-icon {
+	font-size: 25px;
+}

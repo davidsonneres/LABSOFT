@@ -54,4 +54,4 @@
 		</div>
 	</div>
 
-<%@ include file="common/footer.html" %>
+<jsp:include page="common/footer.jsp" />
