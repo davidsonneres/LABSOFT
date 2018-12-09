@@ -44,7 +44,7 @@
 				</ul>
 				<ul class="navbar-nav">
 					<div class="navbar-nav align-items-end">
-						<a class="nav-item nav-link active" href="?logout=true">Logout</a>
+						<a class="nav-item nav-link active" href="/labsoft-site?logout=true">Logout</a>
 					</div>	
 				</ul>
 			</div>

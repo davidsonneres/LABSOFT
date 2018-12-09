@@ -32,7 +32,7 @@
 	<h1 class="text-center font-weight-bold m-4">Lista de Apólices</h1>
 
 	<div class="border border-black rounded bg-light p-2">
-	<table class="table">
+	<table class="table table-striped">
 		<thead class="thead-dark">
 			<tr>
 				<th>Id</th>
