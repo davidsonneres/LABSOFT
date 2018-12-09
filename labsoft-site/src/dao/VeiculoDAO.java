@@ -27,7 +27,7 @@ public class VeiculoDAO {
 	
 	public Veiculo findByPrimaryKey(String renavam) throws SQLException {
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM (Veiculo INNER JOIN FIPE) WHERE RENAVAM='%s'", renavam));
+		ResultSet resultSet = statement.executeQuery(String.format("SELECT * FROM (Veiculo INNER JOIN FIPE ON Veiculo.IdVeiculo = FIPE.IdVeiculo) WHERE RENAVAM='%s'", renavam));
 		Veiculo veiculo = null;
 		if (resultSet.next()) {
 			veiculo = createVeiculo(resultSet);
@@ -39,7 +39,7 @@ public class VeiculoDAO {
 	public Map<String, Veiculo> getAll() throws SQLException {
 		Map<String, Veiculo> veiculoList = new HashMap<>();
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM (Veiculo INNER JOIN FIPE)");
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM (Veiculo INNER JOIN FIPE ON Veiculo.IdVeiculo = FIPE.IdVeiculo)");
 		
 		while(resultSet.next()) {
 			Veiculo veiculo = createVeiculo(resultSet);
