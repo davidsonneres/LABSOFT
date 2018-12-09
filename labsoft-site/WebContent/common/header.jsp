@@ -23,7 +23,7 @@
 <% String permission = (String) session.getAttribute("permission"); %>
 
 <div id="header-bottom">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
 			<a class="navbar-brand" href="/labsoft-site/"><i class="fas fa-car"></i> SS Seguros</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -31,14 +31,14 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="ControleCompra">Comprar seguro</a>
+						<a class="nav-link text-light" href="ControleCompra">Comprar seguro</a>
 					</li>
 					<% if (permission.equals("corretor")) {%>
 						<li class="nav-item">
-							<a class="nav-link" href="ControleRelatorio">Gerar relat&oacute;rios</a>
+							<a class="nav-link text-light" href="ControleRelatorio">Gerar relat&oacute;rios</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="ApoliceControle">Alterar status da ap&oacute;lice</a>
+							<a class="nav-link text-light" href="ApoliceControle">Alterar status da ap&oacute;lice</a>
 						</li>
 					<% } %>
 				</ul>
