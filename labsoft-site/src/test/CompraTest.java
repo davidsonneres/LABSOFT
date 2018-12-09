@@ -13,9 +13,10 @@ public class CompraTest {
 	Compra compra;
 	@Before
 	public void cria() {
-		compra = new Compra(11, 22, 33, 44, 55, 66,
-				"00.111.222/3333-44", "determinado", (float)100, (float)200, (float)300,
-				(float)400, (float)500, new Veiculo("789456123", "Gol", 2000, "Volkswagen", "Prata", "GOL-2000", new Fipe(789, (float) 365.5)));
+		compra = new Compra();
+//		compra = new Compra(11, 22, 33, 44, 55, 66,
+//				"00.111.222/3333-44", "determinado", (float)100, (float)200, (float)300,
+//				(float)400, (float)500, new Veiculo("789456123", "Gol", 2000, "Volkswagen", "Prata", "GOL-2000", new Fipe(789, (float) 365.5)));
 	}
 	@Test
 	public void testGetIdCompra() {
@@ -35,19 +36,19 @@ public class CompraTest {
 
 	@Test
 	public void testSetIdVeiculo() {
-		compra.setIdVeiculo(222);
+		compra.getVeiculo().setIdVeiculo(222);
 		assertEquals("Erro", 222, compra.getIdVeiculo());
 	}
 
 	@Test
 	public void testGetIdCorretor() {
-		assertEquals("Erro", 33, compra.getIdCorretor());
+		assertEquals("Erro", 33, compra.getCorretor().getIdCorretor());
 	}
 
 	@Test
 	public void testSetIdCorretor() {
-		compra.setIdCorretor(333);
-		assertEquals("Erro", 333, compra.getIdCorretor());
+		compra.getCorretor().setIdCorretor(333);
+		assertEquals("Erro", 333, compra.getCorretor().getIdCorretor());
 	}
 
 	@Test

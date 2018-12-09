@@ -43,13 +43,14 @@
 			    </div>
 			  </div>
 			  <br>
-			  <button type="submit" class="btn btn-info">Gerar</button>
+
+			  <button type="submit" class="btn btn-info col col-sm-4">Gerar</button>
+	
 			</form>
 		</div>
-	</div>
-	<div class="container">
-	  <table class="table table-striped">
-	    <thead>
+
+	  <table class="table table-striped mt-4">
+	    <thead class="thead-dark">
 	      <tr>
 	        <th scope="col">#Apolice</th>
 	        <th scope="col">Status</th>
@@ -77,7 +78,7 @@
 	    </tbody>
 	  </table>
 
-	  <a href="/labsoft-site/" class="btn btn-primary">Voltar</a>
+	  <a href="/labsoft-site/" class="btn btn-primary col col-sm-4">Voltar</a>
 	</div>
 	    
 <jsp:include page="../common/footer.jsp" />

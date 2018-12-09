@@ -65,11 +65,11 @@ public class ApoliceControle extends HttpServlet {
 				e.printStackTrace();
 			}
 			request.setAttribute("apoliceList", apoliceList);
-			RequestDispatcher requestDispacher = getServletContext().getRequestDispatcher("/listaApolice.jsp");
+			RequestDispatcher requestDispacher = getServletContext().getRequestDispatcher("/apolice/listaApolice.jsp");
 			requestDispacher.forward(request, response);
 		} else {
 			request.setAttribute("apolice", apoliceList.get(Integer.valueOf(request.getParameter("id"))));
-			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/detalhesApolice.jsp");
+			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/apolice/detalhesApolice.jsp");
 			requestDispatcher.forward(request, response);
 		}
 	}
