@@ -16,21 +16,35 @@
 	
 	<% SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy"); %>
 	<% Apolice apolice = (Apolice) request.getAttribute("apolice");%>
-	<h1>Apólice</h1>
-	<p>Id: <%= apolice.getId() %></p>
-	<p>Data de Início: <%= ft.format(apolice.getDataInicio()) %></p>
-	<p>Data de Fim: <%= ft.format(apolice.getDataFim()) %></p>
-	<p>Status atual: <%= apolice.getStatus() %></p>
+	
+	<div class="container">
+	<h1 class="text-center font-weight-bold m-4">Apólice</h1>
+	<div class="border border-black rounded bg-light p-2">
+
+	<p><strong>Id:</strong> <%= apolice.getId() %></p>
+	<p><strong>Data de Início:</strong> <%= ft.format(apolice.getDataInicio()) %></p>
+	<p><strong>Data de Fim:</strong> <%= ft.format(apolice.getDataFim()) %></p>
+	<p><strong>Status atual:</strong> <%= apolice.getStatus() %></p>
 	<form action = "" method = "post">
 		<label name="id" value = <%= apolice.getId() %> hidden></label>
-    	<label for="sel">Alterar status</label>
+    	<label for="sel"><strong>Alterar status</strong></label>
         <select name = "status" class="form-control" id="sel" >
         	<option>Ativo</option>
             <option>Cancelado</option>
             <option>Encerrado</option>
         </select>
-        <input type="submit" value="salvar">
+        <div class="row justify-content-between mt-4">
+        	<div class="col-sm-4">
+	        	<input type="submit" class="btn btn-success btn-block" value="Salvar">
+	        </div>
+	        <div class="col-sm-4">
+				<input type="button" class="btn btn-primary btn-block" value="Voltar" href="ApoliceControle"></input>
+			</div>
+		</div>
     </form>
-	<a href="ApoliceControle">Voltar</a>
+    
+
+	</div>
+	</div>
 
 <jsp:include page="../common/footer.jsp" />
