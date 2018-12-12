@@ -38,7 +38,7 @@
 	        	<input type="submit" class="btn btn-success btn-block" value="Salvar">
 	        </div>
 	        <div class="col-sm-4">
-				<input type="button" class="btn btn-primary btn-block" value="Voltar" href="ApoliceControle"></input>
+				<a class="btn btn-primary btn-block" href="ApoliceControle">Voltar</a>
 			</div>
 		</div>
     </form>
