@@ -87,8 +87,11 @@ public class ApoliceControle extends HttpServlet {
 			Compra compra = compraDAO.findByApoliceID(apolice.getId());
 			apoliceList = apoliceDAO.getAll();
 			request.setAttribute("apoliceList", apoliceList);
-			
-			if(novoStatus.equals("Cancelado") && new java.util.Date().after(apolice.getDataFim())){
+			if (novoStatus.equals("Cancelado") && apolice.getStatus().equals("Pendente")){
+				apolice.setStatus(novoStatus);
+				apoliceDAO.update(apolice);
+				request.setAttribute("isValid", true);
+			} else if(novoStatus.equals("Cancelado") && new java.util.Date().after(apolice.getDataFim())){
 				request.setAttribute("isValid", false);
 			} else if(novoStatus.equals("Ativo") && apolice.getStatus().equals("Pendente")){
 				compra.setCorretor(corretor);
