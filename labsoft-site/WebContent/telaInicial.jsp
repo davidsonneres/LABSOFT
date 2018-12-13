@@ -31,6 +31,13 @@
 		  </button>
 		</div>
 		<% session.setAttribute("first-login", false); %>
+	<% } else if (firstLogin && permission.equals("gerente")) { %>
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		  Logado como Gerente
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
 	<% } %>
 	
 	

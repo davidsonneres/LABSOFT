@@ -95,7 +95,13 @@ public class MainControle extends HttpServlet {
 	    	
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
 			requestDispatcher.forward(request, response);
-	    } else {
+	    } else if (cpf.equals("admin") && senha.equals("admin")) {
+	    	session.setAttribute("permission", "gerente");
+	    	session.setAttribute("first-login", true);
+	    	
+	    	RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/telaInicial.jsp");
+			requestDispatcher.forward(request, response);
+		} else {
 	    	request.setAttribute("login", false);
 			RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
 			requestDispatcher.forward(request, response);

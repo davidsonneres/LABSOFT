@@ -33,10 +33,12 @@
 					<li class="nav-item">
 						<a class="nav-link text-light" href="ControleCompra">Comprar seguro</a>
 					</li>
-					<% if (permission.equals("corretor")) {%>
+					<% if (permission.equals("gerente")) { %>
 						<li class="nav-item">
 							<a class="nav-link text-light" href="ControleRelatorio">Gerar relat&oacute;rios</a>
 						</li>
+					<% } %>
+					<% if (permission.equals("corretor")) {%>
 						<li class="nav-item">
 							<a class="nav-link text-light" href="ApoliceControle">Alterar status da ap&oacute;lice</a>
 						</li>
